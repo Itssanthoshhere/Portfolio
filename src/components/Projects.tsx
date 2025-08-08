@@ -6,6 +6,7 @@ import hvfProject from "@/assets/hvf-project.jpg";
 import sweetBiteProject from "@/assets/sweet-bite-project.png";
 import fizzi3DProject from "@/assets/Fizzi.png"
 import rdyepreview from "@/assets/rdye-preview.mp4"
+import foodreview from "@/assets/food-preview.mp4"
 import rdyeProject from "@/assets/splash.png"
 import Fizzi from "@/assets/Fizzi.mp4"
 
@@ -53,7 +54,7 @@ const projects = [
     description: "Interactive 3D soda can animation website built with React Three Fiber, Next.js App Router, and Prismic CMS. A fun, fizzy, and fully responsive splash experience for products or portfolios.",
     longDescription: "Fizzi 🥤 is a visually immersive 3D soda can experience built with React Three Fiber and powered by Prismic CMS. Designed as a creative product splash or personal branding demo, it features animated UI, custom SVGs, and CMS-editable content. Leveraging Next.js App Router, the site delivers seamless routing, responsiveness, and performance — all wrapped in fizzy visual delight.",
     image: fizzi3DProject,
-    // video: Fizzi,
+    video: Fizzi,
     technologies: ["React Three Fiber", "Next.js", "Prismic CMS", "Tailwind CSS", "JavaScript", "SVG"],
     features: [
       "3D soda can animations with React Three Fiber",
@@ -72,7 +73,7 @@ const projects = [
     title: "Rdye 🚖 – Full Stack Cab Booking App",
     description: "A ride-booking mobile app built with React Native, Expo, Stripe, Google Maps, and PostgreSQL. Offers a smooth Uber-like experience with real-time tracking, secure payments, and user-friendly design.",
     longDescription: "Rdye is a full-featured ride-booking application that replicates the Uber experience using a modern tech stack. Built with React Native and Expo, it includes real-time map tracking, Stripe-based payments, secure authentication with Clerk, and PostgreSQL database hosted via NeonDB. It’s crafted with clean UI using NativeWind (Tailwind CSS for React Native) and offers an end-to-end cab booking experience on both Android and iOS devices. This project highlights scalable mobile app architecture, smooth animations, and production-level features.",
-    // video: rdyepreview, // MP4 video preview path
+    video: rdyepreview, // MP4 video preview path
     image: rdyeProject, // fallback image if video isn't available
     technologies: [
       "React Native", "Expo", "PostgreSQL", "Stripe",
@@ -92,11 +93,39 @@ const projects = [
       "Modular codebase with reusable components"
     ],
     githubUrl: "https://github.com/Itssanthoshhere/Ryde",
-    liveUrl: "https://expo.dev/@itssanthoshhere/ryde",
+    // liveUrl:
+    figmaUrl: "https://www.figma.com/design/blwkDHvyKdd9YqdOYNCBY7/Ryde---Uber-Clone-App?node-id=0-1&t=SQQwfpztHy1V3epw-1",
+    duration: "August 2025",
+    category: "Full-Stack Mobile App"
+  },
+  {
+    title: "🍔 Food Delivery Mobile App",
+    description: "A modern, full-stack food delivery app built with React Native, Expo, TailwindCSS (NativeWind), Appwrite, and TypeScript. Features smooth UI, Google authentication, dynamic search, and cart functionality for a complete food-ordering experience.",
+    longDescription: "The Food Delivery Mobile App is a full-stack application designed to deliver a smooth, intuitive, and modern food-ordering experience. Built with React Native and Expo, styled using NativeWind (Tailwind CSS for React Native), and powered by TypeScript, it integrates Appwrite for secure authentication, database management, and file storage. The app features Google sign-in, category-based search and filtering, cart and checkout functionalities, and a responsive UI optimized for both Android and iOS. With a scalable architecture and reusable components, it ensures maintainability and a delightful user journey from onboarding to payment.",
+    video: foodreview,
+    // image: foodapppreview,
+    technologies: [
+      "React Native", "Expo", "Appwrite", "Tailwind CSS (NativeWind)",
+      "TypeScript", "Zustand", "Sentry", "Google Auth", "Figma"
+    ],
+    features: [
+      "Google Authentication for secure user login",
+      "Home page with latest offers and quick links",
+      "Category-based search and keyword filtering",
+      "Product details with images and descriptions",
+      "Add to cart functionality with price calculation",
+      "Cart review and checkout flow",
+      "Profile management for user settings",
+      "Appwrite backend integration for database and file storage",
+      "Reusable and modular code architecture",
+      "Responsive UI for Android and iOS"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Food-Delivery-App",
+    // liveUrl:
+    figmaUrl: "https://www.figma.com/design/FGHC0TYI24OH28CgTu4VZx/Food-Delivery-App?node-id=0-1&t=B938Im9U84TKMYmd-1",
     duration: "August 2025",
     category: "Full-Stack Mobile App"
   }
-
 
 ];
 
@@ -120,13 +149,13 @@ export function Projects() {
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
-                  <img
+                  {/* <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-64 lg:h-full object-fill transform group-hover:scale-110 transition-transform duration-700"
-                  />
+                  /> */}
 
-                  {/* {project.video ? (
+                  {project.video ? (
                     <video
                       width="100%"
                       height="100%"
@@ -145,7 +174,7 @@ export function Projects() {
                       alt={project.title}
                       className="w-full h-64 lg:h-full object-fill transform group-hover:scale-110 transition-transform duration-700"
                     />
-                  )} */}
+                  )}
 
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute top-4 right-4">
@@ -202,7 +231,7 @@ export function Projects() {
                     </div>
                   </div>
 
-                  {/* Action Buttons */}
+                  {/* Action Buttons
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button
                       asChild
@@ -215,6 +244,15 @@ export function Projects() {
                     </Button>
                     <Button
                       asChild
+                      className="btn-hero flex items-center gap-2"
+                    >
+                      <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} />
+                        Figma
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
                       variant="outline"
                       className="btn-secondary-hero flex items-center gap-2"
                     >
@@ -223,6 +261,47 @@ export function Projects() {
                         View Code
                       </a>
                     </Button>
+                  </div> */}
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    {project.liveUrl && (
+                      <Button
+                        asChild
+                        className="btn-hero flex items-center gap-2"
+                      >
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={16} />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
+
+                    {/* Show Figma button only for projects with figmaUrl */}
+                    {project.figmaUrl && (
+                      <Button
+                        asChild
+                        className="btn-hero flex items-center gap-2"
+                      >
+                        <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink size={16} />
+                          Figma
+                        </a>
+                      </Button>
+                    )}
+
+                    {project.githubUrl && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="btn-secondary-hero flex items-center gap-2"
+                      >
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github size={16} />
+                          View Code
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
