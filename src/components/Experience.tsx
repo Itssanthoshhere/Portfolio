@@ -82,19 +82,22 @@ const experiences = [
     location: "Remote",
     duration: "Aug 2024 – Present",
     type: "Ongoing",
-    description: "Engaged in continuous learning and practical application of frontend development skills through personal projects and modern web development practices.",
+    description: "Pursuing a self-directed frontend development internship through hands-on personal projects and continuous skill enhancement. Applied industry best practices to design, develop, and deploy modern web applications while building a strong foundation in responsive UI, code quality, and deployment workflows.",
     responsibilities: [
-      "Created multiple frontend applications using HTML, CSS, JavaScript",
-      "Practiced Git-based workflows, UI responsiveness, and clean coding standards",
-      "Implemented modern React applications with TypeScript",
-      "Focused on user experience and responsive design principles",
-      "Deployed applications using modern platforms like Vercel and Netlify"
+      "Developed multiple frontend applications from scratch using HTML5, CSS3, and JavaScript",
+      "Practiced Git-based workflows, including branching, commits, and pull requests",
+      "Implemented modern React applications with TypeScript and reusable component patterns",
+      "Applied responsive design principles for optimal user experience across devices",
+      "Deployed and hosted projects on platforms like Vercel and Netlify for public access",
+      "Explored performance optimization techniques and accessibility best practices"
     ],
-    technologies: ["React", "TypeScript", "HTML5", "CSS3", "JavaScript", "Git", "Vercel", "Netlify"],
+    technologies: [
+      "React", "TypeScript", "HTML5", "CSS3", "JavaScript", "Git", "Vercel", "Netlify"
+    ],
     outcomes: [
-      "Built a portfolio of production-ready web applications",
-      "Developed proficiency in modern frontend development stack",
-      "Gained experience in deployment and DevOps practices"
+      "Built a growing portfolio of production-ready web applications",
+      "Enhanced expertise in modern frontend frameworks and tooling",
+      "Gained practical experience in deployment, version control, and CI/CD workflows"
     ]
   }
 ];
