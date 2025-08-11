@@ -4,31 +4,44 @@ import { Badge } from "@/components/ui/badge";
 
 const skillCategories = [
   {
-    title: "Frontend Development",
+    title: "Frontend & Mobile Development",
     icon: Code,
-    description: "Creating beautiful, responsive user interfaces",
-    skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"],
+    description: "Building responsive, interactive, and mobile-first applications",
+    skills: [
+      "React", "React Native", "Expo", "TypeScript", "JavaScript",
+      "HTML5", "CSS3", "Tailwind CSS", "NativeWind", "Responsive Design",
+      "AOS Animations"
+    ],
     color: "frontend"
   },
   {
     title: "Backend Development",
     icon: Database,
-    description: "Building robust server-side applications",
-    skills: ["Node.js", "Express", "MongoDB", "MySQL", "PHP", "REST APIs"],
+    description: "Developing scalable server-side applications and APIs",
+    skills: [
+      "Node.js", "Express", "PostgreSQL", "MySQL", "MongoDB", "PHP",
+      "Prisma ORM", "REST APIs", "Clerk Auth", "Geoapify", "Google Maps API"
+    ],
     color: "backend"
   },
   {
-    title: "Tools & Technologies",
+    title: "Tools & Platforms",
     icon: Wrench,
-    description: "Development tools and deployment platforms",
-    skills: ["Git", "GitHub", "Figma", "Netlify", "Vercel", "XAMPP", "Vite", "LaTeX"],
+    description: "Development, collaboration, and deployment tools",
+    skills: [
+      "Git", "GitHub", "Figma", "Stripe Payments", "Netlify", "Vercel",
+      "Expo Go", "Vite", "XAMPP", "LaTeX"
+    ],
     color: "tools"
   },
   {
     title: "AI/ML & Programming",
     icon: Brain,
-    description: "Artificial Intelligence and core programming",
-    skills: ["Machine Learning", "NLP (Basic)", "Computer Vision", "Python", "Java", "C++"],
+    description: "Artificial Intelligence concepts and core programming skills",
+    skills: [
+      "Machine Learning", "NLP (Basic)", "Computer Vision",
+      "Python", "Java", "C++"
+    ],
     color: "aiml"
   }
 ];
@@ -79,8 +92,8 @@ export function Skills() {
             Skills & <span className="text-gradient-accent">Technologies</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical skills and the tools I use to bring
-            ideas to life in the digital world.
+            A comprehensive overview of my technical skills and the tools I use to build
+            modern, high-performance applications.
           </p>
         </div>
 
@@ -161,17 +174,17 @@ export function Skills() {
             <div className="p-6">
               <div className="text-4xl font-bold text-primary mb-2">2+</div>
               <div className="text-lg font-medium mb-2">Years of Learning</div>
-              <div className="text-muted-foreground">Continuous skill development and hands-on experience</div>
+              <div className="text-muted-foreground">Hands-on development experience across multiple domains</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-primary mb-2">15+</div>
+              <div className="text-4xl font-bold text-primary mb-2">20+</div>
               <div className="text-lg font-medium mb-2">Technologies</div>
-              <div className="text-muted-foreground">Diverse tech stack spanning frontend, backend, and AI/ML</div>
+              <div className="text-muted-foreground">Spanning frontend, backend, mobile, and AI/ML</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="text-4xl font-bold text-primary mb-2">8+</div>
               <div className="text-lg font-medium mb-2">Projects</div>
-              <div className="text-muted-foreground">Real-world applications and continuous development</div>
+              <div className="text-muted-foreground">Real-world applications deployed for users</div>
             </div>
           </div>
         </div>

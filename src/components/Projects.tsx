@@ -8,14 +8,17 @@ import fizzi3DProject from "@/assets/Fizzi.png"
 import rdyepreview from "@/assets/rdye-preview.mp4"
 import foodreview from "@/assets/food-preview.mp4"
 import rdyeProject from "@/assets/splash.png"
-import Fizzi from "@/assets/Fizzi.mp4"
+import Fizzi from "@/assets/fizzi-preview.mp4"
+import flavorapreview from "@/assets/flavora-preview.mp4"
+import sweetbitepreview from "@/assets/sweet-bite-preview.mp4"
 
 const projects = [
   {
     title: "Sweet Bite – Bakery Website",
     description: "Fully responsive bakery website featuring product showcase, testimonial section, and contact form. Built with HTML5, CSS3, and JavaScript with focus on user-friendly layout and cross-device compatibility.",
     longDescription: "An elegant and modern bakery website showcasing delicious products with beautiful imagery, customer testimonials, and seamless user experience across all devices.",
-    image: sweetBiteProject,
+    // image: sweetBiteProject,
+    video: sweetbitepreview,
     technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
     features: [
       "Beautiful product showcase with image galleries",
@@ -125,7 +128,32 @@ const projects = [
     figmaUrl: "https://www.figma.com/design/FGHC0TYI24OH28CgTu4VZx/Food-Delivery-App?node-id=0-1&t=B938Im9U84TKMYmd-1",
     duration: "August 2025",
     category: "Full-Stack Mobile App"
+  },
+  {
+    title: "🍽 Flavor Fusion – Modern Restaurant Website",
+    description: "A sleek, fully responsive restaurant website built with HTML5, Tailwind CSS, and JavaScript. Features interactive menu filtering, smooth AOS animations, and a polished chef-inspired UI.",
+    longDescription: "Flavor Fusion is a modern, mobile-friendly restaurant website designed to deliver an immersive dining experience online. Built with semantic HTML5, styled using Tailwind CSS for rapid responsive design, and enhanced with JavaScript for interactive features, it offers smooth AOS animations and intuitive navigation. Visitors can explore the menu with dynamic category-based filtering, enjoy scroll-triggered effects, and navigate effortlessly with a sticky header and back-to-top button. Optimized for performance and aesthetics, this project highlights clean UI, accessibility, and cross-device compatibility.",
+    video: flavorapreview, 
+    // image: "assets/readme/hero.png", // Main banner image
+    technologies: [
+      "HTML5", "Tailwind CSS", "JavaScript", "AOS (Animate On Scroll)"
+    ],
+    features: [
+      "Fully responsive design for desktop, tablet, and mobile",
+      "Sticky navigation with scroll-based style changes",
+      "Smooth back-to-top button for quick navigation",
+      "Interactive menu filtering with animated transitions",
+      "Scroll-triggered fade-in effects using AOS",
+      "Mobile menu with slide-in navigation",
+      "SEO-friendly semantic HTML structure",
+      "Optimized for fast loading and smooth performance"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Flavora-Restaurant",
+    liveUrl: "https://flavora-restaurant.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Website"
   }
+
 
 ];
 
