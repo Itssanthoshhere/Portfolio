@@ -11,6 +11,7 @@ import rdyeProject from "@/assets/splash.png"
 import Fizzi from "@/assets/fizzi-preview.mp4"
 import flavorapreview from "@/assets/flavora-preview.mp4"
 import sweetbitepreview from "@/assets/sweet-bite-preview.mp4"
+import restate from "@/assets/real-estate.mp4"
 
 const projects = [
   {
@@ -53,7 +54,7 @@ const projects = [
     category: "Full-Stack Application"
   },
   {
-    title: "Fizzi 🥤 – A 3D Soda Can Web Experience",
+    title: "Fizzi🥤 – A 3D Soda Can Web Experience",
     description: "Interactive 3D soda can animation website built with React Three Fiber, Next.js App Router, and Prismic CMS. A fun, fizzy, and fully responsive splash experience for products or portfolios.",
     longDescription: "Fizzi 🥤 is a visually immersive 3D soda can experience built with React Three Fiber and powered by Prismic CMS. Designed as a creative product splash or personal branding demo, it features animated UI, custom SVGs, and CMS-editable content. Leveraging Next.js App Router, the site delivers seamless routing, responsiveness, and performance — all wrapped in fizzy visual delight.",
     image: fizzi3DProject,
@@ -133,7 +134,7 @@ const projects = [
     title: "🍽 Flavor Fusion – Modern Restaurant Website",
     description: "A sleek, fully responsive restaurant website built with HTML5, Tailwind CSS, and JavaScript. Features interactive menu filtering, smooth AOS animations, and a polished chef-inspired UI.",
     longDescription: "Flavor Fusion is a modern, mobile-friendly restaurant website designed to deliver an immersive dining experience online. Built with semantic HTML5, styled using Tailwind CSS for rapid responsive design, and enhanced with JavaScript for interactive features, it offers smooth AOS animations and intuitive navigation. Visitors can explore the menu with dynamic category-based filtering, enjoy scroll-triggered effects, and navigate effortlessly with a sticky header and back-to-top button. Optimized for performance and aesthetics, this project highlights clean UI, accessibility, and cross-device compatibility.",
-    video: flavorapreview, 
+    video: flavorapreview,
     // image: "assets/readme/hero.png", // Main banner image
     technologies: [
       "HTML5", "Tailwind CSS", "JavaScript", "AOS (Animate On Scroll)"
@@ -152,9 +153,35 @@ const projects = [
     liveUrl: "https://flavora-restaurant.vercel.app/",
     duration: "August 2025",
     category: "Frontend Website"
+  },
+  {
+    title: "Real Scout 🏡 – Real Estate App",
+    description: "A modern cross-platform real estate app built with React Native, Expo, Appwrite, and Tailwind CSS. Designed for browsing, searching, and managing property listings with an intuitive, mobile-first UI.",
+    longDescription: "Real Scout is a full-stack mobile application designed for discovering and managing property listings effortlessly. Built with React Native and Expo SDK 52, it integrates Appwrite for authentication, database, and file storage, while NativeWind (Tailwind CSS for React Native) ensures a clean and responsive design. Users can explore properties, apply filters, view detailed property information, save favorites, and manage their profiles. The app is optimized for both Android and iOS, delivering a smooth, secure, and visually engaging experience. Includes centralized data fetching inspired by TanStack’s useQuery for optimized performance.",
+    video: restate,
+    // image: "assets/readme/hero.png",
+    technologies: [
+      "React Native",
+      "Expo SDK 52",
+      "Appwrite",
+      "TypeScript",
+      "Tailwind CSS (NativeWind)"
+    ],
+    features: [
+      "Secure Google authentication",
+      "Home page with latest and recommended properties",
+      "Advanced search and filtering system",
+      "Explore page to browse all property types",
+      "Detailed property pages with photos, pricing, and full info",
+      "Profile management and preferences",
+      "Centralized and optimized API data fetching",
+      "Responsive design for Android and iOS"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Real-Scout",
+    figmaUrl: "https://www.figma.com/design/F0pys4nJsQXz42KOzI2yl9/Real-Scout---Real-Estate-App?node-id=2-2&t=PjxkudNOJCqZHm97-1",
+    duration: "August 2025",
+    category: "Full-Stack Mobile App"
   }
-
-
 ];
 
 export function Projects() {
@@ -219,9 +246,10 @@ export function Projects() {
                     <span>{project.duration}</span>
                   </div>
 
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gradient-primary">
+                
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                     {project.title}
-                  </h3>
+                  </h3> 
 
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {project.longDescription}
