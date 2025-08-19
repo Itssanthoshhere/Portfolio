@@ -2,7 +2,7 @@ import { ExternalLink, Github, Calendar, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import hvfProject from "@/assets/hvf-project.jpg";
 import sweetBiteProject from "@/assets/sweet-bite-project.png";
 import fizzi3DProject from "@/assets/Fizzi.png"
@@ -210,6 +210,16 @@ const projects = [
   }
 ];
 
+// export function Projects() {
+//   const [filter, setFilter] = useState("All");
+
+//   const categories = ["All", ...new Set(projects.map((p) => p.category))];
+
+//   const filteredProjects =
+//     filter === "All"
+//       ? projects
+//       : projects.filter((project) => project.category === filter);
+
 export function Projects() {
   const [filter, setFilter] = useState("All");
 
@@ -219,6 +229,33 @@ export function Projects() {
     filter === "All"
       ? projects
       : projects.filter((project) => project.category === filter);
+
+  useEffect(() => {
+    const videos = document.querySelectorAll("video");
+
+    // Pause all videos initially
+    videos.forEach((video) => video.pause());
+
+    // Observe only visible videos
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.play();
+          } else {
+            entry.target.pause();
+          }
+        });
+      },
+      { threshold: 0.5 } // Play when 50% of the video is visible
+    );
+
+    videos.forEach((video) => observer.observe(video));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [filter]); // Re-run when filter changes
 
   return (
     <section id="projects" className="section-padding bg-surface/30">
@@ -257,7 +294,7 @@ export function Projects() {
                     alt={project.title}
                     className="w-full h-64 lg:h-full object-fill transform group-hover:scale-110 transition-transform duration-700"
                   /> */}
-{/* 
+                {/* 
                 {project.video ? (
                   <video
                     width="100%"
