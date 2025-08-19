@@ -2,23 +2,24 @@ import { ExternalLink, Github, Calendar, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import hvfProject from "@/assets/hvf-project.jpg";
 import sweetBiteProject from "@/assets/sweet-bite-project.png";
 import fizzi3DProject from "@/assets/Fizzi.png"
 import rdyepreview from "@/assets/rdye-preview.mp4"
 import foodreview from "@/assets/food-preview.mp4"
 import rdyeProject from "@/assets/splash.png"
-import Fizzi from "@/assets/fizzi-preview.mp4"
+import fizzi from "@/assets/fizzi-preview.mp4"
 import flavorapreview from "@/assets/flavora-preview.mp4"
 import sweetbitepreview from "@/assets/sweet-bite-preview.mp4"
 import restate from "@/assets/real-estate.mp4"
+import velvetPourPreview from "@/assets/velvetPourPreview.mp4"
 
 const projects = [
   {
     title: "Sweet Bite – Bakery Website",
     description: "Fully responsive bakery website featuring product showcase, testimonial section, and contact form. Built with HTML5, CSS3, and JavaScript with focus on user-friendly layout and cross-device compatibility.",
     longDescription: "An elegant and modern bakery website showcasing delicious products with beautiful imagery, customer testimonials, and seamless user experience across all devices.",
-    // image: sweetBiteProject,
     video: sweetbitepreview,
     technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
     features: [
@@ -57,8 +58,7 @@ const projects = [
     title: "Fizzi🥤 – A 3D Soda Can Web Experience",
     description: "Interactive 3D soda can animation website built with React Three Fiber, Next.js App Router, and Prismic CMS. A fun, fizzy, and fully responsive splash experience for products or portfolios.",
     longDescription: "Fizzi 🥤 is a visually immersive 3D soda can experience built with React Three Fiber and powered by Prismic CMS. Designed as a creative product splash or personal branding demo, it features animated UI, custom SVGs, and CMS-editable content. Leveraging Next.js App Router, the site delivers seamless routing, responsiveness, and performance — all wrapped in fizzy visual delight.",
-    image: fizzi3DProject,
-    video: Fizzi,
+    video: fizzi,
     technologies: ["React Three Fiber", "Next.js", "Prismic CMS", "Tailwind CSS", "JavaScript", "SVG"],
     features: [
       "3D soda can animations with React Three Fiber",
@@ -74,11 +74,62 @@ const projects = [
     category: "3D Web Experience"
   },
   {
+    title: "🍽 Flavor Fusion – Modern Restaurant Website",
+    description: "A sleek, fully responsive restaurant website built with HTML5, Tailwind CSS, and JavaScript. Features interactive menu filtering, smooth AOS animations, and a polished chef-inspired UI.",
+    longDescription: "Flavor Fusion is a modern, mobile-friendly restaurant website designed to deliver an immersive dining experience online. Built with semantic HTML5, styled using Tailwind CSS for rapid responsive design, and enhanced with JavaScript for interactive features, it offers smooth AOS animations and intuitive navigation. Visitors can explore the menu with dynamic category-based filtering, enjoy scroll-triggered effects, and navigate effortlessly with a sticky header and back-to-top button. Optimized for performance and aesthetics, this project highlights clean UI, accessibility, and cross-device compatibility.",
+    video: flavorapreview,
+    technologies: [
+      "HTML5", "Tailwind CSS", "JavaScript", "AOS (Animate On Scroll)"
+    ],
+    features: [
+      "Fully responsive design for desktop, tablet, and mobile",
+      "Sticky navigation with scroll-based style changes",
+      "Smooth back-to-top button for quick navigation",
+      "Interactive menu filtering with animated transitions",
+      "Scroll-triggered fade-in effects using AOS",
+      "Mobile menu with slide-in navigation",
+      "SEO-friendly semantic HTML structure",
+      "Optimized for fast loading and smooth performance"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Flavora-Restaurant",
+    liveUrl: "https://flavora-restaurant.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Website"
+  },
+  {
+    title: "Velvet Pour 🍹 – Stunning GSAP Cocktail Website",
+    description: "A scroll-driven, animated cocktail website built with React, GSAP, and Tailwind CSS. Features SplitText reveals, ScrollTrigger timelines, pinned sections, parallax scrolling, scroll-synced videos, image masking, and custom carousels.",
+    longDescription: "Velvet Pour is a modern, interactive cocktail website built with React, GSAP, and Tailwind CSS. The project leverages advanced scroll-driven animations like SplitText reveals, ScrollTrigger timelines, pinned sections, parallax scrolling, scroll-synced video playback, image masking, and a fully customized carousel. Designed with responsive layouts and modular React components, it delivers a polished, cinematic, and immersive user experience. Ideal for exploring advanced GSAP animations and creating smooth, visually striking web interactions.",
+    video: velvetPourPreview, // MP4 video preview path
+    technologies: [
+      "React", "GSAP", "Tailwind CSS", "Vite",
+      "SplitText", "ScrollTrigger", "Parallax Scrolling",
+      "Pinned Sections", "Scroll-Synced Video", "Custom Carousel"
+    ],
+    features: [
+      "Dynamic SplitText text reveals for bold section intros",
+      "ScrollTrigger-powered timeline animations and effects",
+      "Smooth parallax scrolling for immersive depth",
+      "Pinned sections for interactive storytelling",
+      "Scroll-synced video playback for cinematic impact",
+      "Scroll-based image masking for striking transitions",
+      "Fully custom animated carousel with multiple navigation options",
+      "Seamless multi-section animation timelines",
+      "Responsive UI across all screen sizes",
+      "Optimized performance for videos and animations"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Velvet-Pour",
+    liveUrl: "https://velvet-pour-cocktail.vercel.app/",
+    figmaUrl: "https://www.figma.com/design/LVdc2zP8j8ZEd4agVV0JVJ/Cocktail-GSAP-Website?node-id=2-2&t=7umyEDJMvJ1iyxmr-1",
+    duration: "August 2025",
+    category: "Frontend Website"
+  },
+
+  {
     title: "Rdye 🚖 – Full Stack Cab Booking App",
     description: "A ride-booking mobile app built with React Native, Expo, Stripe, Google Maps, and PostgreSQL. Offers a smooth Uber-like experience with real-time tracking, secure payments, and user-friendly design.",
     longDescription: "Rdye is a full-featured ride-booking application that replicates the Uber experience using a modern tech stack. Built with React Native and Expo, it includes real-time map tracking, Stripe-based payments, secure authentication with Clerk, and PostgreSQL database hosted via NeonDB. It’s crafted with clean UI using NativeWind (Tailwind CSS for React Native) and offers an end-to-end cab booking experience on both Android and iOS devices. This project highlights scalable mobile app architecture, smooth animations, and production-level features.",
     video: rdyepreview, // MP4 video preview path
-    image: rdyeProject, // fallback image if video isn't available
     technologies: [
       "React Native", "Expo", "PostgreSQL", "Stripe",
       "Google Maps API", "Prisma", "Clerk Auth",
@@ -107,7 +158,6 @@ const projects = [
     description: "A modern, full-stack food delivery app built with React Native, Expo, TailwindCSS (NativeWind), Appwrite, and TypeScript. Features smooth UI, Google authentication, dynamic search, and cart functionality for a complete food-ordering experience.",
     longDescription: "The Food Delivery Mobile App is a full-stack application designed to deliver a smooth, intuitive, and modern food-ordering experience. Built with React Native and Expo, styled using NativeWind (Tailwind CSS for React Native), and powered by TypeScript, it integrates Appwrite for secure authentication, database management, and file storage. The app features Google sign-in, category-based search and filtering, cart and checkout functionalities, and a responsive UI optimized for both Android and iOS. With a scalable architecture and reusable components, it ensures maintainability and a delightful user journey from onboarding to payment.",
     video: foodreview,
-    // image: foodapppreview,
     technologies: [
       "React Native", "Expo", "Appwrite", "Tailwind CSS (NativeWind)",
       "TypeScript", "Zustand", "Sentry", "Google Auth", "Figma"
@@ -130,36 +180,12 @@ const projects = [
     duration: "August 2025",
     category: "Full-Stack Mobile App"
   },
-  {
-    title: "🍽 Flavor Fusion – Modern Restaurant Website",
-    description: "A sleek, fully responsive restaurant website built with HTML5, Tailwind CSS, and JavaScript. Features interactive menu filtering, smooth AOS animations, and a polished chef-inspired UI.",
-    longDescription: "Flavor Fusion is a modern, mobile-friendly restaurant website designed to deliver an immersive dining experience online. Built with semantic HTML5, styled using Tailwind CSS for rapid responsive design, and enhanced with JavaScript for interactive features, it offers smooth AOS animations and intuitive navigation. Visitors can explore the menu with dynamic category-based filtering, enjoy scroll-triggered effects, and navigate effortlessly with a sticky header and back-to-top button. Optimized for performance and aesthetics, this project highlights clean UI, accessibility, and cross-device compatibility.",
-    video: flavorapreview,
-    // image: "assets/readme/hero.png", // Main banner image
-    technologies: [
-      "HTML5", "Tailwind CSS", "JavaScript", "AOS (Animate On Scroll)"
-    ],
-    features: [
-      "Fully responsive design for desktop, tablet, and mobile",
-      "Sticky navigation with scroll-based style changes",
-      "Smooth back-to-top button for quick navigation",
-      "Interactive menu filtering with animated transitions",
-      "Scroll-triggered fade-in effects using AOS",
-      "Mobile menu with slide-in navigation",
-      "SEO-friendly semantic HTML structure",
-      "Optimized for fast loading and smooth performance"
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Flavora-Restaurant",
-    liveUrl: "https://flavora-restaurant.vercel.app/",
-    duration: "August 2025",
-    category: "Frontend Website"
-  },
+
   {
     title: "Real Scout 🏡 – Real Estate App",
     description: "A modern cross-platform real estate app built with React Native, Expo, Appwrite, and Tailwind CSS. Designed for browsing, searching, and managing property listings with an intuitive, mobile-first UI.",
     longDescription: "Real Scout is a full-stack mobile application designed for discovering and managing property listings effortlessly. Built with React Native and Expo SDK 52, it integrates Appwrite for authentication, database, and file storage, while NativeWind (Tailwind CSS for React Native) ensures a clean and responsive design. Users can explore properties, apply filters, view detailed property information, save favorites, and manage their profiles. The app is optimized for both Android and iOS, delivering a smooth, secure, and visually engaging experience. Includes centralized data fetching inspired by TanStack’s useQuery for optimized performance.",
     video: restate,
-    // image: "assets/readme/hero.png",
     technologies: [
       "React Native",
       "Expo SDK 52",
@@ -185,6 +211,15 @@ const projects = [
 ];
 
 export function Projects() {
+  const [filter, setFilter] = useState("All");
+
+  const categories = ["All", ...new Set(projects.map((p) => p.category))];
+
+  const filteredProjects =
+    filter === "All"
+      ? projects
+      : projects.filter((project) => project.category === filter);
+
   return (
     <section id="projects" className="section-padding bg-surface/30">
       <div className="container-custom">
@@ -198,23 +233,66 @@ export function Projects() {
           </p>
         </div>
 
+        {/* Filter Buttons */}
+        <div className="flex justify-center flex-wrap gap-4 mb-12 animate-fade-in">
+          {categories.map((cat) => (
+            <Button
+              key={cat}
+              variant={filter === cat ? "default" : "outline"}
+              onClick={() => setFilter(cat)}
+            >
+              {cat}
+            </Button>
+          ))}
+        </div>
+
         <div className="grid lg:grid-cols-1 gap-12">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <Card key={index} className="card-project overflow-hidden animate-slide-up">
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Project Image */}
-                <div className="relative overflow-hidden">
+                {/* <div className="relative overflow-hidden">
                   {/* <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-64 lg:h-full object-fill transform group-hover:scale-110 transition-transform duration-700"
                   /> */}
+{/* 
+                {project.video ? (
+                  <video
+                    width="100%"
+                    height="100%"
+                    // controls
+                    autoPlay
+                    muted
+                    loop
+                    className="w-full h-64 lg:h-full object-fill transform group-hover:scale-110 transition-transform duration-700"
+                  >
+                    <source src={project.video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64 lg:h-full object-fill transform group-hover:scale-110 transition-transform duration-700"
+                  />
+                )}
 
-                  {project.video ? (
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-4 right-4">
+                  <Badge className="bg-accent text-accent-foreground">
+                    {project.category}
+                  </Badge>
+                </div>
+                </div>  */}
+
+                <div className="relative overflow-hidden">
+                  {project.video && project.video !== "" ? (
                     <video
                       width="100%"
                       height="100%"
-                      controls
+                      // controls
                       autoPlay
                       muted
                       loop
@@ -223,12 +301,16 @@ export function Projects() {
                       <source src={project.video} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
-                  ) : (
+                  ) : project.image ? (
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-64 lg:h-full object-fill transform group-hover:scale-110 transition-transform duration-700"
                     />
+                  ) : (
+                    <div className="w-full h-64 lg:h-full bg-gray-200 flex items-center justify-center text-muted-foreground">
+                      No Preview Available
+                    </div>
                   )}
 
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -246,10 +328,10 @@ export function Projects() {
                     <span>{project.duration}</span>
                   </div>
 
-                
+
                   <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                     {project.title}
-                  </h3> 
+                  </h3>
 
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {project.longDescription}
@@ -337,7 +419,7 @@ export function Projects() {
                     {project.figmaUrl && (
                       <Button
                         asChild
-                        className="btn-hero flex items-center gap-2"
+                        className="btn-secondary-hero flex items-center gap-2"
                       >
                         <a href={project.figmaUrl} target="_blank" rel="noopener noreferrer">
                           <ExternalLink size={16} />
@@ -381,3 +463,5 @@ export function Projects() {
     </section>
   );
 }
+
+
