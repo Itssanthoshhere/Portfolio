@@ -4,11 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import hvfProject from "@/assets/hvf-project.jpg";
-import sweetBiteProject from "@/assets/sweet-bite-project.png";
-import fizzi3DProject from "@/assets/Fizzi.png"
 import rdyepreview from "@/assets/rdye-preview.mp4"
 import foodreview from "@/assets/food-preview.mp4"
-import rdyeProject from "@/assets/splash.png"
 import fizzi from "@/assets/fizzi-preview.mp4"
 import flavorapreview from "@/assets/flavora-preview.mp4"
 import sweetbitepreview from "@/assets/sweet-bite-preview.mp4"
@@ -210,16 +207,6 @@ const projects = [
   }
 ];
 
-// export function Projects() {
-//   const [filter, setFilter] = useState("All");
-
-//   const categories = ["All", ...new Set(projects.map((p) => p.category))];
-
-//   const filteredProjects =
-//     filter === "All"
-//       ? projects
-//       : projects.filter((project) => project.category === filter);
-
 export function Projects() {
   const [filter, setFilter] = useState("All");
 
@@ -229,33 +216,6 @@ export function Projects() {
     filter === "All"
       ? projects
       : projects.filter((project) => project.category === filter);
-
-  useEffect(() => {
-    const videos = document.querySelectorAll("video");
-
-    // Pause all videos initially
-    videos.forEach((video) => video.pause());
-
-    // Observe only visible videos
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.play();
-          } else {
-            entry.target.pause();
-          }
-        });
-      },
-      { threshold: 0.5 } // Play when 50% of the video is visible
-    );
-
-    videos.forEach((video) => observer.observe(video));
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [filter]); // Re-run when filter changes
 
   return (
     <section id="projects" className="section-padding bg-surface/30">
