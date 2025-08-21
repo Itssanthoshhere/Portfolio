@@ -208,15 +208,7 @@ const projects = [
 ];
 
 export function Projects() {
-  const [filter, setFilter] = useState("All");
-
-  const categories = ["All", ...new Set(projects.map((p) => p.category))];
-
-  const filteredProjects =
-    filter === "All"
-      ? projects
-      : projects.filter((project) => project.category === filter);
-
+  
   return (
     <section id="projects" className="section-padding bg-surface/30">
       <div className="container-custom">
@@ -230,21 +222,9 @@ export function Projects() {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex justify-center flex-wrap gap-4 mb-12 animate-fade-in">
-          {categories.map((cat) => (
-            <Button
-              key={cat}
-              variant={filter === cat ? "default" : "outline"}
-              onClick={() => setFilter(cat)}
-            >
-              {cat}
-            </Button>
-          ))}
-        </div>
-
+       
         <div className="grid lg:grid-cols-1 gap-12">
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <Card key={index} className="card-project overflow-hidden animate-slide-up">
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Project Image */}
