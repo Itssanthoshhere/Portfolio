@@ -10,7 +10,7 @@ import flavorapreview from "@/assets/flavora-preview.mp4"
 import sweetbitepreview from "@/assets/sweet-bite-preview.mp4"
 import restate from "@/assets/real-estate.mp4"
 import velvetPourPreview from "@/assets/velvetPourPreview.mp4"
-import flexHavenPreview from "@/assets/FlexHavenPreview.mp4";
+import flexHavenPreview from "@/assets/flexHavenPreview.mp4";
 
 const projects = [
   {
