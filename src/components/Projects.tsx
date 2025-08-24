@@ -2,7 +2,6 @@ import { ExternalLink, Github, Calendar, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
 import hvfProject from "@/assets/hvf-project.jpg";
 import rdyepreview from "@/assets/rdye-preview.mp4"
 import foodreview from "@/assets/food-preview.mp4"
