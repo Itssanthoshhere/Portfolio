@@ -11,6 +11,7 @@ import flavorapreview from "@/assets/flavora-preview.mp4"
 import sweetbitepreview from "@/assets/sweet-bite-preview.mp4"
 import restate from "@/assets/real-estate.mp4"
 import velvetPourPreview from "@/assets/velvetPourPreview.mp4"
+import flexHavenPreview from "@/assets/FlexHavenPreview.mp4";
 
 const projects = [
   {
@@ -123,6 +124,33 @@ const projects = [
   },
 
   {
+    title: "🏋🏼‍♂️ Flex Haven – Modern Gym & Fitness Website",
+    description: "A responsive multi-page fitness website built with HTML, CSS, and JavaScript, featuring dynamic navigation, smooth UI interactions, Swiper.js carousels, and mobile-first design.",
+    longDescription: "Flex Haven is a modern, responsive gym & fitness website designed to provide a professional online presence for fitness enthusiasts, trainers, and gyms. Built with HTML5, CSS3, and JavaScript, it includes dynamic navigation, Swiper.js carousels, a contact form, and interactive elements. The website demonstrates clean UI design, responsive layouts, and cross-browser compatibility, ensuring a smooth experience across devices.",
+    video: flexHavenPreview,
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Swiper.js"
+    ],
+    features: [
+      "Responsive navigation bar with mobile-friendly hamburger menu",
+      "Active link highlighting to indicate current section",
+      "Engaging hero and landing sections with modern fitness UI",
+      "Swiper.js carousels for trainers and class schedules",
+      "Dedicated Contact Page with Google Maps integration",
+      "Interactive contact form with submission feedback",
+      "Footer with newsletter signup and social media links",
+      "Cross-browser compatible, mobile-first responsive design"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Flex-Haven",
+    liveUrl: "https://flex-haven.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Web App"
+  },
+
+  {
     title: "Rdye 🚖 – Full Stack Cab Booking App",
     description: "A ride-booking mobile app built with React Native, Expo, Stripe, Google Maps, and PostgreSQL. Offers a smooth Uber-like experience with real-time tracking, secure payments, and user-friendly design.",
     longDescription: "Rdye is a full-featured ride-booking application that replicates the Uber experience using a modern tech stack. Built with React Native and Expo, it includes real-time map tracking, Stripe-based payments, secure authentication with Clerk, and PostgreSQL database hosted via NeonDB. It’s crafted with clean UI using NativeWind (Tailwind CSS for React Native) and offers an end-to-end cab booking experience on both Android and iOS devices. This project highlights scalable mobile app architecture, smooth animations, and production-level features.",
@@ -208,7 +236,7 @@ const projects = [
 ];
 
 export function Projects() {
-  
+
   return (
     <section id="projects" className="section-padding bg-surface/30">
       <div className="container-custom">
@@ -222,7 +250,7 @@ export function Projects() {
           </p>
         </div>
 
-       
+
         <div className="grid lg:grid-cols-1 gap-12">
           {projects.map((project, index) => (
             <Card key={index} className="card-project overflow-hidden animate-slide-up">

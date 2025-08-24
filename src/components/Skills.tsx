@@ -10,7 +10,7 @@ const skillCategories = [
     skills: [
       "React", "React Native", "Expo", "TypeScript", "JavaScript",
       "HTML5", "CSS3", "Tailwind CSS", "NativeWind", "Responsive Design",
-      "AOS Animations"
+      "React Three Fiber", "Next.js", "AOS Animations", "GSAP", "Swiper.js"
     ],
     color: "frontend"
   },
@@ -19,7 +19,7 @@ const skillCategories = [
     icon: Database,
     description: "Developing scalable server-side applications and APIs",
     skills: [
-      "Node.js", "Express", "PostgreSQL", "MySQL", "MongoDB", "PHP",
+      "Node.js", "Express", "Appwrite", "PostgreSQL", "MySQL", "MongoDB", "PHP",
       "Prisma ORM", "REST APIs", "Clerk Auth", "Geoapify", "Google Maps API"
     ],
     color: "backend"
@@ -30,7 +30,7 @@ const skillCategories = [
     description: "Development, collaboration, and deployment tools",
     skills: [
       "Git", "GitHub", "Figma", "Stripe Payments", "Netlify", "Vercel",
-      "Expo Go", "Vite", "XAMPP", "LaTeX"
+      "Expo Go", "Vite", "Prismic CMS", "Sentry", "XAMPP", "LaTeX"
     ],
     color: "tools"
   },
