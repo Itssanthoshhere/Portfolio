@@ -2,15 +2,24 @@ import { ExternalLink, Github, Calendar, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import hvfProject from "@/assets/hvf-project.jpg";
+
+import hvfPreview from "@/assets/hvf-preview.mp4";
+import hvfThumbnail from "@/assets/hvf-project.jpg";
 import rdyepreview from "@/assets/rdye-preview.mp4"
 import foodreview from "@/assets/food-preview.mp4"
+import sweetThumbnail from "@/assets/sweetThumbnail.png"
 import fizzi from "@/assets/fizzi-preview.mp4"
+import fizziThumbnail from "@/assets/fizzi-thumbnail.png"
 import flavorapreview from "@/assets/flavora-preview.mp4"
+import flavoraThumbnail from "@/assets/flavora-thumbnail.png"
 import sweetbitepreview from "@/assets/sweet-bite-preview.mp4"
 import restate from "@/assets/real-estate.mp4"
 import velvetPourPreview from "@/assets/velvetPourPreview.mp4"
+import velvetThumbnail from "@/assets/velvet-thumbnail.png"
 import flexHavenPreview from "@/assets/flexHavenPreview.mp4";
+import flexThumbnail from "@/assets/flexHaven-thumbnail.png"
+import suburbiaPreview from "@/assets/suburbiaPreview.mp4"
+import suburbiaThumbnail from "@/assets/suburbia-thumbnail.png"
 
 const projects = [
   {
@@ -18,6 +27,7 @@ const projects = [
     description: "Fully responsive bakery website featuring product showcase, testimonial section, and contact form. Built with HTML5, CSS3, and JavaScript with focus on user-friendly layout and cross-device compatibility.",
     longDescription: "An elegant and modern bakery website showcasing delicious products with beautiful imagery, customer testimonials, and seamless user experience across all devices.",
     video: sweetbitepreview,
+    image: sweetThumbnail,
     technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
     features: [
       "Beautiful product showcase with image galleries",
@@ -36,7 +46,8 @@ const projects = [
     title: "HVF e-Leave Portal – React Edition",
     description: "Web-based leave management system developed during In-Plant Training at HVF, Avadi. Built with React, TypeScript, Tailwind CSS, and Vite with modular component structure and reusable hooks.",
     longDescription: "A comprehensive leave management system designed for government sector use at Heavy Vehicles Factory (HVF), Avadi. Features secure authentication, role-based access control, leave tracking, and administrative approval workflows.",
-    image: hvfProject,
+    video: hvfPreview,
+    image: hvfThumbnail,
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Node.js"],
     features: [
       "Secure user authentication and role-based access",
@@ -56,6 +67,7 @@ const projects = [
     description: "Interactive 3D soda can animation website built with React Three Fiber, Next.js App Router, and Prismic CMS. A fun, fizzy, and fully responsive splash experience for products or portfolios.",
     longDescription: "Fizzi 🥤 is a visually immersive 3D soda can experience built with React Three Fiber and powered by Prismic CMS. Designed as a creative product splash or personal branding demo, it features animated UI, custom SVGs, and CMS-editable content. Leveraging Next.js App Router, the site delivers seamless routing, responsiveness, and performance — all wrapped in fizzy visual delight.",
     video: fizzi,
+    image: fizziThumbnail,
     technologies: ["React Three Fiber", "Next.js", "Prismic CMS", "Tailwind CSS", "JavaScript", "SVG"],
     features: [
       "3D soda can animations with React Three Fiber",
@@ -75,6 +87,7 @@ const projects = [
     description: "A sleek, fully responsive restaurant website built with HTML5, Tailwind CSS, and JavaScript. Features interactive menu filtering, smooth AOS animations, and a polished chef-inspired UI.",
     longDescription: "Flavor Fusion is a modern, mobile-friendly restaurant website designed to deliver an immersive dining experience online. Built with semantic HTML5, styled using Tailwind CSS for rapid responsive design, and enhanced with JavaScript for interactive features, it offers smooth AOS animations and intuitive navigation. Visitors can explore the menu with dynamic category-based filtering, enjoy scroll-triggered effects, and navigate effortlessly with a sticky header and back-to-top button. Optimized for performance and aesthetics, this project highlights clean UI, accessibility, and cross-device compatibility.",
     video: flavorapreview,
+    image: flavoraThumbnail,
     technologies: [
       "HTML5", "Tailwind CSS", "JavaScript", "AOS (Animate On Scroll)"
     ],
@@ -97,7 +110,8 @@ const projects = [
     title: "Velvet Pour 🍹 – Stunning GSAP Cocktail Website",
     description: "A scroll-driven, animated cocktail website built with React, GSAP, and Tailwind CSS. Features SplitText reveals, ScrollTrigger timelines, pinned sections, parallax scrolling, scroll-synced videos, image masking, and custom carousels.",
     longDescription: "Velvet Pour is a modern, interactive cocktail website built with React, GSAP, and Tailwind CSS. The project leverages advanced scroll-driven animations like SplitText reveals, ScrollTrigger timelines, pinned sections, parallax scrolling, scroll-synced video playback, image masking, and a fully customized carousel. Designed with responsive layouts and modular React components, it delivers a polished, cinematic, and immersive user experience. Ideal for exploring advanced GSAP animations and creating smooth, visually striking web interactions.",
-    video: velvetPourPreview, // MP4 video preview path
+    video: velvetPourPreview, 
+    image: velvetThumbnail,
     technologies: [
       "React", "GSAP", "Tailwind CSS", "Vite",
       "SplitText", "ScrollTrigger", "Parallax Scrolling",
@@ -127,6 +141,7 @@ const projects = [
     description: "A responsive multi-page fitness website built with HTML, CSS, and JavaScript, featuring dynamic navigation, smooth UI interactions, Swiper.js carousels, and mobile-first design.",
     longDescription: "Flex Haven is a modern, responsive gym & fitness website designed to provide a professional online presence for fitness enthusiasts, trainers, and gyms. Built with HTML5, CSS3, and JavaScript, it includes dynamic navigation, Swiper.js carousels, a contact form, and interactive elements. The website demonstrates clean UI design, responsive layouts, and cross-browser compatibility, ensuring a smooth experience across devices.",
     video: flexHavenPreview,
+    image: flexThumbnail,
     technologies: [
       "HTML5",
       "CSS3",
@@ -147,6 +162,38 @@ const projects = [
     liveUrl: "https://flex-haven.vercel.app/",
     duration: "August 2025",
     category: "Frontend Web App"
+  },
+
+  {
+    title: "🛹 Suburbia Skate – Interactive 3D Skateboard Website",
+    description: "A modern, interactive skateboard website with 3D animations using Next.js 15, TailwindCSS, Prismic CMS, and React Three Fiber. Built step by step with Slice Machine and GSAP for smooth animations.",
+    longDescription: "Suburbia Skate is an interactive skateboard website showcasing products and 3D experiences using React Three Fiber. Users can explore products, view 3D skateboards, and interact with animations powered by GSAP. The site is powered by Next.js 15, TailwindCSS, and Prismic CMS for easy content management, featuring modular components, smooth animations, and fully responsive design.",
+    video: suburbiaPreview,
+    image: suburbiaThumbnail,
+    technologies: [
+      "Next.js 15",
+      "React 19 (RC)",
+      "TypeScript 5",
+      "TailwindCSS 3.4",
+      "Prismic CMS",
+      "React Three Fiber",
+      "Drei",
+      "Three.js",
+      "GSAP",
+      "Matter.js"
+    ],
+    features: [
+      "Landing page with animated hero sections",
+      "Interactive 3D skateboard models with rotation and floating effects",
+      "Dynamic content managed via Prismic CMS",
+      "Custom animations powered by GSAP and React Three Fiber",
+      "Fully responsive design for desktop, tablet, and mobile",
+      "Modular and reusable UI components"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Suburbia-Skate",
+    liveUrl: "https://suburbia-skate.vercel.app/",
+    duration: "August 2025",
+    category: "3D Web Experience"
   },
 
   {
