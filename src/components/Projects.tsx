@@ -174,7 +174,7 @@ const projects = [
     title: "🛍️ Nike E-commerce w/ Devin AI",
     description: "A full-stack modern eCommerce app featuring product pages, cart & checkout with Stripe, authentication, PostgreSQL/Drizzle ORM backend, Zustand state management, and a clean Tailwind UI. Built collaboratively with Devin AI for seamless development.",
     longDescription: "Nike-style E-commerce is a full-stack modern shopping platform built with Next.js 15, TypeScript, and TailwindCSS, featuring a PostgreSQL backend via NeonDB with Drizzle ORM, and secure authentication powered by Better Auth. State management is handled with Zustand, while Stripe ensures smooth checkout flows. Designed with a clean and modular UI, the project was built step by step using Devin AI for AI-assisted development, ensuring scalability, developer productivity, and fast iteration.",
-    // video: nikePreview,
+    video: nikePreview,
     image: nikeThumbnail,
     technologies: [
       "Next.js 15",
