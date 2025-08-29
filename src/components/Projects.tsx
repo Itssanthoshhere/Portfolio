@@ -20,6 +20,8 @@ import flexHavenPreview from "@/assets/flexHavenPreview.mp4";
 import flexThumbnail from "@/assets/flexHaven-thumbnail.png"
 import suburbiaPreview from "@/assets/suburbiaPreview.mp4"
 import suburbiaThumbnail from "@/assets/suburbia-thumbnail.png"
+import nikePreview from "@/assets/nikePreview.mp4"
+import nikeThumbnail from "@/assets/nikeThumbnail.png"
 
 const projects = [
   {
@@ -110,7 +112,7 @@ const projects = [
     title: "Velvet Pour 🍹 – Stunning GSAP Cocktail Website",
     description: "A scroll-driven, animated cocktail website built with React, GSAP, and Tailwind CSS. Features SplitText reveals, ScrollTrigger timelines, pinned sections, parallax scrolling, scroll-synced videos, image masking, and custom carousels.",
     longDescription: "Velvet Pour is a modern, interactive cocktail website built with React, GSAP, and Tailwind CSS. The project leverages advanced scroll-driven animations like SplitText reveals, ScrollTrigger timelines, pinned sections, parallax scrolling, scroll-synced video playback, image masking, and a fully customized carousel. Designed with responsive layouts and modular React components, it delivers a polished, cinematic, and immersive user experience. Ideal for exploring advanced GSAP animations and creating smooth, visually striking web interactions.",
-    video: velvetPourPreview, 
+    video: velvetPourPreview,
     image: velvetThumbnail,
     technologies: [
       "React", "GSAP", "Tailwind CSS", "Vite",
@@ -134,34 +136,6 @@ const projects = [
     figmaUrl: "https://www.figma.com/design/LVdc2zP8j8ZEd4agVV0JVJ/Cocktail-GSAP-Website?node-id=2-2&t=7umyEDJMvJ1iyxmr-1",
     duration: "August 2025",
     category: "Frontend Website"
-  },
-
-  {
-    title: "🏋🏼‍♂️ Flex Haven – Modern Gym & Fitness Website",
-    description: "A responsive multi-page fitness website built with HTML, CSS, and JavaScript, featuring dynamic navigation, smooth UI interactions, Swiper.js carousels, and mobile-first design.",
-    longDescription: "Flex Haven is a modern, responsive gym & fitness website designed to provide a professional online presence for fitness enthusiasts, trainers, and gyms. Built with HTML5, CSS3, and JavaScript, it includes dynamic navigation, Swiper.js carousels, a contact form, and interactive elements. The website demonstrates clean UI design, responsive layouts, and cross-browser compatibility, ensuring a smooth experience across devices.",
-    video: flexHavenPreview,
-    image: flexThumbnail,
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Swiper.js"
-    ],
-    features: [
-      "Responsive navigation bar with mobile-friendly hamburger menu",
-      "Active link highlighting to indicate current section",
-      "Engaging hero and landing sections with modern fitness UI",
-      "Swiper.js carousels for trainers and class schedules",
-      "Dedicated Contact Page with Google Maps integration",
-      "Interactive contact form with submission feedback",
-      "Footer with newsletter signup and social media links",
-      "Cross-browser compatible, mobile-first responsive design"
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Flex-Haven",
-    liveUrl: "https://flex-haven.vercel.app/",
-    duration: "August 2025",
-    category: "Frontend Web App"
   },
 
   {
@@ -194,6 +168,71 @@ const projects = [
     liveUrl: "https://suburbia-skate.vercel.app/",
     duration: "August 2025",
     category: "3D Web Experience"
+  },
+
+  {
+    title: "🛍️ Nike E-commerce w/ Devin AI",
+    description: "A full-stack modern eCommerce app featuring product pages, cart & checkout with Stripe, authentication, PostgreSQL/Drizzle ORM backend, Zustand state management, and a clean Tailwind UI. Built collaboratively with Devin AI for seamless development.",
+    longDescription: "Nike-style E-commerce is a full-stack modern shopping platform built with Next.js 15, TypeScript, and TailwindCSS, featuring a PostgreSQL backend via NeonDB with Drizzle ORM, and secure authentication powered by Better Auth. State management is handled with Zustand, while Stripe ensures smooth checkout flows. Designed with a clean and modular UI, the project was built step by step using Devin AI for AI-assisted development, ensuring scalability, developer productivity, and fast iteration.",
+    // video: nikePreview,
+    image: nikeThumbnail,
+    technologies: [
+      "Next.js 15",
+      "TypeScript",
+      "TailwindCSS",
+      "Prismic (optional for content)",
+      "Better Auth",
+      "Drizzle ORM",
+      "PostgreSQL (Neon)",
+      "Stripe",
+      "Zustand",
+      "Devin AI",
+      "Cursor AI"
+    ],
+    features: [
+      "Landing page with smooth animations and brand showcase",
+      "Product listing with filters, sorting, and availability",
+      "Product details page with reviews and AI-enhanced descriptions",
+      "Shopping cart with Zustand state management",
+      "Secure checkout with Stripe integration",
+      "Authentication and user management via Better Auth",
+      "PostgreSQL database with Drizzle ORM schema",
+      "Responsive design for desktop, tablet, and mobile",
+      "Modular code architecture with reusable components",
+      "Built with Devin AI for AI-assisted software engineering"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Nike-Ecommerce",
+    liveUrl: "https://nike-ecommerce-black.vercel.app/",
+    duration: "September 2025",
+    category: "Full-Stack Web App"
+  },
+
+  {
+    title: "🏋🏼‍♂️ Flex Haven – Modern Gym & Fitness Website",
+    description: "A responsive multi-page fitness website built with HTML, CSS, and JavaScript, featuring dynamic navigation, smooth UI interactions, Swiper.js carousels, and mobile-first design.",
+    longDescription: "Flex Haven is a modern, responsive gym & fitness website designed to provide a professional online presence for fitness enthusiasts, trainers, and gyms. Built with HTML5, CSS3, and JavaScript, it includes dynamic navigation, Swiper.js carousels, a contact form, and interactive elements. The website demonstrates clean UI design, responsive layouts, and cross-browser compatibility, ensuring a smooth experience across devices.",
+    video: flexHavenPreview,
+    image: flexThumbnail,
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Swiper.js"
+    ],
+    features: [
+      "Responsive navigation bar with mobile-friendly hamburger menu",
+      "Active link highlighting to indicate current section",
+      "Engaging hero and landing sections with modern fitness UI",
+      "Swiper.js carousels for trainers and class schedules",
+      "Dedicated Contact Page with Google Maps integration",
+      "Interactive contact form with submission feedback",
+      "Footer with newsletter signup and social media links",
+      "Cross-browser compatible, mobile-first responsive design"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Flex-Haven",
+    liveUrl: "https://flex-haven.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Web App"
   },
 
   {
