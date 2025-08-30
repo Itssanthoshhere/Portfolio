@@ -22,6 +22,8 @@ import suburbiaPreview from "@/assets/suburbiaPreview.mp4"
 import suburbiaThumbnail from "@/assets/suburbia-thumbnail.png"
 import nikePreview from "@/assets/nikePreview.mp4"
 import nikeThumbnail from "@/assets/nikeThumbnail.png"
+import pastryPreview from "@/assets/pastryPreview.mp4"
+import pastryThumbnail from "@/assets/pastryThumbnail.png"
 
 const projects = [
   {
@@ -203,7 +205,7 @@ const projects = [
     ],
     githubUrl: "https://github.com/Itssanthoshhere/Nike-Ecommerce",
     liveUrl: "https://nike-ecommerce-black.vercel.app/",
-    duration: "September 2025",
+    duration: "August 2025",
     category: "Full-Stack Web App"
   },
 
@@ -233,6 +235,35 @@ const projects = [
     liveUrl: "https://flex-haven.vercel.app/",
     duration: "August 2025",
     category: "Frontend Web App"
+  },
+
+  {
+    title: "☕ Pastry World – Modern Café & Bakery Website",
+    description: "A stylish and responsive café & bakery website built with HTML, CSS, and JavaScript. Features interactive menu cards, booking form, smooth animations, and a mobile-first design to showcase café specialties.",
+    longDescription: "Pastry World is a modern, fully responsive café and bakery website designed with HTML5, CSS3, and JavaScript. It provides an elegant online presence for bakeries, coffee shops, and dessert cafés, with interactive features like menu cards, booking forms, and scroll-based animations. The site ensures mobile-first responsiveness, cross-browser compatibility, and smooth UI/UX, making it an engaging platform for customers to explore and connect with the brand.",
+    video: pastryPreview,
+    image: pastryThumbnail,
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Remix Icons",
+      "ScrollReveal.js"
+    ],
+    features: [
+      "Responsive navbar with hamburger menu for mobile",
+      "Engaging hero section with café branding",
+      "Popular menu section with styled cards and hover effects",
+      "Book a table form with interactive design",
+      "About Us section to highlight café story",
+      "Footer with social links and quick navigation",
+      "Smooth animations using ScrollReveal.js",
+      "Cross-browser compatibility and mobile-first design"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Pastry-World",
+    liveUrl: "https://pastry-world-ten.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Website"
   },
 
   {
