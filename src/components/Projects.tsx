@@ -24,6 +24,8 @@ import nikePreview from "@/assets/nikePreview.mp4"
 import nikeThumbnail from "@/assets/nikeThumbnail.png"
 import pastryPreview from "@/assets/pastryPreview.mp4"
 import pastryThumbnail from "@/assets/pastryThumbnail.png"
+import spicyPreview from "@/assets/spicyPreview.mp4"
+import spicyThumbnail from "@/assets/spicy-thumbnail.png"
 
 const projects = [
   {
@@ -264,6 +266,33 @@ const projects = [
     liveUrl: "https://pastry-world-ten.vercel.app/",
     duration: "August 2025",
     category: "Frontend Website"
+  },
+
+  {
+    title: "🌶️ Spicy Picy – Landing Page",
+    description: "A modern and responsive landing page for a spice brand, built with React, Tailwind CSS, and Vite. Features Hero, Banner, Products, About, Reviews, and Footer sections with smooth scrolling and interactive elements.",
+    longDescription: "Spicy Picy is a visually appealing, fully responsive landing page designed for a spice brand. Built with React and Tailwind CSS, it showcases products, highlights brand specialties, displays customer reviews, and provides a smooth scrolling experience. The project emphasizes clean UI, reusable React components, interactive cards, and a modern, maintainable codebase.",
+    video: spicyPreview,
+    image: spicyThumbnail, 
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Vite",
+      "JavaScript (ES6)"
+    ],
+    features: [
+      "Fully responsive desktop & mobile layout",
+      "Smooth scrolling navigation",
+      "Interactive Product and About cards with hover effects",
+      "Reviews section showing random customer testimonials",
+      "Fixed Navbar adapting while scrolling",
+      "Clean and modern UI with Tailwind CSS",
+      "Reusable React components for better maintainability"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Spicy-Picy",
+    liveUrl: "https://spicy-picy.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend Landing Page"
   },
 
   {
