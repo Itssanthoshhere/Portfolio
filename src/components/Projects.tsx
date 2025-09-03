@@ -26,6 +26,9 @@ import pastryPreview from "@/assets/pastryPreview.mp4"
 import pastryThumbnail from "@/assets/pastryThumbnail.png"
 import spicyPreview from "@/assets/spicyPreview.mp4"
 import spicyThumbnail from "@/assets/spicy-thumbnail.png"
+import cozynestPreview from "@/assets/cozynestPreview.mp4"
+import cozynestThumbnail from "@/assets/cozynest-thumbnail.png"
+
 
 const projects = [
   {
@@ -273,7 +276,7 @@ const projects = [
     description: "A modern and responsive landing page for a spice brand, built with React, Tailwind CSS, and Vite. Features Hero, Banner, Products, About, Reviews, and Footer sections with smooth scrolling and interactive elements.",
     longDescription: "Spicy Picy is a visually appealing, fully responsive landing page designed for a spice brand. Built with React and Tailwind CSS, it showcases products, highlights brand specialties, displays customer reviews, and provides a smooth scrolling experience. The project emphasizes clean UI, reusable React components, interactive cards, and a modern, maintainable codebase.",
     video: spicyPreview,
-    image: spicyThumbnail, 
+    image: spicyThumbnail,
     technologies: [
       "React",
       "Tailwind CSS",
@@ -296,10 +299,40 @@ const projects = [
   },
 
   {
+    title: "🛍️ CozyNest – eCommerce Landing Page",
+    description: "A modern and fully responsive eCommerce landing page built with HTML, Tailwind CSS, and vanilla JavaScript. Features product showcase, blog section, smooth interactions, and deployment on Vercel.",
+    longDescription: "CozyNest is a stylish and responsive eCommerce landing page created to showcase handmade decor. Built with HTML5, Tailwind CSS, and vanilla JavaScript, it demonstrates modern UI/UX principles with smooth interactions and responsive design. The project includes engaging sections like Hero, Product Grid, Blog, and Footer, along with a custom slider for product images. Deployed on Vercel, it ensures fast performance and reliable hosting.",
+    video: cozynestPreview, 
+    image: cozynestThumbnail, 
+    technologies: [
+      "HTML5",
+      "Tailwind CSS",
+      "JavaScript (ES6)",
+      "Vercel"
+    ],
+    features: [
+      "Fully responsive design across mobile, tablet, and desktop",
+      "Interactive Navbar with mobile menu toggle",
+      "Modern UI styled with Tailwind CSS utility classes",
+      "Smooth hover effects and transition animations",
+      "Product showcase section with advanced grid layout",
+      "Blog section highlighting handmade decor insights",
+      "Parallax background effects for immersive visuals",
+      "Custom image slider with auto-slide functionality using vanilla JS",
+      "Footer with contact details, social links, and copyright",
+      "Live deployment on Vercel for fast hosting"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/CozyNest-ecommerce",
+    liveUrl: "https://cozynest-ecommerce.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend Landing Page"
+  },
+
+  {
     title: "Rdye 🚖 – Full Stack Cab Booking App",
     description: "A ride-booking mobile app built with React Native, Expo, Stripe, Google Maps, and PostgreSQL. Offers a smooth Uber-like experience with real-time tracking, secure payments, and user-friendly design.",
     longDescription: "Rdye is a full-featured ride-booking application that replicates the Uber experience using a modern tech stack. Built with React Native and Expo, it includes real-time map tracking, Stripe-based payments, secure authentication with Clerk, and PostgreSQL database hosted via NeonDB. It’s crafted with clean UI using NativeWind (Tailwind CSS for React Native) and offers an end-to-end cab booking experience on both Android and iOS devices. This project highlights scalable mobile app architecture, smooth animations, and production-level features.",
-    video: rdyepreview, // MP4 video preview path
+    video: rdyepreview,
     technologies: [
       "React Native", "Expo", "PostgreSQL", "Stripe",
       "Google Maps API", "Prisma", "Clerk Auth",
