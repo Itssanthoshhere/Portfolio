@@ -28,6 +28,8 @@ import spicyPreview from "@/assets/spicyPreview.mp4"
 import spicyThumbnail from "@/assets/spicy-thumbnail.png"
 import cozynestPreview from "@/assets/cozynestPreview.mp4"
 import cozynestThumbnail from "@/assets/cozynest-thumbnail.png"
+import brewblissPreview from "@/assets/brewblissPreview.mp4"
+import brewblissThumbnail from "@/assets/brewblissThumbnail.png"
 
 
 const projects = [
@@ -302,8 +304,8 @@ const projects = [
     title: "🛍️ CozyNest – eCommerce Landing Page",
     description: "A modern and fully responsive eCommerce landing page built with HTML, Tailwind CSS, and vanilla JavaScript. Features product showcase, blog section, smooth interactions, and deployment on Vercel.",
     longDescription: "CozyNest is a stylish and responsive eCommerce landing page created to showcase handmade decor. Built with HTML5, Tailwind CSS, and vanilla JavaScript, it demonstrates modern UI/UX principles with smooth interactions and responsive design. The project includes engaging sections like Hero, Product Grid, Blog, and Footer, along with a custom slider for product images. Deployed on Vercel, it ensures fast performance and reliable hosting.",
-    video: cozynestPreview, 
-    image: cozynestThumbnail, 
+    video: cozynestPreview,
+    image: cozynestThumbnail,
     technologies: [
       "HTML5",
       "Tailwind CSS",
@@ -326,6 +328,37 @@ const projects = [
     liveUrl: "https://cozynest-ecommerce.vercel.app/",
     duration: "September 2025",
     category: "Frontend Landing Page"
+  },
+
+  {
+    title: "☕ Brew Bliss – Premium Coffee Experience",
+    description: "A modern, fully responsive coffee shop website built with HTML, CSS, and JavaScript. Features a clean UI, interactive menu, testimonials slider, and smooth user experience.",
+    longDescription: "Brew Bliss is a stylish and responsive coffee shop website designed to showcase premium coffee experiences and menu offerings. Developed with HTML, CSS, and vanilla JavaScript, it features an engaging Hero section, interactive menu categories, customer testimonials with Swiper.js, a gallery showcase, and a contact form. The project highlights modern UI/UX principles, smooth animations, mobile responsiveness, and fast-loading performance.",
+    video: brewblissPreview, 
+    image: brewblissThumbnail, 
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6)",
+      "Swiper.js",
+      "Font Awesome"
+    ],
+    features: [
+      "Fully responsive design across devices",
+      "Interactive Navbar with hamburger menu",
+      "Smooth hover effects and CSS animations",
+      "Comprehensive Menu for beverages and desserts",
+      "Customer Testimonials with Swiper slider",
+      "Gallery section showcasing coffee shop ambiance",
+      "Contact form for inquiries",
+      "Social media integration (Facebook, Instagram, Twitter)",
+      "Privacy & Refund Policies included",
+      "Fast loading and optimized performance"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Brew-Bliss",
+    liveUrl: "https://brew-bliss-five.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend Web Development"
   },
 
   {
