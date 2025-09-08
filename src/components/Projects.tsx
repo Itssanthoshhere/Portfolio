@@ -30,6 +30,8 @@ import cozynestPreview from "@/assets/cozynestPreview.mp4"
 import cozynestThumbnail from "@/assets/cozynest-thumbnail.png"
 import brewblissPreview from "@/assets/brewblissPreview.mp4"
 import brewblissThumbnail from "@/assets/brewblissThumbnail.png"
+import k72Preview from "@/assets/k72Preview.mp4"
+import k72Thumbnail from "@/assets/k72Thumbail.jpg"
 
 
 const projects = [
@@ -334,8 +336,8 @@ const projects = [
     title: "☕ Brew Bliss – Premium Coffee Experience",
     description: "A modern, fully responsive coffee shop website built with HTML, CSS, and JavaScript. Features a clean UI, interactive menu, testimonials slider, and smooth user experience.",
     longDescription: "Brew Bliss is a stylish and responsive coffee shop website designed to showcase premium coffee experiences and menu offerings. Developed with HTML, CSS, and vanilla JavaScript, it features an engaging Hero section, interactive menu categories, customer testimonials with Swiper.js, a gallery showcase, and a contact form. The project highlights modern UI/UX principles, smooth animations, mobile responsiveness, and fast-loading performance.",
-    video: brewblissPreview, 
-    image: brewblissThumbnail, 
+    video: brewblissPreview,
+    image: brewblissThumbnail,
     technologies: [
       "HTML5",
       "CSS3",
@@ -359,6 +361,32 @@ const projects = [
     liveUrl: "https://brew-bliss-five.vercel.app/",
     duration: "September 2025",
     category: "Frontend Web Development"
+  },
+
+  {
+    title: "⚡ K72 Clone – Animated Creative Agency Website",
+    description: "A modern and fully responsive creative agency clone built with React, GSAP, TailwindCSS, and Vite. Features immersive animations, video backgrounds, and storytelling-inspired layouts.",
+    longDescription: "K72 Clone is a sleek and animated web project inspired by the K72 Creative Agency website. It showcases smooth GSAP-powered animations, autoplay video backgrounds, bold typography, and a clean, minimal aesthetic. Built with React, TailwindCSS, and Vite, it delivers an immersive user experience and highlights modern web animation techniques. This project emphasizes responsiveness, performance optimization, and creative web storytelling for agency-style websites.",
+    video: k72Preview, 
+    image: k72Thumbnail, 
+    technologies: [
+      "React",
+      "GSAP",
+      "TailwindCSS",
+      "Vite"
+    ],
+    features: [
+      "Hero section with autoplay video background",
+      "GSAP-powered animations and scroll effects",
+      "Responsive layouts for desktop and mobile",
+      "Bold typography and storytelling sections",
+      "Creative agency-inspired design",
+      "Optimized performance with Vite bundling"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/k72",
+    liveUrl: "https://k72-spark.vercel.app/",
+    duration: "September 2025",
+    category: "Animated Website"
   },
 
   {
