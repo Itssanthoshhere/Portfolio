@@ -32,6 +32,8 @@ import brewblissPreview from "@/assets/brewblissPreview.mp4"
 import brewblissThumbnail from "@/assets/brewblissThumbnail.png"
 import k72Preview from "@/assets/k72Preview.mp4"
 import k72Thumbnail from "@/assets/k72Thumbail.jpg"
+import chugPreview from "@/assets/chugPreview.mp4"
+import chugThumbnail from "@/assets/chugThumbnail.png"
 
 
 const projects = [
@@ -276,6 +278,31 @@ const projects = [
   },
 
   {
+    title: "🥛 Chug SPYLT – Awwwards-Inspired Interactive Website",
+    description: "An immersive interactive website built with React 19, Tailwind CSS v4, and GSAP. Features smooth parallax scrolling, clip-path animations, and Awwwards-style text reveals.",
+    longDescription: "Chug SPYLT is a stunning interactive web experience inspired by Awwwards’ finest creative projects. Built with React 19, Tailwind CSS v4, and GSAP, it leverages ScrollTrigger and ScrollSmoother for fluid animations, parallax effects, and storytelling-driven layouts. This project showcases advanced animation techniques like layered GSAP timelines, clip-path transitions, and text reveal effects, all wrapped in a responsive and high-performance design. Deployed on Vercel, Chug SPYLT blends creativity, motion design, and technical mastery into one showcase site.",
+    video: chugPreview, 
+    image: chugThumbnail, 
+    technologies: [
+      "React 19",
+      "Tailwind CSS v4",
+      "GSAP"
+    ],
+    features: [
+      "Parallax scrolling with smooth depth effects",
+      "Advanced clip-path animations",
+      "ScrollTrigger & ScrollSmoother for dynamic interactions",
+      "Awwwards-style text reveal animations",
+      "Layered GSAP timelines for immersive storytelling",
+      "Fully responsive design optimized for mobile and desktop"
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Chug-SPYLT",
+    liveUrl: "https://chug-spylt.vercel.app/",
+    duration: "September 2025",
+    category: "Interactive Website"
+  },
+
+  {
     title: "🌶️ Spicy Picy – Landing Page",
     description: "A modern and responsive landing page for a spice brand, built with React, Tailwind CSS, and Vite. Features Hero, Banner, Products, About, Reviews, and Footer sections with smooth scrolling and interactive elements.",
     longDescription: "Spicy Picy is a visually appealing, fully responsive landing page designed for a spice brand. Built with React and Tailwind CSS, it showcases products, highlights brand specialties, displays customer reviews, and provides a smooth scrolling experience. The project emphasizes clean UI, reusable React components, interactive cards, and a modern, maintainable codebase.",
@@ -367,8 +394,8 @@ const projects = [
     title: "⚡ K72 Clone – Animated Creative Agency Website",
     description: "A modern and fully responsive creative agency clone built with React, GSAP, TailwindCSS, and Vite. Features immersive animations, video backgrounds, and storytelling-inspired layouts.",
     longDescription: "K72 Clone is a sleek and animated web project inspired by the K72 Creative Agency website. It showcases smooth GSAP-powered animations, autoplay video backgrounds, bold typography, and a clean, minimal aesthetic. Built with React, TailwindCSS, and Vite, it delivers an immersive user experience and highlights modern web animation techniques. This project emphasizes responsiveness, performance optimization, and creative web storytelling for agency-style websites.",
-    video: k72Preview, 
-    image: k72Thumbnail, 
+    video: k72Preview,
+    image: k72Thumbnail,
     technologies: [
       "React",
       "GSAP",
