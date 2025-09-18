@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @layer base {
   :root {
@@ -57,16 +56,35 @@
     --ring: 174 62% 47%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 25% 27%), hsl(215 25% 35%));
-    --gradient-accent: linear-gradient(135deg, hsl(174 62% 47%), hsl(174 62% 37%));
-    --gradient-hero: linear-gradient(135deg, hsl(215 25% 27%) 0%, hsl(174 62% 47%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(215 20% 98%) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(215 25% 27%),
+      hsl(215 25% 35%)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(174 62% 47%),
+      hsl(174 62% 37%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(215 25% 27%) 0%,
+      hsl(174 62% 47%) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(0 0% 100%) 0%,
+      hsl(215 20% 98%) 100%
+    );
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(215 25% 27% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1), 0 2px 4px -1px hsl(215 25% 27% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1), 0 4px 6px -2px hsl(215 25% 27% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(215 25% 27% / 0.1), 0 10px 10px -5px hsl(215 25% 27% / 0.04);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 27% / 0.1),
+      0 2px 4px -1px hsl(215 25% 27% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 27% / 0.1),
+      0 4px 6px -2px hsl(215 25% 27% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 27% / 0.1),
+      0 10px 10px -5px hsl(215 25% 27% / 0.04);
     --shadow-glow: 0 0 40px hsl(174 62% 47% / 0.3);
 
     /* Animation & Transitions */
@@ -94,13 +112,17 @@
 
   .dark {
     /* Dark Mode - Rich Dark Blue/Slate Background */
-    --background: 215 28% 17%;
+    /* --background: 215 28% 17%; */
+    --background: 220 15% 12%;
     --foreground: 213 31% 91%;
-    --surface: 215 25% 20%;
-    --surface-elevated: 215 22% 23%;
+    /* --surface: 215 25% 20%; */
+    --surface: 220 15% 18%; 
+    /* --surface-elevated: 215 22% 23%; */
+    --surface-elevated: 220 15% 22%;
 
     /* Card & Container Colors */
-    --card: 215 22% 23%;
+    --card: 220 15% 18%;
+
     --card-foreground: 213 31% 91%;
 
     /* Popover Colors */
@@ -143,16 +165,35 @@
     --ring: 174 62% 47%;
 
     /* Dark Mode Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(215 28% 17%), hsl(215 25% 20%));
-    --gradient-accent: linear-gradient(135deg, hsl(174 62% 47%), hsl(174 62% 54%));
-    --gradient-hero: linear-gradient(135deg, hsl(215 28% 17%) 0%, hsl(174 62% 47%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(215 22% 23%) 0%, hsl(215 25% 26%) 100%);
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(215 28% 17%),
+      hsl(215 25% 20%)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(174 62% 47%),
+      hsl(174 62% 54%)
+    );
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(215 28% 17%) 0%,
+      hsl(174 62% 47%) 100%
+    );
+    --gradient-card: linear-gradient(
+      145deg,
+      hsl(215 22% 23%) 0%,
+      hsl(215 25% 26%) 100%
+    );
 
     /* Dark Mode Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(215 28% 5% / 0.5);
-    --shadow-md: 0 4px 6px -1px hsl(215 28% 5% / 0.6), 0 2px 4px -1px hsl(215 28% 5% / 0.4);
-    --shadow-lg: 0 10px 15px -3px hsl(215 28% 5% / 0.7), 0 4px 6px -2px hsl(215 28% 5% / 0.5);
-    --shadow-xl: 0 20px 25px -5px hsl(215 28% 5% / 0.8), 0 10px 10px -5px hsl(215 28% 5% / 0.6);
+    --shadow-md: 0 4px 6px -1px hsl(215 28% 5% / 0.6),
+      0 2px 4px -1px hsl(215 28% 5% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(215 28% 5% / 0.7),
+      0 4px 6px -2px hsl(215 28% 5% / 0.5);
+    --shadow-xl: 0 20px 25px -5px hsl(215 28% 5% / 0.8),
+      0 10px 10px -5px hsl(215 28% 5% / 0.6);
     --shadow-glow: 0 0 40px hsl(174 62% 47% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -183,19 +224,25 @@
 @layer components {
   /* Hero Button Variants */
   .btn-hero {
-    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-hover)));
+    background: linear-gradient(
+      135deg,
+      hsl(var(--accent)),
+      hsl(var(--accent-hover))
+    );
     color: hsl(var(--accent-foreground));
     font-weight: 600;
     padding: 1rem 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 10px 15px -3px hsl(var(--accent) / 0.1), 0 4px 6px -2px hsl(var(--accent) / 0.05);
+    box-shadow: 0 10px 15px -3px hsl(var(--accent) / 0.1),
+      0 4px 6px -2px hsl(var(--accent) / 0.05);
     border: 1px solid hsl(var(--accent) / 0.2);
     backdrop-filter: blur(4px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .btn-hero:hover {
-    box-shadow: 0 20px 25px -5px hsl(var(--accent) / 0.1), 0 10px 10px -5px hsl(var(--accent) / 0.04);
+    box-shadow: 0 20px 25px -5px hsl(var(--accent) / 0.1),
+      0 10px 10px -5px hsl(var(--accent) / 0.04);
     transform: scale(1.05);
   }
 
@@ -206,7 +253,8 @@
     font-weight: 600;
     padding: 1rem 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
+    box-shadow: 0 4px 6px -1px hsl(var(--primary) / 0.1),
+      0 2px 4px -1px hsl(var(--primary) / 0.06);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -214,36 +262,49 @@
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
     transform: scale(1.05);
-    box-shadow: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
+    box-shadow: 0 10px 15px -3px hsl(var(--primary) / 0.1),
+      0 4px 6px -2px hsl(var(--primary) / 0.05);
   }
 
   /* Card Variants */
   .card-elevated {
-    background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--surface)) 100%);
+    background: linear-gradient(
+      145deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--surface)) 100%
+    );
     border: 1px solid hsl(var(--border) / 0.5);
     border-radius: 1rem;
-    box-shadow: 0 10px 15px -3px hsl(var(--foreground) / 0.1), 0 4px 6px -2px hsl(var(--foreground) / 0.05);
+    box-shadow: 0 10px 15px -3px hsl(var(--foreground) / 0.1),
+      0 4px 6px -2px hsl(var(--foreground) / 0.05);
     backdrop-filter: blur(4px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .card-elevated:hover {
-    box-shadow: 0 20px 25px -5px hsl(var(--foreground) / 0.1), 0 10px 10px -5px hsl(var(--foreground) / 0.04);
+    box-shadow: 0 20px 25px -5px hsl(var(--foreground) / 0.1),
+      0 10px 10px -5px hsl(var(--foreground) / 0.04);
     transform: scale(1.02);
   }
 
   .card-project {
-    background: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--surface)) 100%);
+    background: linear-gradient(
+      145deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--surface)) 100%
+    );
     border: 1px solid hsl(var(--border) / 0.5);
     border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px hsl(var(--foreground) / 0.1), 0 2px 4px -1px hsl(var(--foreground) / 0.06);
+    box-shadow: 0 4px 6px -1px hsl(var(--foreground) / 0.1),
+      0 2px 4px -1px hsl(var(--foreground) / 0.06);
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .card-project:hover {
-    box-shadow: 0 20px 25px -5px hsl(var(--foreground) / 0.1), 0 10px 10px -5px hsl(var(--foreground) / 0.04);
+    box-shadow: 0 20px 25px -5px hsl(var(--foreground) / 0.1),
+      0 10px 10px -5px hsl(var(--foreground) / 0.04);
     transform: scale(1.03);
   }
 
@@ -274,7 +335,11 @@
 
   /* Text Gradients */
   .text-gradient-primary {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)),
+      hsl(var(--accent))
+    );
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
