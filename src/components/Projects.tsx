@@ -12,7 +12,7 @@ import fizzi from "@/assets/fizzi-preview.mp4";
 import fizziThumbnail from "@/assets/fizzi-thumbnail.png";
 import flavorapreview from "@/assets/flavora-preview.mp4";
 import flavoraThumbnail from "@/assets/flavora-thumbnail.png";
-import sweetbitepreview from "@/assets/sweet-bite-preview.mp4";
+import sweetbitepreview from "@/assets/sweetPreview2.mp4";
 import restate from "@/assets/real-estate.mp4";
 import velvetPourPreview from "@/assets/velvetPourPreview.mp4";
 import velvetThumbnail from "@/assets/velvet-thumbnail.png";
@@ -36,6 +36,8 @@ import chugPreview from "@/assets/chugPreview.mp4";
 import chugThumbnail from "@/assets/chugThumbnail.png";
 import nimbusPreview from "@/assets/nimbusPreview.mp4";
 import nimbusThumbnail from "@/assets/nimbusThumbnail.jpg";
+import beePreview from "@/assets/beePreview.mp4";
+import beeThumbnail from "@/assets/beeThumbnail.png";
 
 const projects = [
   {
@@ -369,6 +371,29 @@ const projects = [
     liveUrl: "https://nimbus-keyboard-3-d.vercel.app/",
     duration: "September 2025",
     category: "Full-Stack Web App",
+  },
+
+  {
+    title: "Demon Bee 3D 🐝 – Interactive 3D Web Experience",
+    description:
+      "A visually immersive 3D web project featuring animated Demon Bee elements, layered backgrounds, and smooth GSAP & Three.js animations with responsive design.",
+    longDescription:
+      "Demon Bee 3D is an interactive web experience built with HTML, CSS, JavaScript, Three.js, and GSAP. Users can explore animated Demon Bee elements with smooth transitions and layered backgrounds, creating a visually engaging and responsive website. The project demonstrates custom 3D modeling, dynamic animations, and responsive layouts suitable for desktop and mobile devices.",
+    video: beePreview, 
+    image: beeThumbnail, 
+    technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "GSAP"],
+    features: [
+      "Interactive 3D Demon Bee animations",
+      "Layered dynamic backgrounds for depth",
+      "Responsive design for desktop, tablet, and mobile",
+      "Smooth motion animations with GSAP",
+      "Custom fonts integrated via Google/CDN",
+      "Lightweight and performance-optimized",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Demon-Bee-3D",
+    liveUrl: "https://demon-bee-3d.vercel.app/",
+    duration: "September 2025",
+    category: "3D Web Project",
   },
 
   {
