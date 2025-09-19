@@ -38,6 +38,8 @@ import nimbusPreview from "@/assets/nimbusPreview.mp4";
 import nimbusThumbnail from "@/assets/nimbusThumbnail.jpg";
 import beePreview from "@/assets/beePreview.mp4";
 import beeThumbnail from "@/assets/beeThumbnail.png";
+import rayvePreview from "@/assets/rayvePreview.mp4";
+import rayveThumbnail from "@/assets/rayveThumbnail.png";
 
 const projects = [
   {
@@ -379,8 +381,8 @@ const projects = [
       "A visually immersive 3D web project featuring animated Demon Bee elements, layered backgrounds, and smooth GSAP & Three.js animations with responsive design.",
     longDescription:
       "Demon Bee 3D is an interactive web experience built with HTML, CSS, JavaScript, Three.js, and GSAP. Users can explore animated Demon Bee elements with smooth transitions and layered backgrounds, creating a visually engaging and responsive website. The project demonstrates custom 3D modeling, dynamic animations, and responsive layouts suitable for desktop and mobile devices.",
-    video: beePreview, 
-    image: beeThumbnail, 
+    video: beePreview,
+    image: beeThumbnail,
     technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "GSAP"],
     features: [
       "Interactive 3D Demon Bee animations",
@@ -394,6 +396,29 @@ const projects = [
     liveUrl: "https://demon-bee-3d.vercel.app/",
     duration: "September 2025",
     category: "3D Web Project",
+  },
+
+  {
+    title: "Rayve 🕶️ – Animated Modern Landing Page",
+    description:
+      "A sleek and interactive landing page with animated text, dynamic backgrounds, and smooth visual effects using HTML, CSS, JavaScript, GSAP, and Shery.js. Delivers an engaging, modern web presentation experience.",
+    longDescription:
+      "Rayve is a visually engaging landing page project that combines interactive hero sections, dynamic backgrounds, and smooth animations using GSAP and Shery.js. It offers immersive effects, responsive design for all devices, and a modern aesthetic suitable for showcasing products, portfolios, or digital experiences. This project demonstrates advanced front-end animation techniques, creative typography, and interactive web design principles.",
+    video: rayvePreview, 
+    image: rayveThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Shery.js"],
+    features: [
+      "Animated hero text with smooth GSAP transitions",
+      "Dynamic multi-image background effects using Shery.js",
+      "Interactive buttons with hover effects",
+      "Responsive design for desktop",
+      "Custom fonts and modern typography",
+      "Easy customization of animations and backgrounds",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Rayve",
+    liveUrl: "https://rayve-eta.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend Web Project",
   },
 
   {
