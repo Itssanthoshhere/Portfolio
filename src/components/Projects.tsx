@@ -40,6 +40,8 @@ import beePreview from "@/assets/beePreview.mp4";
 import beeThumbnail from "@/assets/beeThumbnail.png";
 import rayvePreview from "@/assets/rayvePreview.mp4";
 import rayveThumbnail from "@/assets/rayveThumbnail.png";
+import magmaPreview from "@/assets/magmaPreview.mp4";
+import magmaThumbnail from "@/assets/magmaThumbnail.jpg";
 
 const projects = [
   {
@@ -404,7 +406,7 @@ const projects = [
       "A sleek and interactive landing page with animated text, dynamic backgrounds, and smooth visual effects using HTML, CSS, JavaScript, GSAP, and Shery.js. Delivers an engaging, modern web presentation experience.",
     longDescription:
       "Rayve is a visually engaging landing page project that combines interactive hero sections, dynamic backgrounds, and smooth animations using GSAP and Shery.js. It offers immersive effects, responsive design for all devices, and a modern aesthetic suitable for showcasing products, portfolios, or digital experiences. This project demonstrates advanced front-end animation techniques, creative typography, and interactive web design principles.",
-    video: rayvePreview, 
+    video: rayvePreview,
     image: rayveThumbnail,
     technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Shery.js"],
     features: [
@@ -419,6 +421,29 @@ const projects = [
     liveUrl: "https://rayve-eta.vercel.app/",
     duration: "September 2025",
     category: "Frontend Web Project",
+  },
+
+  {
+    title: "Magma 🔥 – Interactive Web3 Real Estate Landing Page",
+    description:
+      "A sleek, modern landing page with 14 scrollable sections, animated hero, dynamic visuals, scroll-triggered effects, and social call-to-actions built using HTML, CSS, JavaScript, GSAP, and Locomotive Scroll.",
+    longDescription:
+      "Magma is a Web3-inspired interactive real estate landing page featuring hero sections, digital twin explanation, blogs, featured press, CTAs, and social links across 14 pages. It leverages GSAP for animations and Locomotive Scroll for smooth scroll-triggered effects, providing an immersive and visually engaging user experience. Perfect for portfolio demos, digital agencies, or Web3 project showcases, it highlights modern design, responsive layout, and interactive animations.",
+    video: magmaPreview, 
+    image: magmaThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Locomotive Scroll"],
+    features: [
+      "Animated hero section with text and video background",
+      "14 scrollable sections including CTA, blogs, and featured press",
+      "Smooth scroll and parallax effects via Locomotive Scroll",
+      "Interactive buttons and social links with hover effects",
+      "Responsive design for desktop, tablet, and mobile",
+      "Modern typography and clean layout inspired by Magma website",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Twinverse",
+    liveUrl: "https://twinverse-magma.vercel.app/",
+    duration: "September 2025",
+    category: "Interactive Landing Page",
   },
 
   {
