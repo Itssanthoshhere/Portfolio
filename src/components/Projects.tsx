@@ -42,6 +42,10 @@ import rayvePreview from "@/assets/rayvePreview.mp4";
 import rayveThumbnail from "@/assets/rayveThumbnail.png";
 import magmaPreview from "@/assets/magmaPreview.mp4";
 import magmaThumbnail from "@/assets/magmaThumbnail.jpg";
+import cinemaPreview from "@/assets/cinemaPreview.mp4";
+import cinemaThumbnail from "@/assets/cinemaThumbnail.png";
+import chessPreview from "@/assets/ChessPreview.mp4";
+import chessThumbnail from "@/assets/chessThumbnail.png";
 
 const projects = [
   {
@@ -339,6 +343,68 @@ const projects = [
   },
 
   {
+    title: "🎬 Cinema Seat Booking – Interactive React Component",
+    description:
+      "A modern and responsive seat booking system built with React.js and TailwindCSS. Features dynamic seat layouts, categories, pricing, and booking flow.",
+    longDescription:
+      "Cinema Seat Booking is an interactive and customizable React component designed for cinema halls, theaters, and event booking platforms. It supports seat selection with categories like Regular, Premium, and VIP, dynamic pricing, booking summaries, aisle separation, and booked seat management. Built with React.js and TailwindCSS, it provides a responsive, user-friendly experience. Developers can easily customize seat layouts, categories, pricing, and booking callbacks, making it ideal for production-level applications.",
+    image: cinemaThumbnail,
+    video: cinemaPreview,
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript (ES6+)",
+      "Vite / CRA",
+    ],
+    features: [
+      "Dynamic seat map with rows, seats per row, and aisle separation",
+      "Customizable seat categories (Regular, Premium, VIP)",
+      "Booking summary with selected seats, seat count, and total price",
+      "Booked seat handling with disabled states",
+      "Interactive UI with click-to-select animations",
+      "Responsive design across devices",
+      "Inline notifications for success/error",
+      "Post-booking status showing booked seat IDs",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Cinema-Seat-Booking",
+    liveUrl: "https://cinemaseatbooking.vercel.app/",
+    duration: "September 2025",
+    category: "React Component / UI Project",
+  },
+
+  {
+    title: "♟️ Real-Time Chess Game – Multiplayer Online Chess",
+    description:
+      "A real-time multiplayer chess game with drag-and-drop pieces, live updates via Socket.io, board flipping, and move validation using chess.js. Perfect for playing online with friends or spectating games.",
+    longDescription:
+      "Real-Time Chess Game is an interactive multiplayer chess application built with Node.js, Express, Socket.io, and TailwindCSS. It features drag-and-drop piece movement, real-time board updates for players and spectators, automatic board flipping for black player, and move validation using chess.js. The project emphasizes smooth UI interactions, responsive design, and real-time game synchronization for online chess enthusiasts.",
+    video: chessPreview,
+    image: chessThumbnail, 
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "Socket.io",
+      "chess.js",
+      "TailwindCSS",
+      "JavaScript (ES6+)",
+    ],
+    features: [
+      "Real-time multiplayer chess gameplay",
+      "Drag-and-drop piece movement",
+      "Spectator mode to watch games live",
+      "Automatic board flipping for black player",
+      "Move validation using chess.js",
+      "Responsive design for desktop and tablet",
+      "Customizable board size and styling",
+      "Live board updates for all connected clients",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Real-Time-Chess-Game",
+    liveUrl: "", // Add live demo URL if deployed
+    duration: "September 2025",
+    category: "Full-Stack Web App",
+  },
+
+  {
     title: "Nimbus Keyboards ⌨️ – 3D Interactive E-Commerce Showcase",
     description:
       "An immersive 3D keyboard showcase built with Next.js, TailwindCSS, Prismic CMS, and React Three Fiber. Features GSAP animations, Slice Machine-driven content, and Stripe-powered payments.",
@@ -429,7 +495,7 @@ const projects = [
       "A sleek, modern landing page with 14 scrollable sections, animated hero, dynamic visuals, scroll-triggered effects, and social call-to-actions built using HTML, CSS, JavaScript, GSAP, and Locomotive Scroll.",
     longDescription:
       "Magma is a Web3-inspired interactive real estate landing page featuring hero sections, digital twin explanation, blogs, featured press, CTAs, and social links across 14 pages. It leverages GSAP for animations and Locomotive Scroll for smooth scroll-triggered effects, providing an immersive and visually engaging user experience. Perfect for portfolio demos, digital agencies, or Web3 project showcases, it highlights modern design, responsive layout, and interactive animations.",
-    video: magmaPreview, 
+    video: magmaPreview,
     image: magmaThumbnail,
     technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Locomotive Scroll"],
     features: [
