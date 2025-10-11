@@ -34,7 +34,7 @@ const socialLinks = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    url: "https://linkedin.com/in/santhoshvs",
+    url: "https://www.linkedin.com/in/thesanthoshvs/",
     color: "accent"
   },
   {

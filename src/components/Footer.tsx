@@ -33,7 +33,7 @@ export function Footer() {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/santhoshvs" 
+                  href="https://www.linkedin.com/in/thesanthoshvs/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"

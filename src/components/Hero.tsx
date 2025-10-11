@@ -65,7 +65,7 @@ export function Hero() {
             {/* Social Links */}
             <div className="flex gap-4 justify-center lg:justify-start">
               <a
-                href="https://linkedin.com/in/santhoshvs"
+                href="https://www.linkedin.com/in/thesanthoshvs/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-surface border border-border/50 hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110 hover:shadow-glow"
