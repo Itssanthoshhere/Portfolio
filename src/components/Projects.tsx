@@ -46,6 +46,8 @@ import cinemaPreview from "@/assets/cinemaPreview.mp4";
 import cinemaThumbnail from "@/assets/cinemaThumbnail.png";
 import chessPreview from "@/assets/ChessPreview.mp4";
 import chessThumbnail from "@/assets/chessThumbnail.png";
+import quickshowPreview from "@/assets/quickshowPreview.mp4";
+import quickshowThumbnail from "@/assets/quickshowThumbnail.png";
 
 const projects = [
   {
@@ -379,7 +381,7 @@ const projects = [
     longDescription:
       "Real-Time Chess Game is an interactive multiplayer chess application built with Node.js, Express, Socket.io, and TailwindCSS. It features drag-and-drop piece movement, real-time board updates for players and spectators, automatic board flipping for black player, and move validation using chess.js. The project emphasizes smooth UI interactions, responsive design, and real-time game synchronization for online chess enthusiasts.",
     video: chessPreview,
-    image: chessThumbnail, 
+    image: chessThumbnail,
     technologies: [
       "Node.js",
       "Express.js",
@@ -401,6 +403,49 @@ const projects = [
     githubUrl: "https://github.com/Itssanthoshhere/Real-Time-Chess-Game",
     liveUrl: "", // Add live demo URL if deployed
     duration: "September 2025",
+    category: "Full-Stack Web App",
+  },
+
+  {
+    title: "🎬 QuickShow – Full Stack Movie Theater Booking Platform",
+    description:
+      "A modern movie booking platform built with React, Node.js, Express, and MongoDB. Features real-time seat booking, secure payments via Stripe, and an advanced admin dashboard for theater management.",
+    longDescription:
+      "QuickShow is a full-stack movie theater booking application designed to deliver a seamless and interactive experience for both users and admins. Built with React, Node.js, Express, and MongoDB, it enables users to browse movies, book seats in real-time, and complete payments securely using Stripe. The platform includes Clerk-based authentication, Cloudinary-powered media storage, and an automated workflow system via Inngest. Admins can efficiently manage shows, movies, and analytics through a dedicated dashboard. QuickShow provides a scalable, production-ready solution for digital ticketing and theater operations.",
+    video: quickshowPreview, // MP4 video preview path (if available)
+    image: quickshowThumbnail, // fallback thumbnail image path
+    technologies: [
+      "React 19",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Stripe",
+      "Clerk Auth",
+      "Cloudinary",
+      "Inngest",
+      "Nodemailer",
+      "Tailwind CSS 4",
+      "Axios",
+      "Lucide React",
+    ],
+    features: [
+      "🎟️ Real-time seat booking with dynamic layouts",
+      "💳 Secure payments powered by Stripe",
+      "👥 User authentication and profiles via Clerk",
+      "🧑‍💼 Admin dashboard for movie and show management",
+      "🎬 Movie catalog with trailers and details",
+      "📧 Automated email confirmations using Nodemailer",
+      "☁️ Cloud-based media management with Cloudinary",
+      "📊 Analytics and background workflows via Inngest",
+      "📱 Responsive and accessible design",
+      "⚙️ Modular backend with structured APIs",
+    ],
+    githubUrl:
+      "https://github.com/Itssanthoshhere/QuickShow-Movie-Theater-Booking-Platform",
+    liveUrl: "https://quick-show-ticketbooking.vercel.app/",
+    duration: "October 2025",
     category: "Full-Stack Web App",
   },
 
