@@ -48,6 +48,8 @@ import chessPreview from "@/assets/ChessPreview.mp4";
 import chessThumbnail from "@/assets/chessThumbnail.png";
 import quickshowPreview from "@/assets/quickshowPreview.mp4";
 import quickshowThumbnail from "@/assets/quickshowThumbnail.png";
+import bubblyPreview from "@/assets/bubblyPreview.mp4";
+import bubblyThumbnail from "@/assets/bubblyThumbnail.png";
 
 const projects = [
   {
@@ -447,6 +449,43 @@ const projects = [
     liveUrl: "https://quick-show-ticketbooking.vercel.app/",
     duration: "October 2025",
     category: "Full-Stack Web App",
+  },
+
+  {
+    title: "💬 Bubbly ChatApp – Real-Time Messaging App",
+    description:
+      "A full-stack real-time chat application built with React Native (Expo), Node.js, Express, and MongoDB. Features secure authentication, live chat powered by Socket.IO, and a modern responsive UI using NativeWind.",
+    longDescription:
+      "Bubbly ChatApp is a real-time, full-stack chat application inspired by WhatsApp and Messenger. Built with React Native (Expo) and TypeScript for the frontend, and Node.js, Express, and MongoDB for the backend, it delivers secure authentication, live messaging via Socket.IO, and a smooth, modern chat experience. The app features a clean and scalable architecture with reusable UI components, profile management, and fast real-time updates, all styled using NativeWind (TailwindCSS for React Native).",
+    video: bubblyPreview,
+    image: bubblyThumbnail,
+    technologies: [
+      "React Native (Expo)",
+      "TypeScript",
+      "Tailwind CSS (NativeWind)",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "Axios",
+      "JWT Auth",
+    ],
+    features: [
+      "Secure authentication using JWT",
+      "Real-time messaging with Socket.IO",
+      "User presence and typing indicators",
+      "Profile management with image upload",
+      "Scalable REST API using Express",
+      "Responsive UI for Android and iOS",
+      "Reusable and modular React Native components",
+      "Clean UI powered by NativeWind (TailwindCSS)",
+      "Global auth state using Context API",
+      "Fast and reliable message syncing",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Bubbly-ChatApp",
+    // liveUrl: "https://expo.dev/@itssanthoshhere/bubbly-chatapp",
+    duration: "October 2025",
+    category: "Full-Stack Mobile App",
   },
 
   {
