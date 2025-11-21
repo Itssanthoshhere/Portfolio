@@ -50,6 +50,8 @@ import quickshowPreview from "@/assets/quickshowPreview.mp4";
 import quickshowThumbnail from "@/assets/quickshowThumbnail.png";
 import bubblyPreview from "@/assets/bubblyPreview.mp4";
 import bubblyThumbnail from "@/assets/bubblyThumbnail.png";
+import figProPreview from "@/assets/figProPreview.mp4";
+import figProThumbnail from "@/assets/figProThumbnail.jpg";
 
 const projects = [
   {
@@ -486,6 +488,49 @@ const projects = [
     // liveUrl: "https://expo.dev/@itssanthoshhere/bubbly-chatapp",
     duration: "October 2025",
     category: "Full-Stack Mobile App",
+  },
+
+  {
+    title: "FigPro 🎨 – Real-Time Figma-Style Collaborative Design App",
+    description:
+      "A real-time collaborative design platform built with Next.js, Liveblocks, and Fabric.js, supporting live cursors, drawing tools, shapes, comments, reactions, history, and multi-user collaboration similar to Figma.",
+    longDescription:
+      "FigPro is a fully interactive, real-time collaborative design application inspired by Figma. Built using Next.js, TypeScript, Liveblocks, Fabric.js, TailwindCSS, and Shadcn/UI, it allows multiple users to design together with features like live cursors, drawing tools, shape editing, comments, reactions, undo/redo, canvas history tracking, and exporting options. The app demonstrates advanced real-time syncing, powerful canvas rendering, and a scalable design tooling architecture.",
+
+    video: figProPreview, 
+    image: figProThumbnail,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Liveblocks",
+      "Fabric.js",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "Radix UI",
+      "JSPDF",
+      "UUID",
+    ],
+
+    features: [
+      "Real-time multi-user collaboration",
+      "Live cursors with cursor chat",
+      "Comment threads with pinned notes",
+      "Real-time reactions (emoji bursts)",
+      "Freeform drawing with synced paths",
+      "Shape tools: rectangles, circles, lines, triangles, text",
+      "Image upload and editing",
+      "Properties panel for color, size, stroke, font, and z-index",
+      "Undo/Redo with Liveblocks history",
+      "Keyboard shortcuts for fast interaction",
+      "Export canvas as PDF or image",
+      "Action history tracking and canvas management",
+      "Clean and scalable UI built with Shadcn/UI",
+    ],
+
+    githubUrl: "https://github.com/Itssanthoshhere/FigPro",
+    liveUrl: "https://fig-pro-sandyy.vercel.app/",
+    duration: "November 2025",
+    category: "Real-Time Collaborative App",
   },
 
   {
