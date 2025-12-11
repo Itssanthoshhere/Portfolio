@@ -29,8 +29,8 @@ export function Header() {
     // Create a mock CV download - in real implementation, this would download an actual PDF
     const link = document.createElement('a');
     // link.href = '#';
-    link.href = './src/assets/Resume.pdf'; // Put your PDF in public folder
-    link.download = './src/assests/Resume.pdf';
+    link.href = '/Resume.pdf'; // Put your PDF in public folder
+    link.download = 'Resume.pdf';
     link.click();
 
     // For demo purposes, show an alert
