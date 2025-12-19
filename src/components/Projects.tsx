@@ -1,7 +1,9 @@
+import React, { useState, useMemo } from "react";
 import { ExternalLink, Github, Calendar, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 import hvfPreview from "@/assets/hvf-preview.mp4";
 import hvfThumbnail from "@/assets/hvf-project.jpg";
@@ -57,27 +59,48 @@ import conversoThumbnail from "@/assets/conversoThumbnail.png";
 
 const projects = [
   {
-    title: "Sweet Bite – Bakery Website",
+    title: "🎬 QuickShow – Full Stack Movie Theater Booking Platform",
     description:
-      "Fully responsive bakery website featuring product showcase, testimonial section, and contact form. Built with HTML5, CSS3, and JavaScript with focus on user-friendly layout and cross-device compatibility.",
+      "A modern movie booking platform built with React, Node.js, Express, and MongoDB. Features real-time seat booking, secure payments via Stripe, and an advanced admin dashboard for theater management.",
     longDescription:
-      "An elegant and modern bakery website showcasing delicious products with beautiful imagery, customer testimonials, and seamless user experience across all devices.",
-    video: sweetbitepreview,
-    image: sweetThumbnail,
-    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-    features: [
-      "Beautiful product showcase with image galleries",
-      "Customer testimonials and reviews section",
-      "Contact form with validation",
-      "Fully responsive design",
-      "Smooth animations and transitions",
-      "SEO optimized structure",
+      "QuickShow is a full-stack movie theater booking application designed to deliver a seamless and interactive experience for both users and admins. Built with React, Node.js, Express, and MongoDB, it enables users to browse movies, book seats in real-time, and complete payments securely using Stripe. The platform includes Clerk-based authentication, Cloudinary-powered media storage, and an automated workflow system via Inngest. Admins can efficiently manage shows, movies, and analytics through a dedicated dashboard. QuickShow provides a scalable, production-ready solution for digital ticketing and theater operations.",
+    video: quickshowPreview, // MP4 video preview path (if available)
+    image: quickshowThumbnail, // fallback thumbnail image path
+    technologies: [
+      "React 19",
+      "Vite",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Stripe",
+      "Clerk Auth",
+      "Cloudinary",
+      "Inngest",
+      "Nodemailer",
+      "Tailwind CSS 4",
+      "Axios",
+      "Lucide React",
     ],
-    githubUrl: "https://github.com/Itssanthoshhere/Sweet-Bite",
-    liveUrl: "https://sweet-bite-ruby.vercel.app/",
-    duration: "Oct 2024",
-    category: "Frontend Website",
+    features: [
+      "🎟️ Real-time seat booking with dynamic layouts",
+      "💳 Secure payments powered by Stripe",
+      "👥 User authentication and profiles via Clerk",
+      "🧑‍💼 Admin dashboard for movie and show management",
+      "🎬 Movie catalog with trailers and details",
+      "📧 Automated email confirmations using Nodemailer",
+      "☁️ Cloud-based media management with Cloudinary",
+      "📊 Analytics and background workflows via Inngest",
+      "📱 Responsive and accessible design",
+      "⚙️ Modular backend with structured APIs",
+    ],
+    githubUrl:
+      "https://github.com/Itssanthoshhere/QuickShow-Movie-Theater-Booking-Platform",
+    liveUrl: "https://quick-show-ticketbooking.vercel.app/",
+    duration: "October 2025",
+    category: "Full-Stack Web App",
   },
+
   {
     title: "HVF e-Leave Portal – React Edition",
     description:
@@ -100,64 +123,7 @@ const projects = [
     duration: "June 2025",
     category: "Full-Stack Application",
   },
-  {
-    title: "Fizzi🥤 – A 3D Soda Can Web Experience",
-    description:
-      "Interactive 3D soda can animation website built with React Three Fiber, Next.js App Router, and Prismic CMS. A fun, fizzy, and fully responsive splash experience for products or portfolios.",
-    longDescription:
-      "Fizzi 🥤 is a visually immersive 3D soda can experience built with React Three Fiber and powered by Prismic CMS. Designed as a creative product splash or personal branding demo, it features animated UI, custom SVGs, and CMS-editable content. Leveraging Next.js App Router, the site delivers seamless routing, responsiveness, and performance — all wrapped in fizzy visual delight.",
-    video: fizzi,
-    image: fizziThumbnail,
-    technologies: [
-      "React Three Fiber",
-      "Next.js",
-      "Prismic CMS",
-      "Tailwind CSS",
-      "JavaScript",
-      "SVG",
-    ],
-    features: [
-      "3D soda can animations with React Three Fiber",
-      "CMS-powered content via Prismic",
-      "Next.js App Router for fast routing and rendering",
-      "Animated UI and custom SVG graphics",
-      "Fully responsive and mobile-friendly layout",
-      "Perfect as a product splash or creative portfolio intro",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Fizzi",
-    liveUrl: "https://fizzi-soda-for-gusty-people.vercel.app/",
-    duration: "July 2025",
-    category: "3D Web Experience",
-  },
-  {
-    title: "🍽 Flavor Fusion – Modern Restaurant Website",
-    description:
-      "A sleek, fully responsive restaurant website built with HTML5, Tailwind CSS, and JavaScript. Features interactive menu filtering, smooth AOS animations, and a polished chef-inspired UI.",
-    longDescription:
-      "Flavor Fusion is a modern, mobile-friendly restaurant website designed to deliver an immersive dining experience online. Built with semantic HTML5, styled using Tailwind CSS for rapid responsive design, and enhanced with JavaScript for interactive features, it offers smooth AOS animations and intuitive navigation. Visitors can explore the menu with dynamic category-based filtering, enjoy scroll-triggered effects, and navigate effortlessly with a sticky header and back-to-top button. Optimized for performance and aesthetics, this project highlights clean UI, accessibility, and cross-device compatibility.",
-    video: flavorapreview,
-    image: flavoraThumbnail,
-    technologies: [
-      "HTML5",
-      "Tailwind CSS",
-      "JavaScript",
-      "AOS (Animate On Scroll)",
-    ],
-    features: [
-      "Fully responsive design for desktop, tablet, and mobile",
-      "Sticky navigation with scroll-based style changes",
-      "Smooth back-to-top button for quick navigation",
-      "Interactive menu filtering with animated transitions",
-      "Scroll-triggered fade-in effects using AOS",
-      "Mobile menu with slide-in navigation",
-      "SEO-friendly semantic HTML structure",
-      "Optimized for fast loading and smooth performance",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Flavora-Restaurant",
-    liveUrl: "https://flavora-restaurant.vercel.app/",
-    duration: "August 2025",
-    category: "Frontend Website",
-  },
+
   {
     title: "Velvet Pour 🍹 – Stunning GSAP Cocktail Website",
     description:
@@ -196,6 +162,74 @@ const projects = [
       "https://www.figma.com/design/LVdc2zP8j8ZEd4agVV0JVJ/Cocktail-GSAP-Website?node-id=2-2&t=7umyEDJMvJ1iyxmr-1",
     duration: "August 2025",
     category: "Frontend Website",
+  },
+
+  {
+    title: "Converso 🎓 – AI-Powered LMS SaaS Platform",
+    description:
+      "An AI-driven Learning Management System built with Next.js, Supabase, Clerk, and Vapi. Enables real-time voice-based learning, subscriptions, bookmarks, and session tracking.",
+    longDescription:
+      "Converso is a modern, full-stack SaaS Learning Management System designed to transform how users learn through real-time AI voice conversations. Built with Next.js App Router and TypeScript, it integrates Supabase for PostgreSQL-backed data handling, Clerk for authentication and subscription management, Stripe for billing, and Vapi AI for low-latency speech-to-speech tutoring. Users can create personalized AI companions, talk to them via voice, bookmark favorites, track learning history, and unlock premium features through subscriptions. This project demonstrates production-ready SaaS architecture with secure server actions, feature gating, scalable design, and real-world AI integration.",
+    video: conversoPreview,
+    image: conversoThumbnail,
+    technologies: [
+      "Next.js (App Router)",
+      "TypeScript",
+      "Supabase (PostgreSQL)",
+      "Clerk Auth",
+      "Stripe",
+      "Vapi AI",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "Sentry",
+    ],
+    features: [
+      "Real-time AI voice tutoring with speech-to-speech interaction",
+      "Create and manage personalized AI companions",
+      "Secure authentication and subscriptions with Clerk",
+      "Feature-based access and plan limits",
+      "Stripe-powered subscription billing",
+      "Bookmark favorite companions",
+      "Track session history and learning progress",
+      "User dashboard with activity insights",
+      "Scalable SaaS architecture using server actions",
+      "Responsive and modern UI with Tailwind CSS",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/lms-saas-app",
+    liveUrl: "https://lms-saas-app-coral.vercel.app/",
+    duration: "Nov 2025",
+    category: "Full-Stack SaaS Application",
+  },
+
+  {
+    title: "Fizzi🥤 – A 3D Soda Can Web Experience",
+    description:
+      "Interactive 3D soda can animation website built with React Three Fiber, Next.js App Router, and Prismic CMS. A fun, fizzy, and fully responsive splash experience for products or portfolios.",
+    longDescription:
+      "Fizzi 🥤 is a visually immersive 3D soda can experience built with React Three Fiber and powered by Prismic CMS. Designed as a creative product splash or personal branding demo, it features animated UI, custom SVGs, and CMS-editable content. Leveraging Next.js App Router, the site delivers seamless routing, responsiveness, and performance — all wrapped in fizzy visual delight.",
+    video: fizzi,
+    image: fizziThumbnail,
+    technologies: [
+      "React Three Fiber",
+      "Next.js",
+      "Prismic CMS",
+      "Tailwind CSS",
+      "JavaScript",
+      "SVG",
+    ],
+    features: [
+      "3D soda can animations with React Three Fiber",
+      "CMS-powered content via Prismic",
+      "Next.js App Router for fast routing and rendering",
+      "Animated UI and custom SVG graphics",
+      "Fully responsive and mobile-friendly layout",
+      "Perfect as a product splash or creative portfolio intro",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Fizzi",
+    liveUrl: "https://fizzi-soda-for-gusty-people.vercel.app/",
+    duration: "July 2025",
+    category: "3D Web Experience",
   },
 
   {
@@ -272,62 +306,6 @@ const projects = [
   },
 
   {
-    title: "🏋🏼‍♂️ Flex Haven – Modern Gym & Fitness Website",
-    description:
-      "A responsive multi-page fitness website built with HTML, CSS, and JavaScript, featuring dynamic navigation, smooth UI interactions, Swiper.js carousels, and mobile-first design.",
-    longDescription:
-      "Flex Haven is a modern, responsive gym & fitness website designed to provide a professional online presence for fitness enthusiasts, trainers, and gyms. Built with HTML5, CSS3, and JavaScript, it includes dynamic navigation, Swiper.js carousels, a contact form, and interactive elements. The website demonstrates clean UI design, responsive layouts, and cross-browser compatibility, ensuring a smooth experience across devices.",
-    video: flexHavenPreview,
-    image: flexThumbnail,
-    technologies: ["HTML5", "CSS3", "JavaScript", "Swiper.js"],
-    features: [
-      "Responsive navigation bar with mobile-friendly hamburger menu",
-      "Active link highlighting to indicate current section",
-      "Engaging hero and landing sections with modern fitness UI",
-      "Swiper.js carousels for trainers and class schedules",
-      "Dedicated Contact Page with Google Maps integration",
-      "Interactive contact form with submission feedback",
-      "Footer with newsletter signup and social media links",
-      "Cross-browser compatible, mobile-first responsive design",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Flex-Haven",
-    liveUrl: "https://flex-haven.vercel.app/",
-    duration: "August 2025",
-    category: "Frontend Web App",
-  },
-
-  {
-    title: "☕ Pastry World – Modern Café & Bakery Website",
-    description:
-      "A stylish and responsive café & bakery website built with HTML, CSS, and JavaScript. Features interactive menu cards, booking form, smooth animations, and a mobile-first design to showcase café specialties.",
-    longDescription:
-      "Pastry World is a modern, fully responsive café and bakery website designed with HTML5, CSS3, and JavaScript. It provides an elegant online presence for bakeries, coffee shops, and dessert cafés, with interactive features like menu cards, booking forms, and scroll-based animations. The site ensures mobile-first responsiveness, cross-browser compatibility, and smooth UI/UX, making it an engaging platform for customers to explore and connect with the brand.",
-    video: pastryPreview,
-    image: pastryThumbnail,
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Remix Icons",
-      "ScrollReveal.js",
-    ],
-    features: [
-      "Responsive navbar with hamburger menu for mobile",
-      "Engaging hero section with café branding",
-      "Popular menu section with styled cards and hover effects",
-      "Book a table form with interactive design",
-      "About Us section to highlight café story",
-      "Footer with social links and quick navigation",
-      "Smooth animations using ScrollReveal.js",
-      "Cross-browser compatibility and mobile-first design",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Pastry-World",
-    liveUrl: "https://pastry-world-ten.vercel.app/",
-    duration: "August 2025",
-    category: "Frontend Website",
-  },
-
-  {
     title: "🥛 Chug SPYLT – Awwwards-Inspired Interactive Website",
     description:
       "An immersive interactive website built with React 19, Tailwind CSS v4, and GSAP. Features smooth parallax scrolling, clip-path animations, and Awwwards-style text reveals.",
@@ -348,36 +326,6 @@ const projects = [
     liveUrl: "https://chug-spylt.vercel.app/",
     duration: "September 2025",
     category: "Interactive Website",
-  },
-
-  {
-    title: "🎬 Cinema Seat Booking – Interactive React Component",
-    description:
-      "A modern and responsive seat booking system built with React.js and TailwindCSS. Features dynamic seat layouts, categories, pricing, and booking flow.",
-    longDescription:
-      "Cinema Seat Booking is an interactive and customizable React component designed for cinema halls, theaters, and event booking platforms. It supports seat selection with categories like Regular, Premium, and VIP, dynamic pricing, booking summaries, aisle separation, and booked seat management. Built with React.js and TailwindCSS, it provides a responsive, user-friendly experience. Developers can easily customize seat layouts, categories, pricing, and booking callbacks, making it ideal for production-level applications.",
-    image: cinemaThumbnail,
-    video: cinemaPreview,
-    technologies: [
-      "React.js",
-      "Tailwind CSS",
-      "JavaScript (ES6+)",
-      "Vite / CRA",
-    ],
-    features: [
-      "Dynamic seat map with rows, seats per row, and aisle separation",
-      "Customizable seat categories (Regular, Premium, VIP)",
-      "Booking summary with selected seats, seat count, and total price",
-      "Booked seat handling with disabled states",
-      "Interactive UI with click-to-select animations",
-      "Responsive design across devices",
-      "Inline notifications for success/error",
-      "Post-booking status showing booked seat IDs",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Cinema-Seat-Booking",
-    liveUrl: "https://cinemaseatbooking.vercel.app/",
-    duration: "September 2025",
-    category: "React Component / UI Project",
   },
 
   {
@@ -409,49 +357,6 @@ const projects = [
     githubUrl: "https://github.com/Itssanthoshhere/Real-Time-Chess-Game",
     liveUrl: "", // Add live demo URL if deployed
     duration: "September 2025",
-    category: "Full-Stack Web App",
-  },
-
-  {
-    title: "🎬 QuickShow – Full Stack Movie Theater Booking Platform",
-    description:
-      "A modern movie booking platform built with React, Node.js, Express, and MongoDB. Features real-time seat booking, secure payments via Stripe, and an advanced admin dashboard for theater management.",
-    longDescription:
-      "QuickShow is a full-stack movie theater booking application designed to deliver a seamless and interactive experience for both users and admins. Built with React, Node.js, Express, and MongoDB, it enables users to browse movies, book seats in real-time, and complete payments securely using Stripe. The platform includes Clerk-based authentication, Cloudinary-powered media storage, and an automated workflow system via Inngest. Admins can efficiently manage shows, movies, and analytics through a dedicated dashboard. QuickShow provides a scalable, production-ready solution for digital ticketing and theater operations.",
-    video: quickshowPreview, // MP4 video preview path (if available)
-    image: quickshowThumbnail, // fallback thumbnail image path
-    technologies: [
-      "React 19",
-      "Vite",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Mongoose",
-      "Stripe",
-      "Clerk Auth",
-      "Cloudinary",
-      "Inngest",
-      "Nodemailer",
-      "Tailwind CSS 4",
-      "Axios",
-      "Lucide React",
-    ],
-    features: [
-      "🎟️ Real-time seat booking with dynamic layouts",
-      "💳 Secure payments powered by Stripe",
-      "👥 User authentication and profiles via Clerk",
-      "🧑‍💼 Admin dashboard for movie and show management",
-      "🎬 Movie catalog with trailers and details",
-      "📧 Automated email confirmations using Nodemailer",
-      "☁️ Cloud-based media management with Cloudinary",
-      "📊 Analytics and background workflows via Inngest",
-      "📱 Responsive and accessible design",
-      "⚙️ Modular backend with structured APIs",
-    ],
-    githubUrl:
-      "https://github.com/Itssanthoshhere/QuickShow-Movie-Theater-Booking-Platform",
-    liveUrl: "https://quick-show-ticketbooking.vercel.app/",
-    duration: "October 2025",
     category: "Full-Stack Web App",
   },
 
@@ -536,44 +441,6 @@ const projects = [
   },
 
   {
-    title: "Converso 🎓 – AI-Powered LMS SaaS Platform",
-    description:
-      "An AI-driven Learning Management System built with Next.js, Supabase, Clerk, and Vapi. Enables real-time voice-based learning, subscriptions, bookmarks, and session tracking.",
-    longDescription:
-      "Converso is a modern, full-stack SaaS Learning Management System designed to transform how users learn through real-time AI voice conversations. Built with Next.js App Router and TypeScript, it integrates Supabase for PostgreSQL-backed data handling, Clerk for authentication and subscription management, Stripe for billing, and Vapi AI for low-latency speech-to-speech tutoring. Users can create personalized AI companions, talk to them via voice, bookmark favorites, track learning history, and unlock premium features through subscriptions. This project demonstrates production-ready SaaS architecture with secure server actions, feature gating, scalable design, and real-world AI integration.",
-    video: conversoPreview,
-    image: conversoThumbnail,
-    technologies: [
-      "Next.js (App Router)",
-      "TypeScript",
-      "Supabase (PostgreSQL)",
-      "Clerk Auth",
-      "Stripe",
-      "Vapi AI",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Zod",
-      "Sentry",
-    ],
-    features: [
-      "Real-time AI voice tutoring with speech-to-speech interaction",
-      "Create and manage personalized AI companions",
-      "Secure authentication and subscriptions with Clerk",
-      "Feature-based access and plan limits",
-      "Stripe-powered subscription billing",
-      "Bookmark favorite companions",
-      "Track session history and learning progress",
-      "User dashboard with activity insights",
-      "Scalable SaaS architecture using server actions",
-      "Responsive and modern UI with Tailwind CSS",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/lms-saas-app",
-    liveUrl: "https://lms-saas-app-coral.vercel.app/",
-    duration: "2025",
-    category: "Full-Stack SaaS Application",
-  },
-
-  {
     title: "Nimbus Keyboards ⌨️ – 3D Interactive E-Commerce Showcase",
     description:
       "An immersive 3D keyboard showcase built with Next.js, TailwindCSS, Prismic CMS, and React Three Fiber. Features GSAP animations, Slice Machine-driven content, and Stripe-powered payments.",
@@ -613,29 +480,6 @@ const projects = [
   },
 
   {
-    title: "Demon Bee 3D 🐝 – Interactive 3D Web Experience",
-    description:
-      "A visually immersive 3D web project featuring animated Demon Bee elements, layered backgrounds, and smooth GSAP & Three.js animations with responsive design.",
-    longDescription:
-      "Demon Bee 3D is an interactive web experience built with HTML, CSS, JavaScript, Three.js, and GSAP. Users can explore animated Demon Bee elements with smooth transitions and layered backgrounds, creating a visually engaging and responsive website. The project demonstrates custom 3D modeling, dynamic animations, and responsive layouts suitable for desktop and mobile devices.",
-    video: beePreview,
-    image: beeThumbnail,
-    technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "GSAP"],
-    features: [
-      "Interactive 3D Demon Bee animations",
-      "Layered dynamic backgrounds for depth",
-      "Responsive design for desktop, tablet, and mobile",
-      "Smooth motion animations with GSAP",
-      "Custom fonts integrated via Google/CDN",
-      "Lightweight and performance-optimized",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/Demon-Bee-3D",
-    liveUrl: "https://demon-bee-3d.vercel.app/",
-    duration: "September 2025",
-    category: "3D Web Project",
-  },
-
-  {
     title: "Rayve 🕶️ – Animated Modern Landing Page",
     description:
       "A sleek and interactive landing page with animated text, dynamic backgrounds, and smooth visual effects using HTML, CSS, JavaScript, GSAP, and Shery.js. Delivers an engaging, modern web presentation experience.",
@@ -659,77 +503,118 @@ const projects = [
   },
 
   {
-    title: "Magma 🔥 – Interactive Web3 Real Estate Landing Page",
+    title: "🎬 Cinema Seat Booking – Interactive React Component",
     description:
-      "A sleek, modern landing page with 14 scrollable sections, animated hero, dynamic visuals, scroll-triggered effects, and social call-to-actions built using HTML, CSS, JavaScript, GSAP, and Locomotive Scroll.",
+      "A modern and responsive seat booking system built with React.js and TailwindCSS. Features dynamic seat layouts, categories, pricing, and booking flow.",
     longDescription:
-      "Magma is a Web3-inspired interactive real estate landing page featuring hero sections, digital twin explanation, blogs, featured press, CTAs, and social links across 14 pages. It leverages GSAP for animations and Locomotive Scroll for smooth scroll-triggered effects, providing an immersive and visually engaging user experience. Perfect for portfolio demos, digital agencies, or Web3 project showcases, it highlights modern design, responsive layout, and interactive animations.",
-    video: magmaPreview,
-    image: magmaThumbnail,
-    technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Locomotive Scroll"],
-    features: [
-      "Animated hero section with text and video background",
-      "14 scrollable sections including CTA, blogs, and featured press",
-      "Smooth scroll and parallax effects via Locomotive Scroll",
-      "Interactive buttons and social links with hover effects",
-      "Responsive design for desktop, tablet, and mobile",
-      "Modern typography and clean layout inspired by Magma website",
+      "Cinema Seat Booking is an interactive and customizable React component designed for cinema halls, theaters, and event booking platforms. It supports seat selection with categories like Regular, Premium, and VIP, dynamic pricing, booking summaries, aisle separation, and booked seat management. Built with React.js and TailwindCSS, it provides a responsive, user-friendly experience. Developers can easily customize seat layouts, categories, pricing, and booking callbacks, making it ideal for production-level applications.",
+    image: cinemaThumbnail,
+    video: cinemaPreview,
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript (ES6+)",
+      "Vite / CRA",
     ],
-    githubUrl: "https://github.com/Itssanthoshhere/Twinverse",
-    liveUrl: "https://twinverse-magma.vercel.app/",
+    features: [
+      "Dynamic seat map with rows, seats per row, and aisle separation",
+      "Customizable seat categories (Regular, Premium, VIP)",
+      "Booking summary with selected seats, seat count, and total price",
+      "Booked seat handling with disabled states",
+      "Interactive UI with click-to-select animations",
+      "Responsive design across devices",
+      "Inline notifications for success/error",
+      "Post-booking status showing booked seat IDs",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Cinema-Seat-Booking",
+    liveUrl: "https://cinemaseatbooking.vercel.app/",
     duration: "September 2025",
-    category: "Interactive Landing Page",
+    category: "React Component / UI Project",
+  },
+
+  // Simple frontent websites
+  {
+    title: "Sweet Bite – Bakery Website",
+    description:
+      "Fully responsive bakery website featuring product showcase, testimonial section, and contact form. Built with HTML5, CSS3, and JavaScript with focus on user-friendly layout and cross-device compatibility.",
+    longDescription:
+      "An elegant and modern bakery website showcasing delicious products with beautiful imagery, customer testimonials, and seamless user experience across all devices.",
+    video: sweetbitepreview,
+    image: sweetThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    features: [
+      "Beautiful product showcase with image galleries",
+      "Customer testimonials and reviews section",
+      "Contact form with validation",
+      "Fully responsive design",
+      "Smooth animations and transitions",
+      "SEO optimized structure",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Sweet-Bite",
+    liveUrl: "https://sweet-bite-ruby.vercel.app/",
+    duration: "Oct 2024",
+    category: "Frontend Website",
   },
 
   {
-    title: "🌶️ Spicy Picy – Landing Page",
+    title: "🍽 Flavor Fusion – Modern Restaurant Website",
     description:
-      "A modern and responsive landing page for a spice brand, built with React, Tailwind CSS, and Vite. Features Hero, Banner, Products, About, Reviews, and Footer sections with smooth scrolling and interactive elements.",
+      "A sleek, fully responsive restaurant website built with HTML5, Tailwind CSS, and JavaScript. Features interactive menu filtering, smooth AOS animations, and a polished chef-inspired UI.",
     longDescription:
-      "Spicy Picy is a visually appealing, fully responsive landing page designed for a spice brand. Built with React and Tailwind CSS, it showcases products, highlights brand specialties, displays customer reviews, and provides a smooth scrolling experience. The project emphasizes clean UI, reusable React components, interactive cards, and a modern, maintainable codebase.",
-    video: spicyPreview,
-    image: spicyThumbnail,
-    technologies: ["React", "Tailwind CSS", "Vite", "JavaScript (ES6)"],
-    features: [
-      "Fully responsive desktop & mobile layout",
-      "Smooth scrolling navigation",
-      "Interactive Product and About cards with hover effects",
-      "Reviews section showing random customer testimonials",
-      "Fixed Navbar adapting while scrolling",
-      "Clean and modern UI with Tailwind CSS",
-      "Reusable React components for better maintainability",
+      "Flavor Fusion is a modern, mobile-friendly restaurant website designed to deliver an immersive dining experience online. Built with semantic HTML5, styled using Tailwind CSS for rapid responsive design, and enhanced with JavaScript for interactive features, it offers smooth AOS animations and intuitive navigation. Visitors can explore the menu with dynamic category-based filtering, enjoy scroll-triggered effects, and navigate effortlessly with a sticky header and back-to-top button. Optimized for performance and aesthetics, this project highlights clean UI, accessibility, and cross-device compatibility.",
+    video: flavorapreview,
+    image: flavoraThumbnail,
+    technologies: [
+      "HTML5",
+      "Tailwind CSS",
+      "JavaScript",
+      "AOS (Animate On Scroll)",
     ],
-    githubUrl: "https://github.com/Itssanthoshhere/Spicy-Picy",
-    liveUrl: "https://spicy-picy.vercel.app/",
-    duration: "September 2025",
-    category: "Frontend Landing Page",
+    features: [
+      "Fully responsive design for desktop, tablet, and mobile",
+      "Sticky navigation with scroll-based style changes",
+      "Smooth back-to-top button for quick navigation",
+      "Interactive menu filtering with animated transitions",
+      "Scroll-triggered fade-in effects using AOS",
+      "Mobile menu with slide-in navigation",
+      "SEO-friendly semantic HTML structure",
+      "Optimized for fast loading and smooth performance",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Flavora-Restaurant",
+    liveUrl: "https://flavora-restaurant.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Website",
   },
 
   {
-    title: "🛍️ CozyNest – eCommerce Landing Page",
+    title: "☕ Pastry World – Modern Café & Bakery Website",
     description:
-      "A modern and fully responsive eCommerce landing page built with HTML, Tailwind CSS, and vanilla JavaScript. Features product showcase, blog section, smooth interactions, and deployment on Vercel.",
+      "A stylish and responsive café & bakery website built with HTML, CSS, and JavaScript. Features interactive menu cards, booking form, smooth animations, and a mobile-first design to showcase café specialties.",
     longDescription:
-      "CozyNest is a stylish and responsive eCommerce landing page created to showcase handmade decor. Built with HTML5, Tailwind CSS, and vanilla JavaScript, it demonstrates modern UI/UX principles with smooth interactions and responsive design. The project includes engaging sections like Hero, Product Grid, Blog, and Footer, along with a custom slider for product images. Deployed on Vercel, it ensures fast performance and reliable hosting.",
-    video: cozynestPreview,
-    image: cozynestThumbnail,
-    technologies: ["HTML5", "Tailwind CSS", "JavaScript (ES6)", "Vercel"],
-    features: [
-      "Fully responsive design across mobile, tablet, and desktop",
-      "Interactive Navbar with mobile menu toggle",
-      "Modern UI styled with Tailwind CSS utility classes",
-      "Smooth hover effects and transition animations",
-      "Product showcase section with advanced grid layout",
-      "Blog section highlighting handmade decor insights",
-      "Parallax background effects for immersive visuals",
-      "Custom image slider with auto-slide functionality using vanilla JS",
-      "Footer with contact details, social links, and copyright",
-      "Live deployment on Vercel for fast hosting",
+      "Pastry World is a modern, fully responsive café and bakery website designed with HTML5, CSS3, and JavaScript. It provides an elegant online presence for bakeries, coffee shops, and dessert cafés, with interactive features like menu cards, booking forms, and scroll-based animations. The site ensures mobile-first responsiveness, cross-browser compatibility, and smooth UI/UX, making it an engaging platform for customers to explore and connect with the brand.",
+    video: pastryPreview,
+    image: pastryThumbnail,
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Remix Icons",
+      "ScrollReveal.js",
     ],
-    githubUrl: "https://github.com/Itssanthoshhere/CozyNest-ecommerce",
-    liveUrl: "https://cozynest-ecommerce.vercel.app/",
-    duration: "September 2025",
-    category: "Frontend Landing Page",
+    features: [
+      "Responsive navbar with hamburger menu for mobile",
+      "Engaging hero section with café branding",
+      "Popular menu section with styled cards and hover effects",
+      "Book a table form with interactive design",
+      "About Us section to highlight café story",
+      "Footer with social links and quick navigation",
+      "Smooth animations using ScrollReveal.js",
+      "Cross-browser compatibility and mobile-first design",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Pastry-World",
+    liveUrl: "https://pastry-world-ten.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Website",
   },
 
   {
@@ -763,6 +648,105 @@ const projects = [
     liveUrl: "https://brew-bliss-five.vercel.app/",
     duration: "September 2025",
     category: "Frontend Web Development",
+  },
+
+  {
+    title: "🛍️ CozyNest – eCommerce Landing Page",
+    description:
+      "A modern and fully responsive eCommerce landing page built with HTML, Tailwind CSS, and vanilla JavaScript. Features product showcase, blog section, smooth interactions, and deployment on Vercel.",
+    longDescription:
+      "CozyNest is a stylish and responsive eCommerce landing page created to showcase handmade decor. Built with HTML5, Tailwind CSS, and vanilla JavaScript, it demonstrates modern UI/UX principles with smooth interactions and responsive design. The project includes engaging sections like Hero, Product Grid, Blog, and Footer, along with a custom slider for product images. Deployed on Vercel, it ensures fast performance and reliable hosting.",
+    video: cozynestPreview,
+    image: cozynestThumbnail,
+    technologies: ["HTML5", "Tailwind CSS", "JavaScript (ES6)", "Vercel"],
+    features: [
+      "Fully responsive design across mobile, tablet, and desktop",
+      "Interactive Navbar with mobile menu toggle",
+      "Modern UI styled with Tailwind CSS utility classes",
+      "Smooth hover effects and transition animations",
+      "Product showcase section with advanced grid layout",
+      "Blog section highlighting handmade decor insights",
+      "Parallax background effects for immersive visuals",
+      "Custom image slider with auto-slide functionality using vanilla JS",
+      "Footer with contact details, social links, and copyright",
+      "Live deployment on Vercel for fast hosting",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/CozyNest-ecommerce",
+    liveUrl: "https://cozynest-ecommerce.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend Landing Page",
+  },
+
+  {
+    title: "🏋🏼‍♂️ Flex Haven – Modern Gym & Fitness Website",
+    description:
+      "A responsive multi-page fitness website built with HTML, CSS, and JavaScript, featuring dynamic navigation, smooth UI interactions, Swiper.js carousels, and mobile-first design.",
+    longDescription:
+      "Flex Haven is a modern, responsive gym & fitness website designed to provide a professional online presence for fitness enthusiasts, trainers, and gyms. Built with HTML5, CSS3, and JavaScript, it includes dynamic navigation, Swiper.js carousels, a contact form, and interactive elements. The website demonstrates clean UI design, responsive layouts, and cross-browser compatibility, ensuring a smooth experience across devices.",
+    video: flexHavenPreview,
+    image: flexThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "Swiper.js"],
+    features: [
+      "Responsive navigation bar with mobile-friendly hamburger menu",
+      "Active link highlighting to indicate current section",
+      "Engaging hero and landing sections with modern fitness UI",
+      "Swiper.js carousels for trainers and class schedules",
+      "Dedicated Contact Page with Google Maps integration",
+      "Interactive contact form with submission feedback",
+      "Footer with newsletter signup and social media links",
+      "Cross-browser compatible, mobile-first responsive design",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Flex-Haven",
+    liveUrl: "https://flex-haven.vercel.app/",
+    duration: "August 2025",
+    category: "Frontend Web App",
+  },
+
+  {
+    title: "🌶️ Spicy Picy – Landing Page",
+    description:
+      "A modern and responsive landing page for a spice brand, built with React, Tailwind CSS, and Vite. Features Hero, Banner, Products, About, Reviews, and Footer sections with smooth scrolling and interactive elements.",
+    longDescription:
+      "Spicy Picy is a visually appealing, fully responsive landing page designed for a spice brand. Built with React and Tailwind CSS, it showcases products, highlights brand specialties, displays customer reviews, and provides a smooth scrolling experience. The project emphasizes clean UI, reusable React components, interactive cards, and a modern, maintainable codebase.",
+    video: spicyPreview,
+    image: spicyThumbnail,
+    technologies: ["React", "Tailwind CSS", "Vite", "JavaScript (ES6)"],
+    features: [
+      "Fully responsive desktop & mobile layout",
+      "Smooth scrolling navigation",
+      "Interactive Product and About cards with hover effects",
+      "Reviews section showing random customer testimonials",
+      "Fixed Navbar adapting while scrolling",
+      "Clean and modern UI with Tailwind CSS",
+      "Reusable React components for better maintainability",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Spicy-Picy",
+    liveUrl: "https://spicy-picy.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend Landing Page",
+  },
+
+  {
+    title: "Demon Bee 3D 🐝 – Interactive 3D Web Experience",
+    description:
+      "A visually immersive 3D web project featuring animated Demon Bee elements, layered backgrounds, and smooth GSAP & Three.js animations with responsive design.",
+    longDescription:
+      "Demon Bee 3D is an interactive web experience built with HTML, CSS, JavaScript, Three.js, and GSAP. Users can explore animated Demon Bee elements with smooth transitions and layered backgrounds, creating a visually engaging and responsive website. The project demonstrates custom 3D modeling, dynamic animations, and responsive layouts suitable for desktop and mobile devices.",
+    video: beePreview,
+    image: beeThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "GSAP"],
+    features: [
+      "Interactive 3D Demon Bee animations",
+      "Layered dynamic backgrounds for depth",
+      "Responsive design for desktop, tablet, and mobile",
+      "Smooth motion animations with GSAP",
+      "Custom fonts integrated via Google/CDN",
+      "Lightweight and performance-optimized",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Demon-Bee-3D",
+    liveUrl: "https://demon-bee-3d.vercel.app/",
+    duration: "September 2025",
+    category: "3D Web Project",
   },
 
   {
@@ -893,6 +877,29 @@ const projects = [
       "https://www.figma.com/design/F0pys4nJsQXz42KOzI2yl9/Real-Scout---Real-Estate-App?node-id=2-2&t=PjxkudNOJCqZHm97-1",
     duration: "August 2025",
     category: "Full-Stack Mobile App",
+  },
+
+  {
+    title: "Magma 🔥 – Interactive Web3 Real Estate Landing Page",
+    description:
+      "A sleek, modern landing page with 14 scrollable sections, animated hero, dynamic visuals, scroll-triggered effects, and social call-to-actions built using HTML, CSS, JavaScript, GSAP, and Locomotive Scroll.",
+    longDescription:
+      "Magma is a Web3-inspired interactive real estate landing page featuring hero sections, digital twin explanation, blogs, featured press, CTAs, and social links across 14 pages. It leverages GSAP for animations and Locomotive Scroll for smooth scroll-triggered effects, providing an immersive and visually engaging user experience. Perfect for portfolio demos, digital agencies, or Web3 project showcases, it highlights modern design, responsive layout, and interactive animations.",
+    video: magmaPreview,
+    image: magmaThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "GSAP", "Locomotive Scroll"],
+    features: [
+      "Animated hero section with text and video background",
+      "14 scrollable sections including CTA, blogs, and featured press",
+      "Smooth scroll and parallax effects via Locomotive Scroll",
+      "Interactive buttons and social links with hover effects",
+      "Responsive design for desktop, tablet, and mobile",
+      "Modern typography and clean layout inspired by Magma website",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Twinverse",
+    liveUrl: "https://twinverse-magma.vercel.app/",
+    duration: "September 2025",
+    category: "Interactive Landing Page",
   },
 ];
 
