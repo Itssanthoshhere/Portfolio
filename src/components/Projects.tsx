@@ -52,6 +52,8 @@ import bubblyPreview from "@/assets/bubblyPreview.mp4";
 import bubblyThumbnail from "@/assets/bubblyThumbnail.png";
 import figProPreview from "@/assets/figProPreview.mp4";
 import figProThumbnail from "@/assets/figProThumbnail.jpg";
+import conversoPreview from "@/assets/conversoPreview.mp4";
+import conversoThumbnail from "@/assets/conversoThumbnail.png";
 
 const projects = [
   {
@@ -497,7 +499,7 @@ const projects = [
     longDescription:
       "FigPro is a fully interactive, real-time collaborative design application inspired by Figma. Built using Next.js, TypeScript, Liveblocks, Fabric.js, TailwindCSS, and Shadcn/UI, it allows multiple users to design together with features like live cursors, drawing tools, shape editing, comments, reactions, undo/redo, canvas history tracking, and exporting options. The app demonstrates advanced real-time syncing, powerful canvas rendering, and a scalable design tooling architecture.",
 
-    video: figProPreview, 
+    video: figProPreview,
     image: figProThumbnail,
     technologies: [
       "Next.js",
@@ -531,6 +533,44 @@ const projects = [
     liveUrl: "https://fig-pro-sandyy.vercel.app/",
     duration: "November 2025",
     category: "Real-Time Collaborative App",
+  },
+
+  {
+    title: "Converso 🎓 – AI-Powered LMS SaaS Platform",
+    description:
+      "An AI-driven Learning Management System built with Next.js, Supabase, Clerk, and Vapi. Enables real-time voice-based learning, subscriptions, bookmarks, and session tracking.",
+    longDescription:
+      "Converso is a modern, full-stack SaaS Learning Management System designed to transform how users learn through real-time AI voice conversations. Built with Next.js App Router and TypeScript, it integrates Supabase for PostgreSQL-backed data handling, Clerk for authentication and subscription management, Stripe for billing, and Vapi AI for low-latency speech-to-speech tutoring. Users can create personalized AI companions, talk to them via voice, bookmark favorites, track learning history, and unlock premium features through subscriptions. This project demonstrates production-ready SaaS architecture with secure server actions, feature gating, scalable design, and real-world AI integration.",
+    video: conversoPreview,
+    image: conversoThumbnail,
+    technologies: [
+      "Next.js (App Router)",
+      "TypeScript",
+      "Supabase (PostgreSQL)",
+      "Clerk Auth",
+      "Stripe",
+      "Vapi AI",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zod",
+      "Sentry",
+    ],
+    features: [
+      "Real-time AI voice tutoring with speech-to-speech interaction",
+      "Create and manage personalized AI companions",
+      "Secure authentication and subscriptions with Clerk",
+      "Feature-based access and plan limits",
+      "Stripe-powered subscription billing",
+      "Bookmark favorite companions",
+      "Track session history and learning progress",
+      "User dashboard with activity insights",
+      "Scalable SaaS architecture using server actions",
+      "Responsive and modern UI with Tailwind CSS",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/lms-saas-app",
+    liveUrl: "https://lms-saas-app-coral.vercel.app/",
+    duration: "2025",
+    category: "Full-Stack SaaS Application",
   },
 
   {
