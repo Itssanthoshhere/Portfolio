@@ -56,6 +56,8 @@ import figProPreview from "@/assets/figProPreview.mp4";
 import figProThumbnail from "@/assets/figProThumbnail.jpg";
 import conversoPreview from "@/assets/conversoPreview.mp4";
 import conversoThumbnail from "@/assets/conversoThumbnail.png";
+import waveCastPreview from "@/assets/wavecastPreview.mp4";
+import waveCastThumbnail from "@/assets/wavecastThumbnail.png";
 
 const projects = [
   {
@@ -200,6 +202,42 @@ const projects = [
     liveUrl: "https://lms-saas-app-coral.vercel.app/",
     duration: "Nov 2025",
     category: "Full-Stack SaaS Application",
+  },
+
+  {
+    title: "WaveCast 🎧 – Modern Podcast Platform",
+    description:
+      "A modern podcast discovery platform built with Next.js App Router. Explore podcast episodes, blogs, hosts, pricing plans, and FAQs in a clean, scalable UI.",
+    longDescription:
+      "WaveCast is a fully responsive, production-ready podcast platform built using Next.js App Router, React 19, TypeScript, and Tailwind CSS. It allows users to browse podcast episodes, read blogs, explore hosts, manage favorites, view pricing plans, and interact with FAQ sections. Designed with scalability in mind, WaveCast features clean architecture, reusable components, client-server rendering separation, and smooth UX—making it ready for backend APIs, authentication, and audio player integration.",
+    video: waveCastPreview,
+    image: waveCastThumbnail,
+    technologies: [
+      "Next.js (App Router)",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Swiper.js",
+      "react-hot-toast",
+      "LocalStorage",
+      "next/font",
+    ],
+    features: [
+      "Podcast episode listing with search and sorting",
+      "Favorite episodes using localStorage",
+      "Blog system with categories and dynamic routes",
+      "Host profiles with social interactions",
+      "Pricing plans with monthly/yearly toggle",
+      "Accordion-based FAQ section",
+      "Global layout system with ClientWrapper",
+      "Custom 404 page handling",
+      "Fully responsive modern UI",
+      "Scalable frontend architecture ready for backend integration",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/WaveCast-Podcast",
+    liveUrl: "https://wave-cast-podcast.vercel.app/",
+    duration: "January 2026",
+    category: "Frontend Web Application",
   },
 
   {
