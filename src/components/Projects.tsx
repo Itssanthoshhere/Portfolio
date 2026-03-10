@@ -56,8 +56,7 @@ import conversoPreview from "@/assets/conversoPreview.mp4";
 import conversoThumbnail from "@/assets/conversoThumbnail.png";
 import waveCastPreview from "@/assets/wavecastPreview.mp4";
 import waveCastThumbnail from "@/assets/wavecastThumbnail.png";
-// import expoCommercePreview from "@/assets/expoCommercePreview.mp4";
-import expoCommercePreview from "@/assets/Timeline 1.mov";
+import expoCommercePreview from "@/assets/expoCommercePreview.mp4";
 import expoCommerceThumbnail from "@/assets/expoCommerceThumbnail.png";
 
 const projects = [
