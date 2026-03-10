@@ -1,9 +1,7 @@
-import React, { useState, useMemo } from "react";
 import { ExternalLink, Github, Calendar, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 import hvfPreview from "@/assets/hvf-preview.mp4";
 import hvfThumbnail from "@/assets/hvf-project.jpg";
@@ -58,6 +56,9 @@ import conversoPreview from "@/assets/conversoPreview.mp4";
 import conversoThumbnail from "@/assets/conversoThumbnail.png";
 import waveCastPreview from "@/assets/wavecastPreview.mp4";
 import waveCastThumbnail from "@/assets/wavecastThumbnail.png";
+// import expoCommercePreview from "@/assets/expoCommercePreview.mp4";
+import expoCommercePreview from "@/assets/Timeline 1.mov";
+import expoCommerceThumbnail from "@/assets/expoCommerceThumbnail.png";
 
 const projects = [
   {
@@ -238,6 +239,46 @@ const projects = [
     liveUrl: "https://wave-cast-podcast.vercel.app/",
     duration: "January 2026",
     category: "Frontend Web Application",
+  },
+
+  {
+    title: "ExpoCommerce 🛒 – Full Stack Mobile E-Commerce Platform",
+    description:
+      "A production-style full-stack e-commerce platform with a React Native mobile app, admin dashboard, and REST API backend. Built with Expo, Node.js, MongoDB, Stripe, and Cloudinary.",
+    longDescription:
+      "ExpoCommerce is a complete full-stack e-commerce platform consisting of a customer mobile application, an admin dashboard, and a scalable REST API backend. The mobile app is built using React Native with Expo and NativeWind for a smooth cross-platform UI. The backend is powered by Node.js, Express, and MongoDB with secure authentication via Clerk. Stripe handles payments while Cloudinary manages product images. The platform includes product browsing, cart management, wishlist, order tracking, product reviews, and secure checkout. Admins can manage products, customers, orders, and analytics through a dedicated dashboard. The architecture is designed to be production-ready, scalable, and modular.",
+    video: expoCommercePreview, // MP4 video preview path
+    image: expoCommerceThumbnail, // fallback image if video isn't available
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "NativeWind (Tailwind CSS)",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Stripe",
+      "Cloudinary",
+      "Clerk Auth",
+      "TanStack React Query",
+      "Inngest",
+    ],
+    features: [
+      "Customer mobile app with product browsing and cart",
+      "Wishlist and order history management",
+      "Secure authentication using Clerk (Google & Apple login)",
+      "Stripe payment integration with Payment Sheet",
+      "Admin dashboard for product, order, and customer management",
+      "Cloudinary image uploads for product media",
+      "REST API backend with scalable Express architecture",
+      "Background jobs using Inngest",
+      "Address management and order tracking",
+      "Product reviews and ratings system",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Expo-Ecommerce",
+    // liveUrl: "", // mobile app demo or Expo link if available
+    duration: "December 2025",
+    category: "Full-Stack Mobile Application",
   },
 
   {
