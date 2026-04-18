@@ -1349,8 +1349,8 @@ import waveCastPreview from "@/assets/wavecastPreview.mp4";
 import waveCastThumbnail from "@/assets/wavecastThumbnail.png";
 import expoCommercePreview from "@/assets/expoCommercePreview.mp4";
 import expoCommerceThumbnail from "@/assets/expoCommerceThumbnail.png";
-import wavechatPreview from "@/assets/wavechatPreview.mp4";
-import wavechatThumbnail from "@/assets/wavechatThumbnail.png";
+import wavechatPreview from "@/assets/waveChatPreview.mp4";
+import wavechatThumbnail from "@/assets/waveChatThumbnail.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Section Divider Component
