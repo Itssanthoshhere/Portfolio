@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useRef, useState, ReactNode } from "react";
+import { useRef, useState, type ReactNode, type MouseEvent as ReactMouseEvent } from "react";
 
 interface MagneticButtonProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ export function MagneticButton({ children, className = "" }: MagneticButtonProps
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouse = (e: ReactMouseEvent<HTMLDivElement>) => {
     const { clientX, clientY } = e;
     if (ref.current) {
       const { height, width, left, top } = ref.current.getBoundingClientRect();
