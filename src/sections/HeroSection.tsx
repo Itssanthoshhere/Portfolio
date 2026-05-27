@@ -55,10 +55,10 @@ export function HeroSection() {
               </h1>
             </FadeIn>
 
-            <FadeIn delay={0.6} className="h-12 md:h-16 mb-6">
-              <div className="flex items-center gap-4 text-xl md:text-3xl font-medium text-muted-foreground">
+            <FadeIn delay={0.6} className="h-12 md:h-16 mb-6 w-full">
+              <div className="flex w-full max-w-xl items-center gap-4 text-xl md:text-3xl font-medium text-muted-foreground">
                 <Terminal className="text-accent" size={28} />
-                <div className="relative w-full overflow-hidden h-10">
+                <div className="relative min-w-0 flex-1 overflow-hidden h-10 md:h-12">
                   <AnimatePresence mode="popLayout">
                     <motion.span
                       key={currentTagline}
@@ -66,7 +66,7 @@ export function HeroSection() {
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -40, opacity: 0 }}
                       transition={{ duration: 0.5, ease: "easeInOut" }}
-                      className="absolute left-0 top-0 text-white"
+                      className="absolute inset-0 whitespace-nowrap text-white"
                     >
                       {personalInfo.taglines[currentTagline]}
                     </motion.span>
@@ -122,21 +122,21 @@ export function HeroSection() {
                 
                 {/* Floating Elements */}
                 <motion.div 
-                  className="absolute -right-4 top-10 glass px-4 py-2 rounded-2xl flex items-center gap-2 shadow-xl border border-white/10"
+                  className="absolute -right-4 top-10 px-4 py-2 rounded-2xl flex items-center gap-2 shadow-xl border border-white/20 bg-black/55 backdrop-blur-md"
                   animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <Code size={18} className="text-accent" />
-                  <span className="text-sm font-medium font-mono text-white/90">React Developer</span>
+                  <span className="text-sm font-medium font-mono text-white">React Developer</span>
                 </motion.div>
 
                 <motion.div 
-                  className="absolute -left-8 bottom-20 glass px-4 py-2 rounded-2xl flex items-center gap-2 shadow-xl border border-white/10"
+                  className="absolute -left-8 bottom-20 px-4 py-2 rounded-2xl flex items-center gap-2 shadow-xl border border-white/20 bg-black/55 backdrop-blur-md"
                   animate={{ y: [10, -10, 10] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                 >
                   <User size={18} className="text-primary" />
-                  <span className="text-sm font-medium font-mono text-white/90">UI/UX Enthusiast</span>
+                  <span className="text-sm font-medium font-mono text-white">UI/UX Enthusiast</span>
                 </motion.div>
               </div>
             </FadeIn>
