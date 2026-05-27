@@ -45,26 +45,51 @@ export const experiences = [
       "Gained hands-on experience in full-stack web development and secure deployment"
     ]
   },
-  {
-    title: "Team Co-Head | Multimedia & Design",
-    company: "CodeChef BU",
-    department: "Bennett University",
-    location: "Greater Noida, India",
-    duration: "Sep 2024 – April 2025",
-    type: "Leadership Role",
-    description: "Led the Multimedia & Design Team, driving visual content creation for tech events and coordinating design strategies for one of the university's premier coding clubs.",
-    responsibilities: [
-      "Led the Multimedia & Design Team, driving visual content creation for tech events",
-      "Designed social media posters, event banners, and coordinated design strategies",
-      "Ensured consistent branding and collaborated with teams for outreach campaigns",
-      "Managed a team of designers and coordinated with various departments"
-    ],
-    technologies: ["Figma", "Canva", "Brand Design", "Leadership"],
-    outcomes: [
-      "Successfully increased event participation through effective visual communication",
-      "Established standardized design processes for the organization"
-    ]
-  }
+  // {
+  //   title: "Team Co-Head | Multimedia & Design",
+  //   company: "CodeChef BU",
+  //   department: "Bennett University",
+  //   location: "Greater Noida, India",
+  //   duration: "Sep 2024 – April 2025",
+  //   type: "Leadership Role",
+  //   description: "Led the Multimedia & Design Team, driving visual content creation for tech events and coordinating design strategies for one of the university's premier coding clubs.",
+  //   responsibilities: [
+  //     "Led the Multimedia & Design Team, driving visual content creation for tech events",
+  //     "Designed social media posters, event banners, and coordinated design strategies",
+  //     "Ensured consistent branding and collaborated with teams for outreach campaigns",
+  //     "Managed a team of designers and coordinated with various departments"
+  //   ],
+  //   technologies: ["Figma", "Canva", "Brand Design", "Leadership"],
+  //   outcomes: [
+  //     "Successfully increased event participation through effective visual communication",
+  //     "Established standardized design processes for the organization"
+  //   ]
+  // }
+  // {
+  //   title: "Creative Frontend – Personal Projects",
+  //   company: "Self-Directed Learning",
+  //   department: "Independent Study",
+  //   location: "Remote",
+  //   duration: "Aug 2024 – Present",
+  //   type: "Ongoing",
+  //   description: "Pursuing a self-directed frontend development internship through hands-on personal projects and continuous skill enhancement. Applied industry best practices to design, develop, and deploy modern web applications while building a strong foundation in responsive UI, code quality, and deployment workflows.",
+  //   responsibilities: [
+  //     "Developed multiple frontend applications from scratch using HTML5, CSS3, and JavaScript",
+  //     "Practiced Git-based workflows, including branching, commits, and pull requests",
+  //     "Implemented modern React applications with TypeScript and reusable component patterns",
+  //     "Applied responsive design principles for optimal user experience across devices",
+  //     "Deployed and hosted projects on platforms like Vercel and Netlify for public access",
+  //     "Explored performance optimization techniques and accessibility best practices"
+  //   ],
+  //   technologies: [
+  //     "React", "TypeScript", "HTML5", "CSS3", "JavaScript", "Git", "Vercel", "Netlify"
+  //   ],
+  //   outcomes: [
+  //     "Built a growing portfolio of production-ready web applications",
+  //     "Enhanced expertise in modern frontend frameworks and tooling",
+  //     "Gained practical experience in deployment, version control, and CI/CD workflows"
+  //   ]
+  // }
 ];
 
 export const achievements = [
