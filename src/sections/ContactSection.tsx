@@ -13,38 +13,55 @@ export function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-
     try {
-      // Formspree / Web3Forms integration endpoint would go here
-      // const response = await fetch('YOUR_FORM_ENDPOINT', {
-      //   method: 'POST',
-      //   body: JSON.stringify(data),
-      //   headers: { 'Content-Type': 'application/json' }
-      // });
-      
-      // Simulating network request for premium UX
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setIsSuccess(true);
-      toast({
-        title: "Message sent successfully!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
-      });
-      
-      // Reset form after delay
-      setTimeout(() => {
-        setIsSuccess(false);
-        (e.target as HTMLFormElement).reset();
-      }, 5000);
+      const formData = new FormData(e.currentTarget);
 
+      // Your Web3Forms Access Key
+      formData.append(
+        "access_key",
+        import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+      );
+
+      // Optional
+      formData.append("from_name", "Portfolio Contact");
+      formData.append("subject", "New Portfolio Message");
+
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSuccess(true);
+
+        toast({
+          title: "Message sent successfully!",
+          description:
+            "Thanks for reaching out. I'll get back to you soon.",
+        });
+
+        setTimeout(() => {
+          setIsSuccess(false);
+          e.currentTarget.reset();
+        }, 5000);
+      } else {
+        throw new Error(data.message);
+      }
     } catch (error) {
+      console.error(error);
+
       toast({
         title: "Something went wrong.",
-        description: "Please try again or contact me directly via email.",
+        description:
+          "Please try again or contact me directly via email.",
         variant: "destructive",
       });
     } finally {
@@ -59,7 +76,7 @@ export function ContactSection() {
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Side: Info */}
           <div>
             <FadeIn>
@@ -71,13 +88,13 @@ export function ContactSection() {
                 Available for hire
               </div>
             </FadeIn>
-            
-            <TextReveal 
+
+            <TextReveal
               as="h2"
               text="Let's build something extraordinary together."
               className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-6 leading-tight"
             />
-            
+
             <FadeIn delay={0.2}>
               <p className="text-xl text-muted-foreground mb-12 max-w-lg leading-relaxed">
                 Whether you have a project in mind, a team looking for a developer, or just want to chat about tech—I'm always open to new conversations.
@@ -117,7 +134,7 @@ export function ContactSection() {
               {/* Form Success Overlay */}
               <AnimatePresence>
                 {isSuccess && (
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -141,8 +158,8 @@ export function ContactSection() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-white/80">Full Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       id="name"
                       name="name"
                       required
@@ -153,8 +170,8 @@ export function ContactSection() {
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium text-white/80">Email Address</label>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       id="email"
                       name="email"
                       required
@@ -167,8 +184,8 @@ export function ContactSection() {
 
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium text-white/80">Subject</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="subject"
                     name="subject"
                     required
@@ -180,7 +197,7 @@ export function ContactSection() {
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-white/80">Message</label>
-                  <textarea 
+                  <textarea
                     id="message"
                     name="message"
                     required
@@ -191,8 +208,8 @@ export function ContactSection() {
                   />
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={isSubmitting}
                   className="w-full btn-primary py-4 flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
                 >
