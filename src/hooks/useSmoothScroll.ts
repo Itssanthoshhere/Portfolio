@@ -13,14 +13,20 @@ export function useSmoothScroll() {
       touchMultiplier: 2,
     });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    let frameId: number;
+    let isDestroyed = false;
 
-    requestAnimationFrame(raf);
+    const raf = (time: number) => {
+      if (isDestroyed) return;
+      lenis.raf(time);
+      frameId = requestAnimationFrame(raf);
+    };
+
+    frameId = requestAnimationFrame(raf);
 
     return () => {
+      isDestroyed = true;
+      cancelAnimationFrame(frameId);
       lenis.destroy();
     };
   }, []);
