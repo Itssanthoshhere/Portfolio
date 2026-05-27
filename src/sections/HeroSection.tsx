@@ -8,13 +8,19 @@ import profileImage from '@/assets/santhosh-profile1.jpg';
 
 export function HeroSection() {
   const [currentTagline, setCurrentTagline] = useState(0);
+  const taglines = personalInfo.taglines ?? [];
+  const taglineCount = taglines.length;
+  const currentTaglineText = taglines[currentTagline] ?? '';
 
   useEffect(() => {
+    if (taglineCount <= 0) return;
+
     const interval = setInterval(() => {
-      setCurrentTagline((prev) => (prev + 1) % personalInfo.taglines.length);
+      setCurrentTagline((prev) => (prev + 1) % taglineCount);
     }, 3000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [taglineCount]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -61,14 +67,14 @@ export function HeroSection() {
                 <div className="relative min-w-0 flex-1 overflow-hidden h-10 md:h-12">
                   <AnimatePresence mode="popLayout">
                     <motion.span
-                      key={currentTagline}
+                      key={currentTaglineText || 'fallback-tagline'}
                       initial={{ y: 40, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: -40, opacity: 0 }}
                       transition={{ duration: 0.5, ease: "easeInOut" }}
                       className="absolute inset-0 whitespace-nowrap text-white"
                     >
-                      {personalInfo.taglines[currentTagline]}
+                      {currentTaglineText}
                     </motion.span>
                   </AnimatePresence>
                 </div>
