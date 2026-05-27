@@ -2222,7 +2222,7 @@ const frontendProjects = [
 
     liveUrl: "https://travelor-one.vercel.app/",
 
-    duration: "January 2026",
+    duration: "May 2026",
 
     category: "Frontend Travel Web Application",
   },
