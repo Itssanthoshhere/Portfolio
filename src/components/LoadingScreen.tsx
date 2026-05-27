@@ -9,27 +9,28 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate loading progress
     const duration = 2000;
     const interval = 20;
     const steps = duration / interval;
     let currentStep = 0;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
     const timer = setInterval(() => {
       currentStep++;
       const newProgress = Math.min((currentStep / steps) * 100, 100);
-      
-      // Easing function for progress bar
       const easeProgress = 100 - (100 - newProgress) * Math.pow(1 - newProgress / 100, 3);
       setProgress(easeProgress);
 
       if (currentStep >= steps) {
         clearInterval(timer);
-        setTimeout(onComplete, 500); // Wait a beat before fading out
+        timeoutId = setTimeout(onComplete, 500);
       }
     }, interval);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      clearTimeout(timeoutId);
+    };
   }, [onComplete]);
 
   return (
