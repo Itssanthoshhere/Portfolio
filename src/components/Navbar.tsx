@@ -46,6 +46,8 @@ export function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Initialize scroll state immediately on mount
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -140,6 +142,8 @@ export function Navbar() {
             className="md:hidden z-50 text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle Menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu-overlay"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -150,6 +154,7 @@ export function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-menu-overlay"
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
