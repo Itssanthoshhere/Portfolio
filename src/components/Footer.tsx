@@ -18,7 +18,7 @@ export function Footer() {
           
           {/* Brand */}
           <div className="md:col-span-1">
-            <a href="#" onClick={scrollToTop} className="inline-block mb-6 overflow-hidden rounded-full border border-white/10 w-12 h-12 hover:border-accent/50 transition-colors">
+            <a href="#" onClick={scrollToTop} className="inline-block mb-6 overflow-hidden rounded-full border border-white/10 w-12 h-12 hover:border-accent/50 transition-colors" aria-label="Back to top">
               <img src={profileImage} alt="Santhosh VS" className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500" />
             </a>
             <p className="text-muted-foreground leading-relaxed max-w-sm mb-6">
