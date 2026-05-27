@@ -1351,6 +1351,8 @@ import expoCommercePreview from "@/assets/expoCommercePreview.mp4";
 import expoCommerceThumbnail from "@/assets/expoCommerceThumbnail.png";
 import wavechatPreview from "@/assets/waveChatPreview.mp4";
 import wavechatThumbnail from "@/assets/waveChatThumbnail.png";
+import travelorThumbnail from "@/assets/travelorThumbnail.png";
+import travelorPreview from "@/assets/travelorPreview.mp4";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Section Divider Component
@@ -2176,6 +2178,54 @@ const animatedProjects = [
 ];
 
 const frontendProjects = [
+  {
+    title: "Travelor ✈️ – Multi-Page Travel & Tourism Website",
+
+    description:
+      "A fully responsive travel and tourism website built with React, Tailwind CSS v4, React Router, and Swiper.js. Features advanced animations, dynamic routing, interactive sliders, and a scalable component-driven architecture.",
+
+    longDescription:
+      "Travelor is a production-quality multi-page travel and tourism website built entirely from scratch using React 19, Vite, Tailwind CSS v4, React Router v7, and Swiper.js. Designed as a deep frontend engineering project, it showcases modern SPA routing, advanced Swiper integrations, reusable component architecture, handcrafted CSS animations, and a scalable folder structure. The platform includes fully routed pages for tours, destinations, blogs, pricing, services, testimonials, FAQs, and tour guides. Interactive features such as animated hero sections, parallax clouds, autoplay carousels, dynamic detail pages, animated counters, and custom CSS effects create an immersive travel experience. Built without UI kits or animation libraries, Travelor demonstrates clean frontend architecture, responsive design systems, and production-level React development.",
+
+    video: travelorPreview,
+    image: travelorThumbnail,
+
+    technologies: [
+      "React 19",
+      "Vite",
+      "Tailwind CSS v4",
+      "React Router DOM v7",
+      "Swiper.js",
+      "@iconify/react",
+      "react-countup",
+      "JavaScript (ES6+)",
+      "CSS Animations",
+      "Vercel",
+    ],
+
+    features: [
+      "13 fully routed pages with dynamic route parameters",
+      "Advanced Swiper.js integrations with autoplay and custom navigation",
+      "Animated hero section with MP4 video background and parallax effects",
+      "Dynamic tour, destination, service, and blog detail pages",
+      "Reusable component architecture with 30+ modular components",
+      "Custom handcrafted CSS animations without animation libraries",
+      "Animated counters using react-countup",
+      "Responsive testimonials, tours, and destinations carousels",
+      "Interactive FAQ accordion and booking widgets",
+      "Responsive mobile navigation with slide-in drawer menus",
+      "Custom shimmer button effects and hover interactions",
+      "Fully responsive design optimized for desktop, tablet, and mobile",
+    ],
+
+    githubUrl: "https://github.com/Itssanthoshhere/Travelor",
+
+    liveUrl: "https://travelor-one.vercel.app/",
+
+    duration: "January 2026",
+
+    category: "Frontend Travel Web Application",
+  },
   {
     title: "WaveCast 🎧 – Modern Podcast Platform",
     description:
