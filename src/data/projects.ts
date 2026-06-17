@@ -59,6 +59,8 @@ import wavechatThumbnail from "@/assets/waveChatThumbnail.png";
 import recurioPreview from "@/assets/recurioPreview.mp4";
 import recurioThumbnail from "@/assets/recurioThumbnail.png";
 import RecurioApk from "@/assets/Recurio-v1.0.0.apk";
+import travelorThumbnail from "@/assets/travelorThumbnail.png";
+import travelorPreview from "@/assets/travelorPreview.mp4";
 
 export interface Project {
   slug: string;
@@ -103,6 +105,9 @@ export const projects: Project[] = [
       "NativeWind v5",
     ],
     features: [
+      "Secure, identity-first authentication with Clerk (MFA & JWT support)",
+      "Optimistic UI updates with Zustand client state caching",
+      "Real-time backend queries and mutations via Supabase",
       "Dynamic dashboard and search filter for active subscriptions",
       "Interactive Bar Chart detailing expenses across categories",
       "Slide-up bottom sheet modal for creation & editing with custom card colors",
@@ -115,14 +120,14 @@ export const projects: Project[] = [
     category: "Mobile",
     featured: true,
   },
-  
+
   {
     slug: "quickshow-movie-booking",
     title: "QuickShow – Movie Theater Platform",
     description:
       "A modern movie booking platform built with React, Node.js, Express, and MongoDB. Features real-time seat booking and secure payments.",
     longDescription:
-      "QuickShow is a full-stack movie theater booking application designed to deliver a seamless and interactive experience for both users and admins. Built with React, Node.js, Express, and MongoDB, it enables users to browse movies, book seats in real-time, and complete payments securely using Stripe.",
+      "QuickShow is a full-stack movie theater booking application designed to deliver a seamless and interactive experience for both users and admins. Built with React, Node.js, Express, and MongoDB, it enables users to browse movies, book seats in real-time, and complete payments securely using Stripe. The platform leverages Inngest for automated background workflows, Cloudinary for media storage, and automatically syncs the latest 'Now Playing' movies from the TMDB API.",
     video: quickshowPreview,
     image: quickshowThumbnail,
     technologies: [
@@ -133,13 +138,19 @@ export const projects: Project[] = [
       "MongoDB",
       "Stripe",
       "Clerk Auth",
+      "Inngest",
+      "Cloudinary",
+      "TMDB API",
+      "Nodemailer",
     ],
     features: [
       "Real-time seat booking with dynamic layouts",
-      "Secure payments powered by Stripe",
+      "Secure payments powered by Stripe webhooks",
+      "Automated background workflows using Inngest (user sync, validations, reminders)",
+      "Automatic 'Now Playing' movie synchronization via TMDB API",
+      "Email notifications for booking confirmations and reminders via Nodemailer",
       "User authentication and profiles via Clerk",
-      "Admin dashboard for movie and show management",
-      "Movie catalog with trailers and details",
+      "Admin dashboard for centralized movie and show management",
     ],
     githubUrl:
       "https://github.com/Itssanthoshhere/QuickShow-Movie-Theater-Booking-Platform",
@@ -170,7 +181,7 @@ export const projects: Project[] = [
     liveUrl: "https://hvf-e-leave-portal.vercel.app/",
     duration: "June 2025",
     category: "Full-Stack",
-    featured: false,
+    featured: true,
   },
   {
     slug: "converso-lms",
@@ -200,37 +211,7 @@ export const projects: Project[] = [
     liveUrl: "https://lms-saas-app-coral.vercel.app/",
     duration: "Nov 2025",
     category: "Full-Stack",
-    featured: true,
-  },
-  {
-    slug: "wavechat",
-    title: "WaveChat 🌊 – Real-Time Messaging",
-    description:
-      "A production-grade full-stack messaging platform built with React 19, React Native (Expo), Express.js, MongoDB, and Socket.io.",
-    longDescription:
-      "WaveChat is a full-stack, cross-platform messaging application powered by a custom Socket.io server — giving full control over real-time infrastructure with no vendor lock-in. Works seamlessly across iOS, Android, and web.",
-    video: wavechatPreview,
-    image: wavechatThumbnail,
-    technologies: [
-      "React 19",
-      "React Native",
-      "TypeScript",
-      "Node.js",
-      "MongoDB",
-      "Socket.io",
-      "Zustand",
-    ],
-    features: [
-      "Real-time messaging with custom Socket.io server",
-      "Typing indicators and online/offline presence",
-      "Optimistic UI updates for instant feel",
-      "Cross-platform: iOS, Android, and Web from one backend",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/WaveChat-App",
-    liveUrl: "https://wavechat-app.onrender.com/",
-    duration: "April 2026",
-    category: "Mobile",
-    featured: true,
+    featured: false,
   },
   {
     slug: "figpro-collaborative",
@@ -259,7 +240,7 @@ export const projects: Project[] = [
     liveUrl: "https://fig-pro-sandyy.vercel.app/",
     duration: "November 2025",
     category: "Full-Stack",
-    featured: true,
+    featured: false,
   },
   {
     slug: "nimbus-keyboards-3d",
@@ -520,6 +501,211 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Itssanthoshhere/Bubbly-ChatApp",
     duration: "October 2025",
     category: "Mobile",
+    featured: false,
+  },
+  {
+    slug: "demon-bee-3d",
+    title: "Demon Bee 3D 🐝 – Interactive 3D Web Experience",
+    description:
+      "A visually immersive 3D web project featuring animated Demon Bee elements, layered backgrounds, and smooth GSAP & Three.js animations with responsive design.",
+    longDescription:
+      "Demon Bee 3D is an interactive web experience built with HTML, CSS, JavaScript, Three.js, and GSAP. Users can explore animated Demon Bee elements with smooth transitions and layered backgrounds, creating a visually engaging and responsive website. The project demonstrates custom 3D modeling, dynamic animations, and responsive layouts suitable for desktop and mobile devices.",
+    video: beePreview,
+    image: beeThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "GSAP"],
+    features: [
+      "Interactive 3D Demon Bee animations",
+      "Layered dynamic backgrounds for depth",
+      "Responsive design for desktop, tablet, and mobile",
+      "Smooth motion animations with GSAP",
+      "Custom fonts integrated via Google/CDN",
+      "Lightweight and performance-optimized",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Demon-Bee-3D",
+    liveUrl: "https://demon-bee-3d.vercel.app/",
+    duration: "September 2025",
+    category: "3D Experience",
+    featured: false,
+  },
+  {
+    slug: "chug-spylt",
+    title: "🥛 Chug SPYLT – Awwwards-Inspired Interactive Website",
+    description:
+      "An immersive interactive website built with React 19, Tailwind CSS v4, and GSAP. Features smooth parallax scrolling, clip-path animations, and Awwwards-style text reveals.",
+    longDescription:
+      "Chug SPYLT is a stunning interactive web experience inspired by Awwwards' finest creative projects. Built with React 19, Tailwind CSS v4, and GSAP, it leverages ScrollTrigger and ScrollSmoother for fluid animations, parallax effects, and storytelling-driven layouts. This project showcases advanced animation techniques like layered GSAP timelines, clip-path transitions, and text reveal effects.",
+    video: chugPreview,
+    image: chugThumbnail,
+    technologies: ["React 19", "Tailwind CSS v4", "GSAP"],
+    features: [
+      "Parallax scrolling with smooth depth effects",
+      "Advanced clip-path animations",
+      "ScrollTrigger & ScrollSmoother for dynamic interactions",
+      "Awwwards-style text reveal animations",
+      "Layered GSAP timelines for immersive storytelling",
+      "Fully responsive design optimized for mobile and desktop",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Chug-SPYLT",
+    liveUrl: "https://chug-spylt.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend",
+    featured: false,
+  },
+  {
+    slug: "travelor-tourism",
+    title: "Travelor ✈️ – Multi-Page Travel & Tourism Website",
+    description:
+      "A fully responsive travel and tourism website built with React, Tailwind CSS v4, React Router, and Swiper.js. Features advanced animations, dynamic routing, interactive sliders, and a scalable component-driven architecture.",
+    longDescription:
+      "Travelor is a production-quality multi-page travel and tourism website built entirely from scratch using React 19, Vite, Tailwind CSS v4, React Router v7, and Swiper.js. Designed as a deep frontend engineering project, it showcases modern SPA routing, advanced Swiper integrations, reusable component architecture, handcrafted CSS animations, and a scalable folder structure. The platform includes fully routed pages for tours, destinations, blogs, pricing, services, testimonials, FAQs, and tour guides. Interactive features such as animated hero sections, parallax clouds, autoplay carousels, dynamic detail pages, animated counters, and custom CSS effects create an immersive travel experience. Built without UI kits or animation libraries, Travelor demonstrates clean frontend architecture, responsive design systems, and production-level React development.",
+    video: travelorPreview,
+    image: travelorThumbnail,
+    technologies: [
+      "React 19",
+      "Vite",
+      "Tailwind CSS v4",
+      "React Router DOM v7",
+      "Swiper.js",
+      "@iconify/react",
+      "react-countup",
+      "JavaScript (ES6+)",
+      "CSS Animations",
+      "Vercel",
+    ],
+    features: [
+      "13 fully routed pages with dynamic route parameters",
+      "Advanced Swiper.js integrations with autoplay and custom navigation",
+      "Animated hero section with MP4 video background and parallax effects",
+      "Dynamic tour, destination, service, and blog detail pages",
+      "Reusable component architecture with 30+ modular components",
+      "Custom handcrafted CSS animations without animation libraries",
+      "Animated counters using react-countup",
+      "Responsive testimonials, tours, and destinations carousels",
+      "Interactive FAQ accordion and booking widgets",
+      "Responsive mobile navigation with slide-in drawer menus",
+      "Custom shimmer button effects and hover interactions",
+      "Fully responsive design optimized for desktop, tablet, and mobile",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Travelor",
+    liveUrl: "https://travelor-one.vercel.app/",
+    duration: "May 2026",
+    category: "Frontend",
+    featured: false,
+  },
+  {
+    slug: "wavecast-podcast",
+    title: "WaveCast 🎧 – Modern Podcast Platform",
+    description:
+      "A modern podcast discovery platform built with Next.js App Router. Explore podcast episodes, blogs, hosts, pricing plans, and FAQs in a clean, scalable UI.",
+    longDescription:
+      "WaveCast is a fully responsive, production-ready podcast platform built using Next.js App Router, React 19, TypeScript, and Tailwind CSS. It allows users to browse podcast episodes, read blogs, explore hosts, manage favorites, view pricing plans, and interact with FAQ sections. Designed with scalability in mind, WaveCast features clean architecture, reusable components, and smooth UX.",
+    video: waveCastPreview,
+    image: waveCastThumbnail,
+    technologies: [
+      "Next.js (App Router)",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Swiper.js",
+      "react-hot-toast",
+      "LocalStorage",
+      "next/font",
+    ],
+    features: [
+      "Podcast episode listing with search and sorting",
+      "Favorite episodes using localStorage",
+      "Blog system with categories and dynamic routes",
+      "Host profiles with social interactions",
+      "Pricing plans with monthly/yearly toggle",
+      "Accordion-based FAQ section",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/WaveCast-Podcast",
+    liveUrl: "https://wave-cast-podcast.vercel.app/",
+    duration: "January 2026",
+    category: "Frontend",
+    featured: false,
+  },
+  {
+    slug: "cinema-seat-booking",
+    title: "🎬 Cinema Seat Booking – Interactive React Component",
+    description:
+      "A modern and responsive seat booking system built with React.js and TailwindCSS. Features dynamic seat layouts, categories, pricing, and booking flow.",
+    longDescription:
+      "Cinema Seat Booking is an interactive and customizable React component designed for cinema halls, theaters, and event booking platforms. It supports seat selection with categories like Regular, Premium, and VIP, dynamic pricing, booking summaries, aisle separation, and booked seat management.",
+    image: cinemaThumbnail,
+    video: cinemaPreview,
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript (ES6+)",
+      "Vite / CRA",
+    ],
+    features: [
+      "Dynamic seat map with rows, seats per row, and aisle separation",
+      "Customizable seat categories (Regular, Premium, VIP)",
+      "Booking summary with selected seats, seat count, and total price",
+      "Interactive UI with click-to-select animations",
+      "Responsive design across devices",
+      "Post-booking status showing booked seat IDs",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Cinema-Seat-Booking",
+    liveUrl: "https://cinemaseatbooking.vercel.app/",
+    duration: "September 2025",
+    category: "Component",
+    featured: false,
+  },
+  {
+    slug: "sweet-bite-bakery",
+    title: "Sweet Bite – Bakery Website",
+    description:
+      "Fully responsive bakery website featuring product showcase, testimonial section, and contact form. Built with HTML5, CSS3, and JavaScript with focus on user-friendly layout and cross-device compatibility.",
+    longDescription:
+      "An elegant and modern bakery website showcasing delicious products with beautiful imagery, customer testimonials, and seamless user experience across all devices.",
+    video: sweetbitepreview,
+    image: sweetThumbnail,
+    technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    features: [
+      "Beautiful product showcase with image galleries",
+      "Customer testimonials and reviews section",
+      "Contact form with validation",
+      "Fully responsive design",
+      "Smooth animations and transitions",
+      "SEO optimized structure",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Sweet-Bite",
+    liveUrl: "https://sweet-bite-ruby.vercel.app/",
+    duration: "Oct 2024",
+    category: "Frontend",
+    featured: false,
+  },
+  {
+    slug: "brew-bliss-coffee",
+    title: "☕ Brew Bliss – Premium Coffee Experience",
+    description:
+      "A modern, fully responsive coffee shop website built with HTML, CSS, and JavaScript. Features a clean UI, interactive menu, testimonials slider, and smooth user experience.",
+    longDescription:
+      "Brew Bliss is a stylish and responsive coffee shop website designed to showcase premium coffee experiences and menu offerings. Developed with HTML, CSS, and vanilla JavaScript, it features an engaging Hero section, interactive menu categories, customer testimonials with Swiper.js, a gallery showcase, and a contact form.",
+    video: brewblissPreview,
+    image: brewblissThumbnail,
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6)",
+      "Swiper.js",
+      "Font Awesome",
+    ],
+    features: [
+      "Fully responsive design across devices",
+      "Interactive Navbar with hamburger menu",
+      "Smooth hover effects and CSS animations",
+      "Customer Testimonials with Swiper slider",
+      "Gallery section showcasing coffee shop ambiance",
+      "Contact form for inquiries",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Brew-Bliss",
+    liveUrl: "https://brew-bliss-five.vercel.app/",
+    duration: "September 2025",
+    category: "Frontend",
     featured: false,
   },
 ];
