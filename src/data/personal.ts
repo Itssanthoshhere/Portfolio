@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Santhosh VS",
   taglines: [
     "Frontend Developer",
-    "Full Stack Engineer",
+    "React Native Developer",
     "AI Enthusiast",
     "Creative Coder"
   ],
