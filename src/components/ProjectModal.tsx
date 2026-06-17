@@ -77,13 +77,13 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         muted
                         loop
                         playsInline
-                        className="w-full h-full object-contain lg:object-cover absolute inset-0"
+                        className="w-full h-full object-contain absolute inset-0"
                       />
                     ) : (
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover absolute inset-0"
+                        className="w-full h-full object-contain absolute inset-0"
                       />
                     )}
                   </div>
