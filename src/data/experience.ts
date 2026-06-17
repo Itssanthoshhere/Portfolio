@@ -1,5 +1,26 @@
 export const experiences = [
   {
+    title: "Software Development Intern",
+    company: "Zenith Enterprise Solutions Pvt. Ltd. (MF360)",
+    department: "Engineering",
+    location: "Remote",
+    duration: "Jan 2026 - Present",
+    type: "Internship",
+    description: "Sole frontend developer for MF360, an AI-powered SaaS platform for Mutual Fund Distributors. Built the complete web product from scratch, leading two major redesigns from MVP to production.",
+    responsibilities: [
+      "Sole frontend developer for MF360 (AI SaaS platform); drove the product from MVP to production across two major redesigns.",
+      "Developed responsive dashboards, Auth0 authentication flows, and reusable UI components using React, TypeScript, and Tailwind CSS.",
+      "Automated Mutual Fund NAV data retrieval pipelines using Python scripts and Power Query workflows.",
+      "Collaborated directly with founders to translate business requirements into features across multiple release phases."
+    ],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Auth0", "Python", "Power Query"],
+    outcomes: [
+      "Successfully launched production-ready SaaS platform from an initial MVP",
+      "Improved overall user experience and platform responsiveness through multiple redesign phases",
+      "Streamlined financial data updates through custom Python automation scripts"
+    ]
+  },
+  {
     title: "UI/UX Designer",
     company: "Zonomo Technologies Private Limited",
     department: "Startup - Home Services Platform",
