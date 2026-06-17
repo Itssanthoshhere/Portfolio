@@ -195,7 +195,8 @@
 
   /* ── Hero Buttons ── */
   .btn-primary {
-    background: linear-gradient(135deg, #7C3AED, #8B5CF6);
+    background: linear-gradient(135deg, #7C3AED, #8B5CF6, #7C3AED);
+    background-size: 200% auto;
     color: white;
     font-weight: 600;
     padding: 0.875rem 2rem;
@@ -206,20 +207,8 @@
     overflow: hidden;
   }
 
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #8B5CF6, #7C3AED);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .btn-primary:hover::before {
-    opacity: 1;
-  }
-
   .btn-primary:hover {
+    background-position: right center;
     box-shadow: 0 0 30px hsl(263 70% 50% / 0.4);
     transform: translateY(-2px);
   }
