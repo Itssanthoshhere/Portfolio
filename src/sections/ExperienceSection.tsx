@@ -17,7 +17,7 @@ export function ExperienceSection() {
           align="center"
         />
 
-        <div className="max-w-4xl mx-auto relative pt-8">
+        <div className="max-w-6xl mx-auto relative pt-8">
           {/* Central Timeline Line (Desktop) */}
           <div className="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-white/10" />
           
@@ -48,9 +48,19 @@ export function ExperienceSection() {
                             <MapPin size={16} /> {exp.location}
                           </span>
                         </div>
-                        <p className="text-white/80 leading-relaxed mb-6">{exp.description}</p>
+                        <p className="text-white/80 leading-relaxed mb-4">{exp.description}</p>
+                        {exp.responsibilities && exp.responsibilities.length > 0 && (
+                          <ul className="space-y-2 mb-6">
+                            {exp.responsibilities.map((resp, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground text-left">
+                                <span className="text-accent mt-0.5">▹</span>
+                                <span>{resp}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                         <div className="flex flex-wrap gap-2">
-                          {exp.technologies.slice(0, 4).map(tech => (
+                          {exp.technologies.map(tech => (
                             <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-white/60">
                               {tech}
                             </span>
@@ -74,9 +84,19 @@ export function ExperienceSection() {
                             <MapPin size={16} /> {exp.location}
                           </span>
                         </div>
-                        <p className="text-white/80 leading-relaxed mb-6">{exp.description}</p>
+                        <p className="text-white/80 leading-relaxed mb-4">{exp.description}</p>
+                        {exp.responsibilities && exp.responsibilities.length > 0 && (
+                          <ul className="space-y-2 mb-6">
+                            {exp.responsibilities.map((resp, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground text-left">
+                                <span className="text-accent mt-0.5">▹</span>
+                                <span>{resp}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                         <div className="flex flex-wrap gap-2">
-                          {exp.technologies.slice(0, 4).map(tech => (
+                          {exp.technologies.map(tech => (
                             <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-white/60">
                               {tech}
                             </span>
@@ -97,7 +117,26 @@ export function ExperienceSection() {
                             <Calendar size={14} /> {exp.duration}
                           </span>
                         </div>
-                        <p className="text-white/80 text-sm leading-relaxed">{exp.description}</p>
+                        <p className="text-white/80 text-sm leading-relaxed mb-4">{exp.description}</p>
+                        {exp.responsibilities && exp.responsibilities.length > 0 && (
+                          <ul className="space-y-2 mb-6">
+                            {exp.responsibilities.map((resp, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground text-left">
+                                <span className="text-accent mt-0.5">▹</span>
+                                <span>{resp}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                        {exp.technologies && (
+                          <div className="flex flex-wrap gap-2">
+                            {exp.technologies.map(tech => (
+                              <span key={tech} className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs font-mono text-white/60">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </GlassCard>
                     </FadeIn>
                   </div>
