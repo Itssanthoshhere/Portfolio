@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, Code, Calendar } from 'lucide-react';
+import { X, ExternalLink, Github, Code, Calendar, Download } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
@@ -145,6 +145,14 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                               <Github size={18} className="mr-2" />
                               Source Code
+                            </a>
+                          </Button>
+                        )}
+                        {project.apkUrl && (
+                          <Button asChild className="btn-secondary">
+                            <a href={project.apkUrl} target="_blank" rel="noopener noreferrer">
+                              <Download size={18} className="mr-2" />
+                              Download APK
                             </a>
                           </Button>
                         )}

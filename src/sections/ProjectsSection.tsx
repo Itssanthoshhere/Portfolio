@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SectionHeading, ProjectModal } from '@/components';
 import { FadeIn, SlideReveal } from '@/animations';
 import { projects, Project } from '@/data/projects';
-import { ExternalLink, Github, Code } from 'lucide-react';
+import { ExternalLink, Github, Code, Download } from 'lucide-react';
 
 export function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -142,6 +142,18 @@ export function ProjectsSection() {
                         aria-label="View Source Code"
                       >
                         <Github size={20} />
+                      </a>
+                    )}
+                    
+                    {project.apkUrl && (
+                      <a 
+                        href={project.apkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-muted-foreground hover:text-white transition-colors"
+                        aria-label="Download APK"
+                      >
+                        <Download size={20} />
                       </a>
                     )}
                   </div>
