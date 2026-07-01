@@ -61,6 +61,8 @@ import recurioThumbnail from "@/assets/recurioThumbnail.png";
 import RecurioApk from "@/assets/Recurio-v1.0.0.apk";
 import travelorThumbnail from "@/assets/travelorThumbnail.png";
 import travelorPreview from "@/assets/travelorPreview.mp4";
+import feastoThumbnail from "@/assets/feastoThumbnail.png";
+import feastoPreview from "@/assets/feastoPreview.mp4";
 
 export interface Project {
   slug: string;
@@ -86,6 +88,40 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "feasto-food-delivery",
+    title: "Feasto 🛵 – Full-Stack Real-Time Food Delivery",
+    description:
+      "A production-grade microservices food delivery ecosystem built with React, TypeScript, Node.js, RabbitMQ, Socket.IO, MongoDB, and Docker.",
+    longDescription:
+      "Feasto is a full-stack food delivery ecosystem that demonstrates real-world microservices architecture at the application level. It implements decoupled async communication via RabbitMQ between payment, restaurant, and rider services, real-time WebSocket delivery with JWT-authenticated rooms, geospatial queries in MongoDB for location-aware restaurant discovery and rider dispatching, dual payment gateway integration, and multi-role RBAC for customers, sellers, riders, and admins.",
+    technologies: [
+      "React 19",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "RabbitMQ",
+      "Socket.IO",
+      "Docker",
+      "Vite",
+      "Tailwind CSS",
+    ],
+    features: [
+      "Decoupled async communication via RabbitMQ",
+      "Real-time WebSocket delivery with JWT-authenticated rooms",
+      "Geospatial queries in MongoDB for location-aware routing",
+      "Dual payment gateway integration (Razorpay + Stripe)",
+      "Multi-role RBAC for customers, sellers, riders, and admins",
+    ],
+    video: feastoPreview,
+    image: feastoThumbnail,
+    githubUrl: "https://github.com/Itssanthoshhere/Feasto",
+    liveUrl: "https://getfeasto.vercel.app",
+    duration: "Current",
+    category: "Full-Stack",
+    featured: true,
+  },
   {
     slug: "recurio-subscription-manager",
     title: "Recurio 📱 – Subscription Manager",
