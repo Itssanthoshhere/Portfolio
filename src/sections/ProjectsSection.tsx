@@ -9,11 +9,11 @@ export function ProjectsSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
+  const categories = ['All', ...Array.from(new Set(projects.flatMap(p => Array.isArray(p.category) ? p.category : [p.category])))];
   
   const filteredProjects = selectedCategory === 'All' 
     ? projects.filter(p => p.featured) 
-    : projects.filter(p => p.category === selectedCategory);
+    : projects.filter(p => Array.isArray(p.category) ? p.category.includes(selectedCategory as any) : p.category === selectedCategory);
 
   return (
     <section id="projects" className="section-padding relative z-10 bg-surface/30">
@@ -98,7 +98,7 @@ export function ProjectsSection() {
                 {/* Content */}
                 <div className={`flex flex-col ${index % 2 !== 0 ? 'lg:col-start-1' : ''}`}>
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="text-accent font-mono text-sm">{project.category}</span>
+                    <span className="text-accent font-mono text-sm">{Array.isArray(project.category) ? project.category.join(' & ') : project.category}</span>
                   </div>
                   
                   <h3 className="text-3xl md:text-4xl font-bold font-heading mb-4 text-white">

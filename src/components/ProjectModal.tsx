@@ -1,7 +1,14 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, Code, Calendar, Download } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  X,
+  ExternalLink,
+  Github,
+  Code,
+  Calendar,
+  Download,
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface ProjectModalProps {
   project: any | null;
@@ -12,12 +19,12 @@ interface ProjectModalProps {
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   // Prevent body scroll when modal is open
   if (isOpen) {
-    if (typeof window !== 'undefined') {
-      document.body.style.overflow = 'hidden';
+    if (typeof window !== "undefined") {
+      document.body.style.overflow = "hidden";
     }
   } else {
-    if (typeof window !== 'undefined') {
-      document.body.style.overflow = 'unset';
+    if (typeof window !== "undefined") {
+      document.body.style.overflow = "unset";
     }
   }
 
@@ -50,7 +57,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               <div className="flex items-center justify-between p-6 border-b border-border/50">
                 <div className="flex items-center gap-4">
                   <Badge className="bg-primary/20 text-primary border-primary/30 font-mono">
-                    {project.category}
+                    {Array.isArray(project.category)
+                      ? project.category.join(" & ")
+                      : project.category}
                   </Badge>
                   <span className="text-sm text-muted-foreground flex items-center gap-2">
                     <Calendar size={14} />
@@ -61,7 +70,10 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   onClick={onClose}
                   className="p-2 rounded-full hover:bg-white/10 transition-colors"
                 >
-                  <X size={24} className="text-muted-foreground hover:text-white" />
+                  <X
+                    size={24}
+                    className="text-muted-foreground hover:text-white"
+                  />
                 </button>
               </div>
 
@@ -93,7 +105,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     <h2 className="text-3xl lg:text-4xl font-bold font-heading mb-6 leading-tight">
                       {project.title}
                     </h2>
-                    
+
                     <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                       {project.longDescription}
                     </p>
@@ -106,21 +118,28 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                           Key Features
                         </h3>
                         <ul className="space-y-3">
-                          {project.features.map((feature: string, idx: number) => (
-                            <li key={idx} className="flex items-start gap-3 text-muted-foreground">
-                              <span className="text-accent mt-1">▹</span>
-                              <span>{feature}</span>
-                            </li>
-                          ))}
+                          {project.features.map(
+                            (feature: string, idx: number) => (
+                              <li
+                                key={idx}
+                                className="flex items-start gap-3 text-muted-foreground"
+                              >
+                                <span className="text-accent mt-1">▹</span>
+                                <span>{feature}</span>
+                              </li>
+                            ),
+                          )}
                         </ul>
                       </div>
 
                       {/* Technologies */}
                       <div>
-                        <h3 className="text-xl font-bold mb-4 text-white">Tech Stack</h3>
+                        <h3 className="text-xl font-bold mb-4 text-white">
+                          Tech Stack
+                        </h3>
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech: string) => (
-                            <span 
+                            <span
                               key={tech}
                               className="px-3 py-1.5 rounded-full text-sm font-medium bg-white/5 border border-white/10 text-white/80"
                             >
@@ -134,7 +153,11 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                       <div className="flex flex-wrap gap-4 pt-4">
                         {project.liveUrl && (
                           <Button asChild className="btn-primary">
-                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <ExternalLink size={18} className="mr-2" />
                               View Live Demo
                             </a>
@@ -142,7 +165,11 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         )}
                         {project.githubUrl && (
                           <Button asChild className="btn-secondary">
-                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Github size={18} className="mr-2" />
                               Source Code
                             </a>
@@ -150,7 +177,11 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         )}
                         {project.apkUrl && (
                           <Button asChild className="btn-secondary">
-                            <a href={project.apkUrl} target="_blank" rel="noopener noreferrer">
+                            <a
+                              href={project.apkUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <Download size={18} className="mr-2" />
                               Download APK
                             </a>

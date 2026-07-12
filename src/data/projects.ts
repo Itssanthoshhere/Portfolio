@@ -83,7 +83,8 @@ export interface Project {
     | "Mobile"
     | "3D Experience"
     | "Frontend"
-    | "Component";
+    | "Component"
+    | ("Full-Stack" | "Mobile" | "3D Experience" | "Frontend" | "Component")[];
   featured?: boolean;
 }
 
@@ -94,23 +95,28 @@ export const projects: Project[] = [
     description:
       "A production-grade microservices food delivery ecosystem built with React, TypeScript, Node.js, RabbitMQ, Socket.IO, MongoDB, and Docker.",
     longDescription:
-      "Feasto is a full-stack food delivery ecosystem that demonstrates real-world microservices architecture at the application level. It implements decoupled async communication via RabbitMQ between payment, restaurant, and rider services, real-time WebSocket delivery with JWT-authenticated rooms, geospatial queries in MongoDB for location-aware restaurant discovery and rider dispatching, dual payment gateway integration, and multi-role RBAC for customers, sellers, riders, and admins.",
+      "Feasto is a full-stack food delivery ecosystem that demonstrates real-world microservices architecture at the application level. It features a responsive web app and a native Expo mobile app. The platform implements decoupled async communication via RabbitMQ between payment, restaurant, and rider services, real-time WebSocket delivery with JWT-authenticated rooms, geospatial queries in MongoDB for location-aware restaurant discovery and rider dispatching, live map routing via Leaflet, dual payment gateway integration, and multi-role RBAC for customers, sellers, riders, and admins.",
     technologies: [
       "React 19",
+      "React Native",
+      "Expo",
       "TypeScript",
       "Node.js",
       "Express.js",
       "MongoDB",
       "RabbitMQ",
       "Socket.IO",
+      "Leaflet",
       "Docker",
       "Vite",
       "Tailwind CSS",
     ],
     features: [
-      "Decoupled async communication via RabbitMQ",
+      "Cross-platform access with a responsive web app and native Expo mobile app",
+      "Decoupled async communication via RabbitMQ between microservices",
       "Real-time WebSocket delivery with JWT-authenticated rooms",
-      "Geospatial queries in MongoDB for location-aware routing",
+      "Live order tracking with Socket.IO updates and Leaflet routing maps",
+      "Geospatial queries in MongoDB for location-aware restaurant discovery and rider dispatching",
       "Dual payment gateway integration (Razorpay + Stripe)",
       "Multi-role RBAC for customers, sellers, riders, and admins",
     ],
@@ -118,8 +124,9 @@ export const projects: Project[] = [
     image: feastoThumbnail,
     githubUrl: "https://github.com/Itssanthoshhere/Feasto",
     liveUrl: "https://getfeasto.vercel.app",
+    apkUrl: "https://expo.dev/accounts/itssanthoshhere/projects/feasto/builds/aa0d513f-cf0d-4456-8b88-aa1656e623ed",
     duration: "Current",
-    category: "Full-Stack",
+    category: ["Full-Stack", "Mobile"],
     featured: true,
   },
   {
