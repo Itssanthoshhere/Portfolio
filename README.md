@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://santhosh-vs-portfolio.vercel.app/" target="_blank">
-      <img src="src/assets/hero.png" alt="Portfolio Banner">
+      <img src="src/assets/herov1.png" alt="Portfolio Banner">
     </a>
   <br />
 
