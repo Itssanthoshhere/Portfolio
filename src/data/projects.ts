@@ -79,12 +79,12 @@ export interface Project {
   apkUrl?: string;
   duration: string;
   category:
-    | "Full-Stack"
-    | "Mobile"
-    | "3D Experience"
-    | "Frontend"
-    | "Component"
-    | ("Full-Stack" | "Mobile" | "3D Experience" | "Frontend" | "Component")[];
+  | "Full-Stack"
+  | "Mobile"
+  | "3D Experience"
+  | "Frontend"
+  | "Component"
+  | ("Full-Stack" | "Mobile" | "3D Experience" | "Frontend" | "Component")[];
   featured?: boolean;
 }
 
@@ -145,10 +145,11 @@ export const projects: Project[] = [
       "Supabase",
       "Clerk Auth",
       "Zustand",
-      "NativeWind v5",
+      "NativeWind",
+      "PostHog"
     ],
     features: [
-      "Secure, identity-first authentication with Clerk (MFA & JWT support)",
+      "Secure, identity-first authentication with Clerk",
       "Optimistic UI updates with Zustand client state caching",
       "Real-time backend queries and mutations via Supabase",
       "Dynamic dashboard and search filter for active subscriptions",
@@ -156,8 +157,7 @@ export const projects: Project[] = [
       "Slide-up bottom sheet modal for creation & editing with custom card colors",
       "Local push notifications configured dynamically via user settings",
     ],
-    githubUrl:
-      "https://github.com/Itssanthoshhere/Recurio-Subscription-Manager-App",
+    githubUrl: "https://github.com/Itssanthoshhere/Recurio-Subscription-Manager-App",
     apkUrl: RecurioApk,
     duration: "Recent",
     category: "Mobile",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
 
   {
     slug: "quickshow-movie-booking",
-    title: "QuickShow – Movie Theater Platform",
+    title: "QuickShow 🎟️ – Movie Theater Platform",
     description:
       "A modern movie booking platform built with React, Node.js, Express, and MongoDB. Features real-time seat booking and secure payments.",
     longDescription:
@@ -226,65 +226,66 @@ export const projects: Project[] = [
     category: "Full-Stack",
     featured: true,
   },
-  {
-    slug: "converso-lms",
-    title: "Converso 🎓 – AI-Powered LMS SaaS",
-    description:
-      "An AI-driven Learning Management System built with Next.js, Supabase, Clerk, and Vapi. Enables real-time voice-based learning.",
-    longDescription:
-      "Converso is a modern, full-stack SaaS Learning Management System designed to transform how users learn through real-time AI voice conversations. Built with Next.js App Router and TypeScript, it integrates Supabase for PostgreSQL-backed data handling and Vapi AI for low-latency speech-to-speech tutoring.",
-    video: conversoPreview,
-    image: conversoThumbnail,
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Supabase",
-      "Clerk Auth",
-      "Stripe",
-      "Vapi AI",
-      "Tailwind CSS",
-    ],
-    features: [
-      "Real-time AI voice tutoring with speech-to-speech interaction",
-      "Create and manage personalized AI companions",
-      "Secure authentication and subscriptions with Clerk",
-      "Stripe-powered subscription billing",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/lms-saas-app",
-    liveUrl: "https://lms-saas-app-coral.vercel.app/",
-    duration: "Nov 2025",
-    category: "Full-Stack",
-    featured: false,
-  },
-  {
-    slug: "figpro-collaborative",
-    title: "FigPro 🎨 – Collaborative Design App",
-    description:
-      "A real-time collaborative design platform built with Next.js, Liveblocks, and Fabric.js, supporting live cursors and drawing tools.",
-    longDescription:
-      "FigPro is a fully interactive, real-time collaborative design application inspired by Figma. Built using Next.js, TypeScript, Liveblocks, Fabric.js, and TailwindCSS, it allows multiple users to design together with features like live cursors, drawing tools, and shape editing.",
-    video: figProPreview,
-    image: figProThumbnail,
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Liveblocks",
-      "Fabric.js",
-      "Tailwind CSS",
-      "Shadcn/UI",
-    ],
-    features: [
-      "Real-time multi-user collaboration",
-      "Live cursors with cursor chat",
-      "Freeform drawing with synced paths",
-      "Shape tools: rectangles, circles, lines, triangles, text",
-    ],
-    githubUrl: "https://github.com/Itssanthoshhere/FigPro",
-    liveUrl: "https://fig-pro-sandyy.vercel.app/",
-    duration: "November 2025",
-    category: "Full-Stack",
-    featured: false,
-  },
+  // {
+  //   slug: "converso-lms",
+  //   title: "Converso 🎓 – AI-Powered LMS SaaS",
+  //   description:
+  //     "An AI-driven Learning Management System built with Next.js, Supabase, Clerk, and Vapi. Enables real-time voice-based learning.",
+  //   longDescription:
+  //     "Converso is a modern, full-stack SaaS Learning Management System designed to transform how users learn through real-time AI voice conversations. Built with Next.js App Router and TypeScript, it integrates Supabase for PostgreSQL-backed data handling and Vapi AI for low-latency speech-to-speech tutoring.",
+  //   video: conversoPreview,
+  //   image: conversoThumbnail,
+  //   technologies: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "Supabase",
+  //     "Clerk Auth",
+  //     "Stripe",
+  //     "Vapi AI",
+  //     "Tailwind CSS",
+  //   ],
+  //   features: [
+  //     "Real-time AI voice tutoring with speech-to-speech interaction",
+  //     "Create and manage personalized AI companions",
+  //     "Secure authentication and subscriptions with Clerk",
+  //     "Stripe-powered subscription billing",
+  //   ],
+  //   githubUrl: "https://github.com/Itssanthoshhere/lms-saas-app",
+  //   liveUrl: "https://lms-saas-app-coral.vercel.app/",
+  //   duration: "Nov 2025",
+  //   category: "Full-Stack",
+  //   featured: false,
+  // },
+  
+  // {
+  //   slug: "figpro-collaborative",
+  //   title: "FigPro 🎨 – Collaborative Design App",
+  //   description:
+  //     "A real-time collaborative design platform built with Next.js, Liveblocks, and Fabric.js, supporting live cursors and drawing tools.",
+  //   longDescription:
+  //     "FigPro is a fully interactive, real-time collaborative design application inspired by Figma. Built using Next.js, TypeScript, Liveblocks, Fabric.js, and TailwindCSS, it allows multiple users to design together with features like live cursors, drawing tools, and shape editing.",
+  //   video: figProPreview,
+  //   image: figProThumbnail,
+  //   technologies: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "Liveblocks",
+  //     "Fabric.js",
+  //     "Tailwind CSS",
+  //     "Shadcn/UI",
+  //   ],
+  //   features: [
+  //     "Real-time multi-user collaboration",
+  //     "Live cursors with cursor chat",
+  //     "Freeform drawing with synced paths",
+  //     "Shape tools: rectangles, circles, lines, triangles, text",
+  //   ],
+  //   githubUrl: "https://github.com/Itssanthoshhere/FigPro",
+  //   liveUrl: "https://fig-pro-sandyy.vercel.app/",
+  //   duration: "November 2025",
+  //   category: "Full-Stack",
+  //   featured: false,
+  // },
   {
     slug: "nimbus-keyboards-3d",
     title: "Nimbus Keyboards ⌨️ – 3D E-Commerce",

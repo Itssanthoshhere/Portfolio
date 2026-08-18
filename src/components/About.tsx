@@ -23,21 +23,20 @@ export function About() {
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I'm currently pursuing my B.Tech in Computer Science & Engineering with a specialization
-                in Artificial Intelligence at Bennett University. My journey in technology started with
-                curiosity and has evolved into a passion for creating meaningful digital experiences.
+                in Artificial Intelligence at Bennett University. My journey in technology has evolved into 
+                a passion for engineering scalable backend systems, cross-platform mobile apps, and premium digital experiences.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Through my experiences as Team Co-Head of the Multimedia & Design Team at CodeChef BU
-                and my internship at Heavy Vehicles Factory (HVF), I've developed strong leadership
-                skills and practical knowledge in web development, particularly in React, TypeScript,
-                and modern frontend technologies.
+                As a Full-Stack Engineer, I specialize in building production-ready architectures using modern 
+                frameworks like Next.js, Expo, and Node.js. My experience spans designing RESTful APIs, 
+                optimizing PostgreSQL/MongoDB databases, and deploying real-time applications with Socket.IO.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm passionate about combining creativity with technology to build applications that
-                not only function well but also provide exceptional user experiences. I'm always
-                eager to learn new technologies and take on challenging projects.
+                I'm deeply interested in the intersection of AI integration and creative engineering, 
+                striving to build applications that not only function flawlessly at scale but also deliver 
+                exceptional, immersive user experiences.
               </p>
 
               <div className="flex flex-wrap gap-2 sm:gap-4 mt-8 justify-center lg:justify-start">
@@ -45,7 +44,7 @@ export function About() {
                   Frontend Development
                 </span>
                 <span className="px-3 py-2 sm:px-4 bg-gold/10 text-gold rounded-full font-medium text-sm sm:text-base">
-                  AI/ML Enthusiast
+                  React Native / Mobile
                 </span>
                 <span className="px-3 py-2 sm:px-4 bg-primary/10 text-primary rounded-full font-medium text-sm sm:text-base">
                   UI/UX Design

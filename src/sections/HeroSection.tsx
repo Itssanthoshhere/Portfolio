@@ -83,7 +83,7 @@ export function HeroSection() {
 
             <FadeIn delay={0.8}>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed text-balance">
-                Bridging the gap between design and engineering to build premium, cinematic digital experiences.
+                Building scalable full-stack products, cross-platform mobile apps, and premium digital experiences powered by modern architecture and AI.
               </p>
             </FadeIn>
 

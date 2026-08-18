@@ -2,9 +2,9 @@ export const personalInfo = {
   name: "Santhosh VS",
   taglines: [
     "Frontend Developer",
+    "Full-Stack Enginer",
     "React Native Developer",
-    "AI Enthusiast",
-    "Creative Coder"
+    "AI / Creative Engineering"
   ],
   bio: [
     "I am a Full-Stack Engineer and Frontend Specialist with a strong focus on building scalable, high-performance web applications and cross-platform mobile solutions. I specialize in modern JavaScript/TypeScript ecosystems, primarily utilizing React 19, Next.js, and React Native (Expo).",
@@ -13,15 +13,17 @@ export const personalInfo = {
   ],
   email: "santhosh02vs@gmail.com",
   phone: "+91 9940310662",
-  location: "Chennai, Tamil Nadu, India",
+  location: "Greater Noida, Uttar Pradesh, India",
   socials: {
     linkedin: "https://www.linkedin.com/in/thesanthoshvs/",
     github: "https://github.com/Itssanthoshhere"
   },
   stats: {
     yearsOfLearning: 2,
-    technologies: 20,
-    projects: 15,
+    technologies: 25,
+    projects: 6,
+    // technologies: 20,
+    // projects: 15,
     certifications: 5
   }
 };
