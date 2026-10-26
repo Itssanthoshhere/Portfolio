@@ -17,7 +17,7 @@ export const skillCategories = [
     description: "Developing scalable server-side applications and APIs",
     skills: [
       "Node.js", "Express", "Appwrite", "PostgreSQL", "MongoDB", "PHP",
-      "Prisma ORM", "REST APIs", "Clerk Auth"
+      "Drizzle ORM", "Prisma ORM", "REST APIs", "Clerk Auth"
     ],
     color: "cyan"
   },

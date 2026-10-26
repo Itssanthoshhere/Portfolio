@@ -63,6 +63,8 @@ import travelorThumbnail from "@/assets/travelorThumbnail.png";
 import travelorPreview from "@/assets/travelorPreview.mp4";
 import feastoThumbnail from "@/assets/feastoThumbnail.png";
 import feastoPreview from "@/assets/feastoPreview.mp4";
+import medivoiceThumbnail from "@/assets/medivoiceThumbnail.png";
+import medivoicePreview from "@/assets/medivoicePreview.mp4";
 
 export interface Project {
   slug: string;
@@ -89,6 +91,43 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "medivoice-ai-clinical-platform",
+    title: "MediVoice AI 🩺 – AI Medical Voice & Clinical Platform",
+    description:
+      "A production-grade, AI-first clinical consultation platform connecting patients with 11 specialized AI doctors via real-time voice (Vapi), multimodal lab report analysis, and automated SOAP note generation.",
+    longDescription:
+      "MediVoice AI is a full-stack, AI-driven healthcare platform designed to revolutionize primary care access. Built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4, the system connects patients with 11 domain-specific AI specialist doctors through low-latency real-time voice streaming powered by Vapi WebRTC with automatic fallback to an intelligent multi-model LLM chain (OpenRouter and Google Gemini). The platform automatically converts spoken dialogues into clinical SOAP notes (Subjective, Objective, Assessment, Plan), extracts biomarker anomalies from uploaded lab PDFs and images, calculates dynamic personal health index scores, and manages longitudinal family health timelines using Neon Serverless Postgres and Drizzle ORM with Clerk authentication.",
+    video: medivoicePreview,
+    image: medivoiceThumbnail,
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "Vapi Voice AI",
+      "Google Gemini",
+      "OpenRouter",
+      "Drizzle ORM",
+      "Neon Postgres",
+      "Clerk Auth",
+      "Framer Motion",
+    ],
+    features: [
+      "Real-time voice consultations with 11 specialized AI doctor personas using Vapi WebRTC",
+      "Automated clinical SOAP report generator with downloadable summaries and shareable links",
+      "AI Medical Report Vault extracting biomarkers from lab test PDFs/images with abnormality flagging",
+      "Longitudinal health timeline with dynamic MediVoice Health Index score calculation",
+      "Resilient multi-tier LLM architecture chaining OpenRouter (DeepSeek R1 / Llama 3.3) and Google Gemini",
+      "Multi-member family health profile management under a unified account",
+      "Real-time vitals logging (Heart Rate, Blood Pressure, SpO2, Blood Sugar) with health status indicator",
+    ],
+    githubUrl: "https://github.com/Itssanthoshhere/Medi-Voice-AI",
+    liveUrl: "https://medi-voice-assistant.vercel.app/",
+    duration: "September 2026",
+    category: "Full-Stack",
+    featured: true,
+  },
   {
     slug: "feasto-food-delivery",
     title: "Feasto 🛵 – Full-Stack Real-Time Food Delivery",
@@ -256,7 +295,7 @@ export const projects: Project[] = [
   //   category: "Full-Stack",
   //   featured: false,
   // },
-  
+
   // {
   //   slug: "figpro-collaborative",
   //   title: "FigPro 🎨 – Collaborative Design App",

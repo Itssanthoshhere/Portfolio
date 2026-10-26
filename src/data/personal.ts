@@ -21,7 +21,7 @@ export const personalInfo = {
   stats: {
     yearsOfLearning: 2,
     technologies: 25,
-    projects: 6,
+    projects: 7,
     // technologies: 20,
     // projects: 15,
     certifications: 5

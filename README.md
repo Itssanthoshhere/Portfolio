@@ -79,6 +79,7 @@ Key highlights include:
 
 The portfolio showcases a variety of projects spanning different technologies:
 
+- **MediVoice AI 🩺:** An AI-powered clinical consultation platform connecting patients with 11 specialist AI doctors via real-time voice (Vapi), multimodal lab report analysis, and automated SOAP note generation.
 - **Feasto 🛵:** A production-grade microservices food delivery ecosystem built with React, Node.js, RabbitMQ, Socket.IO, MongoDB, and Docker.
 - **Recurio 📱:** A premium, high-fidelity Expo & React Native application to track, manage, and optimize recurring subscriptions.
 - **QuickShow 🎟️:** A modern movie booking platform with real-time seat booking, secure Stripe payments, and automated background workflows.
